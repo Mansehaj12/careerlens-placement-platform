@@ -1,0 +1,3770 @@
+[
+  {
+    "job_id": "JOB_02836",
+    "title": "Lead Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Qualcomm",
+    "salary_min": 144104.34270833334,
+    "salary_max": 194964.69895833332,
+    "salary_avg": 169534.52083333334,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "R",
+      "PyTorch",
+      "SQL",
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_05792",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Google",
+    "salary_min": 61440.0,
+    "salary_max": 122880.0,
+    "salary_avg": 92160.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Git",
+      "CI/CD",
+      "Bash"
+    ]
+  },
+  {
+    "job_id": "JOB_03241",
+    "title": "Entry Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Zoom",
+    "salary_min": 162240.0,
+    "salary_max": 162240.0,
+    "salary_avg": 162240.0,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "Machine Learning",
+      "Kubernetes",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_00297",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Robinhood",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "PostgreSQL",
+      "Redis",
+      "Django",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_06349",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Intel",
+    "salary_min": 99631.86600000001,
+    "salary_max": 134796.054,
+    "salary_avg": 117213.96,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Git",
+      "Go",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_03441",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Stripe",
+    "salary_min": 99631.86600000001,
+    "salary_max": 134796.054,
+    "salary_avg": 117213.96,
+    "clean_location": "London",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Go",
+      "SQL",
+      "Git",
+      "Python",
+      "Docker",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_02644",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Salesforce",
+    "salary_min": 75000.0,
+    "salary_max": 150000.0,
+    "salary_avg": 112500.0,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "Redis",
+      "gRPC"
+    ]
+  },
+  {
+    "job_id": "JOB_07719",
+    "title": "Senior Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Nvidia",
+    "salary_min": 128111.98802816901,
+    "salary_max": 173327.9838028169,
+    "salary_avg": 150719.98591549296,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Agile",
+      "A/B Testing",
+      "Product Roadmap",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_00238",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Meta",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "San Francisco",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "gRPC",
+      "REST APIs",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_01545",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Chime",
+    "salary_min": 55192.96355932203,
+    "salary_max": 74672.83305084745,
+    "salary_avg": 64932.898305084746,
+    "clean_location": "Toronto",
+    "clean_experience": "Intern",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_00016",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Slack",
+    "salary_min": 89440.0,
+    "salary_max": 89440.0,
+    "salary_avg": 89440.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "Kubernetes",
+      "AWS",
+      "SQL",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07246",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Apple",
+    "salary_min": 112739.07957746478,
+    "salary_max": 152529.34295774647,
+    "salary_avg": 132634.21126760563,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TypeScript",
+      "Vite",
+      "CSS3"
+    ]
+  },
+  {
+    "job_id": "JOB_05052",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "TCS",
+    "salary_min": 160355.52222222224,
+    "salary_max": 216951.5888888889,
+    "salary_avg": 188653.55555555556,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "Kubernetes",
+      "Python",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_00648",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Infosys",
+    "salary_min": 78000.0,
+    "salary_max": 143000.0,
+    "salary_avg": 110500.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "Pandas",
+      "Python",
+      "Tableau"
+    ]
+  },
+  {
+    "job_id": "JOB_01443",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Google",
+    "salary_min": 67200.0,
+    "salary_max": 134400.0,
+    "salary_avg": 100800.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "React",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_02848",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Airbnb",
+    "salary_min": 106912.28189655172,
+    "salary_max": 144646.02844827584,
+    "salary_avg": 125779.1551724138,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "A/B Testing",
+      "Power BI",
+      "SQL",
+      "Agile",
+      "Data Visualization"
+    ]
+  },
+  {
+    "job_id": "JOB_04675",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Tesla",
+    "salary_min": 49065.084285714285,
+    "salary_max": 66382.17285714285,
+    "salary_avg": 57723.62857142857,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "A/B Testing",
+      "Data Visualization",
+      "Power BI",
+      "Tableau",
+      "Pandas",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_00290",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Nvidia",
+    "salary_min": 101920.0,
+    "salary_max": 101920.0,
+    "salary_avg": 101920.0,
+    "clean_location": "Austin",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Python",
+      "Wireshark",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_00761",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Shopify",
+    "salary_min": 99840.0,
+    "salary_max": 199680.0,
+    "salary_avg": 149760.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Go",
+      "Java",
+      "Agile",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_05571",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Cognizant",
+    "salary_min": 48000.0,
+    "salary_max": 88000.0,
+    "salary_avg": 68000.0,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "A/B Testing",
+      "Data Visualization",
+      "Python",
+      "Pandas",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_00251",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Accenture",
+    "salary_min": 160160.0,
+    "salary_max": 160160.0,
+    "salary_avg": 160160.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Wireframing",
+      "Agile",
+      "SQL",
+      "Product Roadmap"
+    ]
+  },
+  {
+    "job_id": "JOB_06192",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Capgemini",
+    "salary_min": 89964.74538461538,
+    "salary_max": 121717.00846153845,
+    "salary_avg": 105840.87692307692,
+    "clean_location": "Boston",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Wireframing",
+      "Analytics",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_04246",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Robinhood",
+    "salary_min": 61440.0,
+    "salary_max": 122880.0,
+    "salary_avg": 92160.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "SQL",
+      "Git",
+      "Python",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_02382",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Nvidia",
+    "salary_min": 132342.5289285714,
+    "salary_max": 179051.65678571427,
+    "salary_avg": 155697.09285714285,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Network Security",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_05379",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Netflix",
+    "salary_min": 152642.0,
+    "salary_max": 152642.0,
+    "salary_avg": 152642.0,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Go",
+      "Java",
+      "SQL",
+      "Python",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_04871",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "HubSpot",
+    "salary_min": 55761.87265625,
+    "salary_max": 75442.53359374999,
+    "salary_avg": 65602.203125,
+    "clean_location": "Boston",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "JavaScript",
+      "React",
+      "Tailwind"
+    ]
+  },
+  {
+    "job_id": "JOB_05425",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Tesla",
+    "salary_min": 141099.0,
+    "salary_max": 141099.0,
+    "salary_avg": 141099.0,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "REST APIs",
+      "Django",
+      "Express"
+    ]
+  },
+  {
+    "job_id": "JOB_04958",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Qualcomm",
+    "salary_min": 101275.81231884057,
+    "salary_max": 137020.21666666665,
+    "salary_avg": 119148.01449275362,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Git",
+      "CI/CD",
+      "Bash"
+    ]
+  },
+  {
+    "job_id": "JOB_06153",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Nvidia",
+    "salary_min": 87101.671484375,
+    "salary_max": 117843.43789062499,
+    "salary_avg": 102472.5546875,
+    "clean_location": "New York",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "HTML5",
+      "JavaScript",
+      "TypeScript",
+      "CSS3",
+      "Vite",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_02677",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Salesforce",
+    "salary_min": 74880.0,
+    "salary_max": 74880.0,
+    "salary_avg": 74880.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "HTML5",
+      "React",
+      "TypeScript",
+      "CSS3",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_06546",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Capgemini",
+    "salary_min": 81120.0,
+    "salary_max": 81120.0,
+    "salary_avg": 81120.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "R",
+      "SQL",
+      "Python",
+      "Pandas",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_05901",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Infosys",
+    "salary_min": 108550.0,
+    "salary_max": 108550.0,
+    "salary_avg": 108550.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "Java",
+      "SQL",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_02109",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "TCS",
+    "salary_min": 71459.8423611111,
+    "salary_max": 96680.96319444444,
+    "salary_avg": 84070.40277777778,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Agile",
+      "Data Visualization",
+      "Statistics",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_05562",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "TCS",
+    "salary_min": 202643.0,
+    "salary_max": 202643.0,
+    "salary_avg": 202643.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Network Security",
+      "Penetration Testing",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_04513",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Microsoft",
+    "salary_min": 187036.0,
+    "salary_max": 187036.0,
+    "salary_avg": 187036.0,
+    "clean_location": "Austin",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Kubernetes",
+      "CI/CD",
+      "Bash",
+      "Agile",
+      "Docker"
+    ]
+  },
+  {
+    "job_id": "JOB_07630",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Wipro",
+    "salary_min": 144104.34270833334,
+    "salary_max": 194964.69895833332,
+    "salary_avg": 169534.52083333334,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "Python",
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07027",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Chime",
+    "salary_min": 66560.0,
+    "salary_max": 66560.0,
+    "salary_avg": 66560.0,
+    "clean_location": "Seattle",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "SQL",
+      "Scrum",
+      "A/B Testing"
+    ]
+  },
+  {
+    "job_id": "JOB_02721",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Wipro",
+    "salary_min": 88801.0,
+    "salary_max": 88801.0,
+    "salary_avg": 88801.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "Analytics",
+      "Wireframing"
+    ]
+  },
+  {
+    "job_id": "JOB_06766",
+    "title": "Entry Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "SpaceX",
+    "salary_min": 78513.06379310344,
+    "salary_max": 106223.5568965517,
+    "salary_avg": 92368.31034482758,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Network Security",
+      "Python",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01170",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Cognizant",
+    "salary_min": 104467.0,
+    "salary_max": 104467.0,
+    "salary_avg": 104467.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_07325",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Google",
+    "salary_min": 140798.0,
+    "salary_max": 140798.0,
+    "salary_avg": 140798.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "AWS",
+      "SQL",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_04893",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Salesforce",
+    "salary_min": 80146.74121621622,
+    "salary_max": 108433.82635135135,
+    "salary_avg": 94290.28378378379,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Pandas",
+      "SQL",
+      "Tableau"
+    ]
+  },
+  {
+    "job_id": "JOB_05388",
+    "title": "Entry Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Robinhood",
+    "salary_min": 76774.83333333333,
+    "salary_max": 103871.83333333331,
+    "salary_avg": 90323.33333333333,
+    "clean_location": "London",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Next.js",
+      "JavaScript",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_03709",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "PayPal",
+    "salary_min": 100979.26100746269,
+    "salary_max": 136619.00018656717,
+    "salary_avg": 118799.13059701493,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "PyTorch",
+      "Python",
+      "Agile",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_00384",
+    "title": "Mid Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Amazon",
+    "salary_min": 94130.74197530864,
+    "salary_max": 127353.35679012345,
+    "salary_avg": 110742.04938271605,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "Tailwind",
+      "JavaScript",
+      "TypeScript",
+      "Vite"
+    ]
+  },
+  {
+    "job_id": "JOB_04500",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Plaid",
+    "salary_min": 138966.0,
+    "salary_max": 138966.0,
+    "salary_avg": 138966.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "A/B Testing",
+      "Statistics",
+      "Power BI",
+      "Tableau"
+    ]
+  },
+  {
+    "job_id": "JOB_03195",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Tesla",
+    "salary_min": 170560.0,
+    "salary_max": 170560.0,
+    "salary_avg": 170560.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "R",
+      "PyTorch",
+      "Python",
+      "Agile",
+      "Pandas",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_01207",
+    "title": "Not Specified Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Figma",
+    "salary_min": 103895.61333333333,
+    "salary_max": 140564.65333333332,
+    "salary_avg": 122230.13333333333,
+    "clean_location": "New York",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Product Roadmap",
+      "Wireframing",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_04597",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Cognizant",
+    "salary_min": 78513.06379310344,
+    "salary_max": 106223.5568965517,
+    "salary_avg": 92368.31034482758,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Python",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01385",
+    "title": "Entry Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Qualcomm",
+    "salary_min": 87133.42031249999,
+    "salary_max": 117886.3921875,
+    "salary_avg": 102509.90625,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Go",
+      "SQL",
+      "Git",
+      "Docker",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_01587",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Tencent",
+    "salary_min": 164320.0,
+    "salary_max": 164320.0,
+    "salary_avg": 164320.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Java",
+      "SQL",
+      "Git",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_00070",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Accenture",
+    "salary_min": 70720.0,
+    "salary_max": 70720.0,
+    "salary_avg": 70720.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "SQL",
+      "Analytics",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_01612",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Chime",
+    "salary_min": 88586.0,
+    "salary_max": 88586.0,
+    "salary_avg": 88586.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Power BI",
+      "SQL",
+      "Python",
+      "Tableau",
+      "Pandas",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_01340",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Wipro",
+    "salary_min": 71250.0,
+    "salary_max": 142500.0,
+    "salary_avg": 106875.0,
+    "clean_location": "New York",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "Node.js",
+      "Python",
+      "gRPC",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_05840",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "HubSpot",
+    "salary_min": 80112.81315789474,
+    "salary_max": 108387.92368421052,
+    "salary_avg": 94250.36842105263,
+    "clean_location": "Berlin",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "PostgreSQL",
+      "Django",
+      "Python",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_00102",
+    "title": "Intern DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Meta",
+    "salary_min": 56281.0,
+    "salary_max": 56281.0,
+    "salary_avg": 56281.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Git",
+      "Bash",
+      "Docker",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_03380",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Snowflake",
+    "salary_min": 87133.42031249999,
+    "salary_max": 117886.3921875,
+    "salary_avg": 102509.90625,
+    "clean_location": "San Francisco",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "SQL",
+      "Python",
+      "Docker",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_04086",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Stripe",
+    "salary_min": 80146.74121621622,
+    "salary_max": 108433.82635135135,
+    "salary_avg": 94290.28378378379,
+    "clean_location": "Toronto",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "SQL",
+      "Python",
+      "Data Visualization",
+      "Statistics",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_00903",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Robinhood",
+    "salary_min": 85500.0,
+    "salary_max": 161500.0,
+    "salary_avg": 123500.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Product Roadmap",
+      "Analytics",
+      "Agile",
+      "A/B Testing"
+    ]
+  },
+  {
+    "job_id": "JOB_04462",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "PayPal",
+    "salary_min": 144104.34270833334,
+    "salary_max": 194964.69895833332,
+    "salary_avg": 169534.52083333334,
+    "clean_location": "Berlin",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Pandas",
+      "SQL",
+      "Machine Learning",
+      "TensorFlow"
+    ]
+  },
+  {
+    "job_id": "JOB_05529",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Stripe",
+    "salary_min": 68491.15158730159,
+    "salary_max": 92664.4992063492,
+    "salary_avg": 80577.8253968254,
+    "clean_location": "Austin",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "PyTorch",
+      "Kubernetes",
+      "Python",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_05607",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "HubSpot",
+    "salary_min": 64000.0,
+    "salary_max": 128000.0,
+    "salary_avg": 96000.0,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Java",
+      "Git",
+      "Python",
+      "Agile",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_02239",
+    "title": "Not Specified Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "TCS",
+    "salary_min": 87101.671484375,
+    "salary_max": 117843.43789062499,
+    "salary_avg": 102472.5546875,
+    "clean_location": "Boston",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TypeScript",
+      "Vite",
+      "CSS3",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_05426",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Spotify",
+    "salary_min": 160355.52222222224,
+    "salary_max": 216951.5888888889,
+    "salary_avg": 188653.55555555556,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "Kubernetes",
+      "SQL",
+      "Python",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_04471",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Amazon",
+    "salary_min": 87360.0,
+    "salary_max": 174720.0,
+    "salary_avg": 131040.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind"
+    ]
+  },
+  {
+    "job_id": "JOB_06657",
+    "title": "Mid Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Shopify",
+    "salary_min": 85000.0,
+    "salary_max": 170000.0,
+    "salary_avg": 127500.0,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "SQL",
+      "Machine Learning",
+      "Python",
+      "TensorFlow"
+    ]
+  },
+  {
+    "job_id": "JOB_04021",
+    "title": "Senior Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Netflix",
+    "salary_min": 87360.0,
+    "salary_max": 174720.0,
+    "salary_avg": 131040.0,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "Tailwind",
+      "HTML5",
+      "React",
+      "JavaScript",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_05015",
+    "title": "Not Specified Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "PayPal",
+    "salary_min": 87101.671484375,
+    "salary_max": 117843.43789062499,
+    "salary_avg": 102472.5546875,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "Tailwind",
+      "HTML5",
+      "React",
+      "TypeScript",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_07408",
+    "title": "Lead Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Apple",
+    "salary_min": 139495.0,
+    "salary_max": 139495.0,
+    "salary_avg": 139495.0,
+    "clean_location": "Austin",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Wireframing",
+      "SQL",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_07922",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Zoom",
+    "salary_min": 139360.0,
+    "salary_max": 139360.0,
+    "salary_avg": 139360.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "SQL",
+      "Go",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_02465",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Microsoft",
+    "salary_min": 88818.60523255814,
+    "salary_max": 120166.34825581394,
+    "salary_avg": 104492.47674418605,
+    "clean_location": "Austin",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "CI/CD",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_06179",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Databricks",
+    "salary_min": 103490.0,
+    "salary_max": 103490.0,
+    "salary_avg": 103490.0,
+    "clean_location": "London",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "Kubernetes",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07328",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Tesla",
+    "salary_min": 105000.0,
+    "salary_max": 210000.0,
+    "salary_avg": 157500.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "HTML5",
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "CSS3"
+    ]
+  },
+  {
+    "job_id": "JOB_07996",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Netflix",
+    "salary_min": 68640.0,
+    "salary_max": 68640.0,
+    "salary_avg": 68640.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_06474",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "ByteDance",
+    "salary_min": 81600.0,
+    "salary_max": 163200.0,
+    "salary_avg": 122400.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_00076",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "ByteDance",
+    "salary_min": 109069.0,
+    "salary_max": 109069.0,
+    "salary_avg": 109069.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "PostgreSQL",
+      "REST APIs",
+      "Express",
+      "Redis",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_03071",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "TCS",
+    "salary_min": 104362.82291666667,
+    "salary_max": 141196.76041666666,
+    "salary_avg": 122779.79166666667,
+    "clean_location": "London",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Product Roadmap",
+      "SQL",
+      "Wireframing",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_01215",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "PayPal",
+    "salary_min": 94130.74197530864,
+    "salary_max": 127353.35679012345,
+    "salary_avg": 110742.04938271605,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "TypeScript",
+      "CSS3",
+      "Vite",
+      "Agile",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_04110",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Uber",
+    "salary_min": 96029.41318681318,
+    "salary_max": 129922.14725274725,
+    "salary_avg": 112975.78021978022,
+    "clean_location": "Toronto",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Python",
+      "Wireshark",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_06549",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Apple",
+    "salary_min": 203066.0,
+    "salary_max": 203066.0,
+    "salary_avg": 203066.0,
+    "clean_location": "New York",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "A/B Testing",
+      "Analytics",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_01708",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Spotify",
+    "salary_min": 38000.0,
+    "salary_max": 76000.0,
+    "salary_avg": 57000.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "PyTorch",
+      "Kubernetes",
+      "AWS",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_03265",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "TCS",
+    "salary_min": 97493.0875,
+    "salary_max": 131902.41249999998,
+    "salary_avg": 114697.75,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "SQL",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_05527",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Tencent",
+    "salary_min": 66560.0,
+    "salary_max": 66560.0,
+    "salary_avg": 66560.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch"
+    ]
+  },
+  {
+    "job_id": "JOB_00314",
+    "title": "Entry DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Accenture",
+    "salary_min": 63360.00000000001,
+    "salary_max": 126720.00000000001,
+    "salary_avg": 95040.00000000001,
+    "clean_location": "Berlin",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Kubernetes",
+      "Git",
+      "CI/CD",
+      "Docker",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_04599",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Accenture",
+    "salary_min": 66500.0,
+    "salary_max": 133000.0,
+    "salary_avg": 99750.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "Tailwind",
+      "HTML5",
+      "React",
+      "JavaScript",
+      "Vite"
+    ]
+  },
+  {
+    "job_id": "JOB_04145",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Slack",
+    "salary_min": 68000.0,
+    "salary_max": 136000.0,
+    "salary_avg": 102000.0,
+    "clean_location": "London",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "SQL",
+      "Machine Learning",
+      "Python",
+      "TensorFlow"
+    ]
+  },
+  {
+    "job_id": "JOB_05266",
+    "title": "Intern Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Salesforce",
+    "salary_min": 68491.15158730159,
+    "salary_max": 92664.4992063492,
+    "salary_avg": 80577.8253968254,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "PyTorch",
+      "Kubernetes",
+      "AWS",
+      "SQL",
+      "Agile",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_03963",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Qualcomm",
+    "salary_min": 94130.74197530864,
+    "salary_max": 127353.35679012345,
+    "salary_avg": 110742.04938271605,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "HTML5",
+      "CSS3",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_00788",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Spotify",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "San Francisco",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MongoDB",
+      "gRPC",
+      "REST APIs",
+      "Express"
+    ]
+  },
+  {
+    "job_id": "JOB_03856",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Apple",
+    "salary_min": 141440.0,
+    "salary_max": 141440.0,
+    "salary_avg": 141440.0,
+    "clean_location": "Boston",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Linux",
+      "Terraform",
+      "AWS",
+      "Bash",
+      "Docker"
+    ]
+  },
+  {
+    "job_id": "JOB_02853",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Spotify",
+    "salary_min": 32000.0,
+    "salary_max": 64000.0,
+    "salary_avg": 48000.0,
+    "clean_location": "Remote",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Terraform",
+      "CI/CD",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_04670",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Adobe",
+    "salary_min": 119249.0,
+    "salary_max": 119249.0,
+    "salary_avg": 119249.0,
+    "clean_location": "Austin",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "AWS",
+      "Agile",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_02317",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Qualcomm",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "gRPC",
+      "Express"
+    ]
+  },
+  {
+    "job_id": "JOB_00387",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Accenture",
+    "salary_min": 132342.5289285714,
+    "salary_max": 179051.65678571427,
+    "salary_avg": 155697.09285714285,
+    "clean_location": "Seattle",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Network Security",
+      "Python"
+    ]
+  },
+  {
+    "job_id": "JOB_05171",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Wipro",
+    "salary_min": 86400.0,
+    "salary_max": 163200.0,
+    "salary_avg": 124800.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Wireframing",
+      "Agile",
+      "A/B Testing",
+      "Analytics",
+      "Product Roadmap",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_02911",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Nvidia",
+    "salary_min": 128960.0,
+    "salary_max": 128960.0,
+    "salary_avg": 128960.0,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Linux",
+      "AWS",
+      "Git"
+    ]
+  },
+  {
+    "job_id": "JOB_04856",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "ByteDance",
+    "salary_min": 106080.0,
+    "salary_max": 106080.0,
+    "salary_avg": 106080.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Excel",
+      "Python",
+      "Power BI",
+      "A/B Testing"
+    ]
+  },
+  {
+    "job_id": "JOB_06130",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Capgemini",
+    "salary_min": 42311.0,
+    "salary_max": 42311.0,
+    "salary_avg": 42311.0,
+    "clean_location": "Remote",
+    "clean_experience": "Intern",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Linux",
+      "Python",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_04447",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Figma",
+    "salary_min": 120000.0,
+    "salary_max": 240000.0,
+    "salary_avg": 180000.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Agile",
+      "Linux",
+      "Git",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_03736",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Stripe",
+    "salary_min": 147680.0,
+    "salary_max": 147680.0,
+    "salary_avg": 147680.0,
+    "clean_location": "New York",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "PostgreSQL",
+      "Node.js",
+      "Redis",
+      "Python",
+      "Agile",
+      "gRPC",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_02535",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Plaid",
+    "salary_min": 74250.0,
+    "salary_max": 138600.0,
+    "salary_avg": 106425.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Linux",
+      "Network Security",
+      "Python",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_03475",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "TCS",
+    "salary_min": 59400.00000000001,
+    "salary_max": 118800.00000000001,
+    "salary_avg": 89100.00000000001,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Node.js",
+      "Django",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_03773",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "PayPal",
+    "salary_min": 88396.97112676056,
+    "salary_max": 119595.90211267605,
+    "salary_avg": 103996.43661971831,
+    "clean_location": "London",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "TensorFlow",
+      "Python",
+      "Pandas",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_02716",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Shopify",
+    "salary_min": 90041.0,
+    "salary_max": 90041.0,
+    "salary_avg": 90041.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "PyTorch",
+      "SQL",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_01448",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Slack",
+    "salary_min": 34560.0,
+    "salary_max": 65280.0,
+    "salary_avg": 49920.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Intern",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Analytics",
+      "Wireframing",
+      "A/B Testing"
+    ]
+  },
+  {
+    "job_id": "JOB_04073",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Intel",
+    "salary_min": 64480.0,
+    "salary_max": 64480.0,
+    "salary_avg": 64480.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "SQL",
+      "Analytics",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_06124",
+    "title": "Senior Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Slack",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "REST APIs",
+      "Express",
+      "Node.js",
+      "Redis",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_03768",
+    "title": "Entry Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Figma",
+    "salary_min": 78513.06379310344,
+    "salary_max": 106223.5568965517,
+    "salary_avg": 92368.31034482758,
+    "clean_location": "Toronto",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Network Security",
+      "Penetration Testing",
+      "Wireshark"
+    ]
+  },
+  {
+    "job_id": "JOB_06401",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Stripe",
+    "salary_min": 72000.0,
+    "salary_max": 134400.0,
+    "salary_avg": 103200.0,
+    "clean_location": "New York",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Agile",
+      "Network Security",
+      "Penetration Testing",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01063",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Capgemini",
+    "salary_min": 95987.49420289854,
+    "salary_max": 129865.43333333332,
+    "salary_avg": 112926.46376811594,
+    "clean_location": "Austin",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Agile",
+      "gRPC",
+      "Node.js",
+      "Redis"
+    ]
+  },
+  {
+    "job_id": "JOB_01921",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Databricks",
+    "salary_min": 141285.0053333333,
+    "salary_max": 191150.3013333333,
+    "salary_avg": 166217.65333333332,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Terraform",
+      "AWS",
+      "Git",
+      "CI/CD",
+      "Bash"
+    ]
+  },
+  {
+    "job_id": "JOB_06218",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Figma",
+    "salary_min": 72000.0,
+    "salary_max": 134400.0,
+    "salary_avg": 103200.0,
+    "clean_location": "Boston",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Python",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_00739",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "SpaceX",
+    "salary_min": 141075.0,
+    "salary_max": 282150.0,
+    "salary_avg": 211612.5,
+    "clean_location": "New York",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "PyTorch",
+      "Kubernetes",
+      "SQL",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_01188",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Apple",
+    "salary_min": 96525.00000000001,
+    "salary_max": 193050.00000000003,
+    "salary_avg": 144787.50000000003,
+    "clean_location": "San Francisco",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "Express",
+      "Redis",
+      "Python",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_03985",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Robinhood",
+    "salary_min": 123544.59275362319,
+    "salary_max": 167148.56666666665,
+    "salary_avg": 145346.57971014493,
+    "clean_location": "Seattle",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "R"
+    ]
+  },
+  {
+    "job_id": "JOB_07858",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Qualcomm",
+    "salary_min": 79040.0,
+    "salary_max": 79040.0,
+    "salary_avg": 79040.0,
+    "clean_location": "Austin",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Python",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01466",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Amazon",
+    "salary_min": 23760.000000000004,
+    "salary_max": 43560.0,
+    "salary_avg": 33660.0,
+    "clean_location": "Remote",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "A/B Testing",
+      "SQL",
+      "Data Visualization",
+      "Statistics",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_03444",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Figma",
+    "salary_min": 76774.83333333333,
+    "salary_max": 103871.83333333331,
+    "salary_avg": 90323.33333333333,
+    "clean_location": "New York",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "HTML5",
+      "JavaScript",
+      "CSS3",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_02875",
+    "title": "Entry Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Wipro",
+    "salary_min": 109733.0,
+    "salary_max": 109733.0,
+    "salary_avg": 109733.0,
+    "clean_location": "London",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Express",
+      "Node.js",
+      "Python",
+      "Agile",
+      "gRPC"
+    ]
+  },
+  {
+    "job_id": "JOB_07426",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Coinbase",
+    "salary_min": 66365.0,
+    "salary_max": 66365.0,
+    "salary_avg": 66365.0,
+    "clean_location": "Remote",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "A/B Testing",
+      "SQL",
+      "Analytics",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_03939",
+    "title": "Not Specified Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Snowflake",
+    "salary_min": 80022.52142857143,
+    "salary_max": 108265.76428571428,
+    "salary_avg": 94144.14285714286,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Data Visualization",
+      "SQL",
+      "Python",
+      "Statistics"
+    ]
+  },
+  {
+    "job_id": "JOB_05142",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Uber",
+    "salary_min": 76960.0,
+    "salary_max": 76960.0,
+    "salary_avg": 76960.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Intern",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "SQL",
+      "Python",
+      "Agile",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_00320",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Intel",
+    "salary_min": 132342.5289285714,
+    "salary_max": 179051.65678571427,
+    "salary_avg": 155697.09285714285,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Python",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_03221",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Nvidia",
+    "salary_min": 126880.0,
+    "salary_max": 126880.0,
+    "salary_avg": 126880.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "R",
+      "Python",
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07806",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Tesla",
+    "salary_min": 89964.74538461538,
+    "salary_max": 121717.00846153845,
+    "salary_avg": 105840.87692307692,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Wireframing",
+      "A/B Testing",
+      "SQL",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_01516",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "PayPal",
+    "salary_min": 117867.0118670886,
+    "salary_max": 159467.13370253163,
+    "salary_avg": 138667.07278481012,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "Kubernetes",
+      "SQL",
+      "Python",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_02574",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Wipro",
+    "salary_min": 64000.0,
+    "salary_max": 128000.0,
+    "salary_avg": 96000.0,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Terraform",
+      "Linux",
+      "AWS",
+      "Kubernetes"
+    ]
+  },
+  {
+    "job_id": "JOB_03212",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Apple",
+    "salary_min": 126780.19166666665,
+    "salary_max": 171526.14166666663,
+    "salary_avg": 149153.16666666666,
+    "clean_location": "Toronto",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Terraform",
+      "AWS",
+      "Git"
+    ]
+  },
+  {
+    "job_id": "JOB_04637",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Wipro",
+    "salary_min": 88396.97112676056,
+    "salary_max": 119595.90211267605,
+    "salary_avg": 103996.43661971831,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "R",
+      "PyTorch",
+      "SQL",
+      "Statistics",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_01511",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Cognizant",
+    "salary_min": 102838.0,
+    "salary_max": 102838.0,
+    "salary_avg": 102838.0,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "A/B Testing",
+      "SQL",
+      "Analytics",
+      "Agile",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_02544",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Salesforce",
+    "salary_min": 96029.41318681318,
+    "salary_max": 129922.14725274725,
+    "salary_avg": 112975.78021978022,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Network Security",
+      "Penetration Testing",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_00683",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Apple",
+    "salary_min": 75000.0,
+    "salary_max": 150000.0,
+    "salary_avg": 112500.0,
+    "clean_location": "Austin",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "REST APIs",
+      "Python",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_05262",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Microsoft",
+    "salary_min": 103623.0,
+    "salary_max": 103623.0,
+    "salary_avg": 103623.0,
+    "clean_location": "Boston",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "PyTorch",
+      "Kubernetes",
+      "AWS",
+      "Agile",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_03472",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Wipro",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "New York",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "PostgreSQL",
+      "Node.js",
+      "gRPC",
+      "REST APIs"
+    ]
+  },
+  {
+    "job_id": "JOB_06846",
+    "title": "Intern Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Zoom",
+    "salary_min": 55014.244,
+    "salary_max": 74431.036,
+    "salary_avg": 64722.64,
+    "clean_location": "New York",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Redis",
+      "Django",
+      "Python",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_02014",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Zoom",
+    "salary_min": 104820.65307692307,
+    "salary_max": 141816.17769230768,
+    "salary_avg": 123318.41538461538,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Pandas",
+      "Machine Learning",
+      "TensorFlow",
+      "R"
+    ]
+  },
+  {
+    "job_id": "JOB_07094",
+    "title": "Lead Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Infosys",
+    "salary_min": 128960.0,
+    "salary_max": 128960.0,
+    "salary_avg": 128960.0,
+    "clean_location": "Austin",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Linux",
+      "Network Security",
+      "Python",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_00033",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Robinhood",
+    "salary_min": 60000.0,
+    "salary_max": 112000.0,
+    "salary_avg": 86000.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Wireshark",
+      "Network Security",
+      "Python",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_07494",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Adobe",
+    "salary_min": 74880.0,
+    "salary_max": 74880.0,
+    "salary_avg": 74880.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "Kubernetes",
+      "SQL",
+      "Python",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_04451",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Figma",
+    "salary_min": 90250.0,
+    "salary_max": 180500.0,
+    "salary_avg": 135375.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "Kubernetes",
+      "AWS",
+      "SQL",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_01828",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "HubSpot",
+    "salary_min": 106912.28189655172,
+    "salary_max": 144646.02844827584,
+    "salary_avg": 125779.1551724138,
+    "clean_location": "New York",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "A/B Testing",
+      "Statistics",
+      "Power BI",
+      "Tableau"
+    ]
+  },
+  {
+    "job_id": "JOB_03213",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Figma",
+    "salary_min": 105000.0,
+    "salary_max": 210000.0,
+    "salary_avg": 157500.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "CSS3",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_00743",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Netflix",
+    "salary_min": 126780.19166666665,
+    "salary_max": 171526.14166666663,
+    "salary_avg": 149153.16666666666,
+    "clean_location": "Berlin",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "AWS",
+      "Git",
+      "CI/CD",
+      "Docker",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_03588",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Google",
+    "salary_min": 236345.0,
+    "salary_max": 236345.0,
+    "salary_avg": 236345.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Docker",
+      "Git",
+      "System Design",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_04708",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Qualcomm",
+    "salary_min": 145461.60634920635,
+    "salary_max": 196800.9968253968,
+    "salary_avg": 171131.3015873016,
+    "clean_location": "Toronto",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Wireframing",
+      "SQL",
+      "Analytics",
+      "Product Roadmap",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_03015",
+    "title": "Mid Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Salesforce",
+    "salary_min": 104362.82291666667,
+    "salary_max": 141196.76041666666,
+    "salary_avg": 122779.79166666667,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "User Research",
+      "Agile",
+      "A/B Testing",
+      "SQL",
+      "Analytics",
+      "Product Roadmap"
+    ]
+  },
+  {
+    "job_id": "JOB_02050",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Nvidia",
+    "salary_min": 100979.26100746269,
+    "salary_max": 136619.00018656717,
+    "salary_avg": 118799.13059701493,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "R",
+      "PyTorch",
+      "SQL",
+      "Python",
+      "Agile",
+      "Pandas",
+      "Statistics",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_03777",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Qualcomm",
+    "salary_min": 123544.59275362319,
+    "salary_max": 167148.56666666665,
+    "salary_avg": 145346.57971014493,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "TensorFlow",
+      "PyTorch",
+      "Python",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_06083",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Robinhood",
+    "salary_min": 68000.0,
+    "salary_max": 136000.0,
+    "salary_avg": 102000.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "TensorFlow",
+      "R",
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_01194",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Shopify",
+    "salary_min": 132342.5289285714,
+    "salary_max": 179051.65678571427,
+    "salary_avg": 155697.09285714285,
+    "clean_location": "Seattle",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Linux",
+      "Network Security",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_05723",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "ByteDance",
+    "salary_min": 68400.0,
+    "salary_max": 136800.0,
+    "salary_avg": 102600.0,
+    "clean_location": "Austin",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "REST APIs",
+      "Express",
+      "Redis",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_02944",
+    "title": "Entry Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Spotify",
+    "salary_min": 59400.00000000001,
+    "salary_max": 110880.00000000001,
+    "salary_avg": 85140.00000000001,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Linux",
+      "Network Security",
+      "Python",
+      "Cryptography"
+    ]
+  },
+  {
+    "job_id": "JOB_04297",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Infosys",
+    "salary_min": 76774.83333333333,
+    "salary_max": 103871.83333333331,
+    "salary_avg": 90323.33333333333,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Next.js",
+      "Tailwind",
+      "HTML5",
+      "JavaScript",
+      "CSS3",
+      "Vite"
+    ]
+  },
+  {
+    "job_id": "JOB_04811",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Coinbase",
+    "salary_min": 55014.244,
+    "salary_max": 74431.036,
+    "salary_avg": 64722.64,
+    "clean_location": "Berlin",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "REST APIs",
+      "Django",
+      "Express"
+    ]
+  },
+  {
+    "job_id": "JOB_05514",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Intel",
+    "salary_min": 81600.0,
+    "salary_max": 163200.0,
+    "salary_avg": 122400.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07033",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Spotify",
+    "salary_min": 186375.0,
+    "salary_max": 186375.0,
+    "salary_avg": 186375.0,
+    "clean_location": "London",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Redis",
+      "Python",
+      "MongoDB"
+    ]
+  },
+  {
+    "job_id": "JOB_03454",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Salesforce",
+    "salary_min": 112320.0,
+    "salary_max": 112320.0,
+    "salary_avg": 112320.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Intern",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01595",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Airbnb",
+    "salary_min": 71250.0,
+    "salary_max": 133000.0,
+    "salary_avg": 102125.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Network Security",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01419",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Shopify",
+    "salary_min": 124800.0,
+    "salary_max": 124800.0,
+    "salary_avg": 124800.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "HTML5",
+      "TypeScript",
+      "Tailwind",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_00450",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Snowflake",
+    "salary_min": 95000.0,
+    "salary_max": 190000.0,
+    "salary_avg": 142500.0,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "AWS",
+      "SQL",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_04479",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Shopify",
+    "salary_min": 168480.0,
+    "salary_max": 168480.0,
+    "salary_avg": 168480.0,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Docker",
+      "Java",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_04682",
+    "title": "Lead Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Cognizant",
+    "salary_min": 167311.0,
+    "salary_max": 167311.0,
+    "salary_avg": 167311.0,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Linux",
+      "Python",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_00035",
+    "title": "Mid Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Snowflake",
+    "salary_min": 69300.0,
+    "salary_max": 138600.0,
+    "salary_avg": 103950.0,
+    "clean_location": "Remote",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Tailwind",
+      "React",
+      "TypeScript",
+      "CSS3",
+      "Agile",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_02899",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Zoom",
+    "salary_min": 160355.52222222224,
+    "salary_max": 216951.5888888889,
+    "salary_avg": 188653.55555555556,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "SQL",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_06150",
+    "title": "Senior Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Uber",
+    "salary_min": 96525.00000000001,
+    "salary_max": 180180.0,
+    "salary_avg": 138352.5,
+    "clean_location": "New York",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Python",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_05355",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Wipro",
+    "salary_min": 54720.0,
+    "salary_max": 100320.0,
+    "salary_avg": 77520.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Not Specified",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Power BI",
+      "SQL",
+      "Python",
+      "Tableau",
+      "Statistics"
+    ]
+  },
+  {
+    "job_id": "JOB_02157",
+    "title": "Data Analyst",
+    "standard_title": "Data Analyst",
+    "company": "Amazon",
+    "salary_min": 92760.27826086957,
+    "salary_max": 125499.2,
+    "salary_avg": 109129.73913043478,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Power BI",
+      "Tableau",
+      "Data Visualization",
+      "Statistics",
+      "Excel"
+    ]
+  },
+  {
+    "job_id": "JOB_00564",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Amazon",
+    "salary_min": 88396.97112676056,
+    "salary_max": 119595.90211267605,
+    "salary_avg": 103996.43661971831,
+    "clean_location": "New York",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Pandas",
+      "Machine Learning",
+      "PyTorch",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_01925",
+    "title": "Senior Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Uber",
+    "salary_min": 117009.19741379311,
+    "salary_max": 158306.56120689656,
+    "salary_avg": 137657.87931034484,
+    "clean_location": "London",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "Express",
+      "Node.js",
+      "Python",
+      "Agile",
+      "gRPC",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_02963",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Slack",
+    "salary_min": 129600.0,
+    "salary_max": 244800.0,
+    "salary_avg": 187200.0,
+    "clean_location": "Seattle",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Product Roadmap",
+      "SQL",
+      "User Research"
+    ]
+  },
+  {
+    "job_id": "JOB_01363",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Atlassian",
+    "salary_min": 112739.07957746478,
+    "salary_max": 152529.34295774647,
+    "salary_avg": 132634.21126760563,
+    "clean_location": "Remote",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Next.js",
+      "JavaScript",
+      "Vite",
+      "Agile"
+    ]
+  },
+  {
+    "job_id": "JOB_03230",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "TCS",
+    "salary_min": 94130.74197530864,
+    "salary_max": 127353.35679012345,
+    "salary_avg": 110742.04938271605,
+    "clean_location": "Seattle",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "HTML5",
+      "Tailwind"
+    ]
+  },
+  {
+    "job_id": "JOB_03253",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Airbnb",
+    "salary_min": 164323.0,
+    "salary_max": 164323.0,
+    "salary_avg": 164323.0,
+    "clean_location": "New York",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Kubernetes",
+      "AWS",
+      "Git",
+      "Bash",
+      "Docker"
+    ]
+  },
+  {
+    "job_id": "JOB_05975",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Nvidia",
+    "salary_min": 68640.0,
+    "salary_max": 68640.0,
+    "salary_avg": 68640.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "TypeScript",
+      "CSS3",
+      "Vite",
+      "Redux"
+    ]
+  },
+  {
+    "job_id": "JOB_05440",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Uber",
+    "salary_min": 76800.0,
+    "salary_max": 153600.0,
+    "salary_avg": 115200.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Linux",
+      "Git",
+      "Docker",
+      "Bash"
+    ]
+  },
+  {
+    "job_id": "JOB_05455",
+    "title": "Mid Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Netflix",
+    "salary_min": 108160.0,
+    "salary_max": 108160.0,
+    "salary_avg": 108160.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_01021",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Spotify",
+    "salary_min": 199823.0,
+    "salary_max": 199823.0,
+    "salary_avg": 199823.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Linux",
+      "Penetration Testing",
+      "Python"
+    ]
+  },
+  {
+    "job_id": "JOB_01651",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "SpaceX",
+    "salary_min": 110500.0,
+    "salary_max": 221000.0,
+    "salary_avg": 165750.0,
+    "clean_location": "London",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "PyTorch",
+      "Python",
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_07543",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Google",
+    "salary_min": 132342.5289285714,
+    "salary_max": 179051.65678571427,
+    "salary_avg": 155697.09285714285,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Wireshark",
+      "Linux",
+      "Network Security",
+      "Python",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_04814",
+    "title": "Data Scientist",
+    "standard_title": "Data Scientist",
+    "company": "Adobe",
+    "salary_min": 88396.97112676056,
+    "salary_max": 119595.90211267605,
+    "salary_avg": 103996.43661971831,
+    "clean_location": "Boston",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Pandas",
+      "Statistics",
+      "Machine Learning",
+      "Python"
+    ]
+  },
+  {
+    "job_id": "JOB_02881",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Stripe",
+    "salary_min": 151840.0,
+    "salary_max": 151840.0,
+    "salary_avg": 151840.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "Git",
+      "Docker",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_00044",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "ByteDance",
+    "salary_min": 128111.98802816901,
+    "salary_max": 173327.9838028169,
+    "salary_avg": 150719.98591549296,
+    "clean_location": "Seattle",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "User Research",
+      "Agile",
+      "A/B Testing",
+      "Analytics",
+      "Product Roadmap",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_04358",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Chime",
+    "salary_min": 87101.671484375,
+    "salary_max": 117843.43789062499,
+    "salary_avg": 102472.5546875,
+    "clean_location": "Remote",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "HTML5",
+      "JavaScript",
+      "React",
+      "Next.js"
+    ]
+  },
+  {
+    "job_id": "JOB_00154",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Robinhood",
+    "salary_min": 93600.0,
+    "salary_max": 93600.0,
+    "salary_avg": 93600.0,
+    "clean_location": "Toronto",
+    "clean_experience": "Entry",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "Kubernetes",
+      "Python",
+      "Docker",
+      "Machine Learning",
+      "Scikit-Learn"
+    ]
+  },
+  {
+    "job_id": "JOB_05772",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Snowflake",
+    "salary_min": 91200.0,
+    "salary_max": 182400.0,
+    "salary_avg": 136800.0,
+    "clean_location": "London",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "Kubernetes",
+      "AWS",
+      "Python",
+      "Docker",
+      "Machine Learning"
+    ]
+  },
+  {
+    "job_id": "JOB_01981",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Databricks",
+    "salary_min": 95987.49420289854,
+    "salary_max": 129865.43333333332,
+    "salary_avg": 112926.46376811594,
+    "clean_location": "London",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MongoDB",
+      "gRPC",
+      "Python",
+      "Express"
+    ]
+  },
+  {
+    "job_id": "JOB_07234",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Slack",
+    "salary_min": 72960.0,
+    "salary_max": 145920.0,
+    "salary_avg": 109440.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Java",
+      "SQL",
+      "Git",
+      "Python",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_05826",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Intel",
+    "salary_min": 108000.0,
+    "salary_max": 216000.0,
+    "salary_avg": 162000.0,
+    "clean_location": "Boston",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "PostgreSQL",
+      "Express",
+      "Node.js",
+      "Agile",
+      "gRPC",
+      "Django"
+    ]
+  },
+  {
+    "job_id": "JOB_04058",
+    "title": "Product Manager",
+    "standard_title": "Product Manager",
+    "company": "Wipro",
+    "salary_min": 145461.60634920635,
+    "salary_max": 196800.9968253968,
+    "salary_avg": 171131.3015873016,
+    "clean_location": "Remote",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "User Research",
+      "A/B Testing",
+      "Analytics",
+      "Product Roadmap",
+      "Scrum"
+    ]
+  },
+  {
+    "job_id": "JOB_04484",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Zoom",
+    "salary_min": 102788.0,
+    "salary_max": 102788.0,
+    "salary_avg": 102788.0,
+    "clean_location": "Hyderabad",
+    "clean_experience": "Mid",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "Java",
+      "System Design",
+      "Git"
+    ]
+  },
+  {
+    "job_id": "JOB_02350",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Salesforce",
+    "salary_min": 96525.00000000001,
+    "salary_max": 180180.0,
+    "salary_avg": 138352.5,
+    "clean_location": "New York",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Wireshark",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_00960",
+    "title": "Backend Developer",
+    "standard_title": "Backend Developer",
+    "company": "Atlassian",
+    "salary_min": 68640.0,
+    "salary_max": 68640.0,
+    "salary_avg": 68640.0,
+    "clean_location": "Remote",
+    "clean_experience": "Entry",
+    "clean_remote": false,
+    "skills_extracted": [
+      "MongoDB",
+      "REST APIs",
+      "Node.js",
+      "Python",
+      "Agile",
+      "gRPC"
+    ]
+  },
+  {
+    "job_id": "JOB_00034",
+    "title": "Frontend Developer",
+    "standard_title": "Frontend Developer",
+    "company": "Airbnb",
+    "salary_min": 90090.0,
+    "salary_max": 180180.0,
+    "salary_avg": 135135.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Senior",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Next.js",
+      "HTML5",
+      "React",
+      "JavaScript",
+      "TypeScript"
+    ]
+  },
+  {
+    "job_id": "JOB_00991",
+    "title": "Cybersecurity Analyst",
+    "standard_title": "Cybersecurity Analyst",
+    "company": "Databricks",
+    "salary_min": 87118.74305555555,
+    "salary_max": 117866.53472222222,
+    "salary_avg": 102492.63888888889,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Penetration Testing",
+      "Linux",
+      "Network Security",
+      "Cryptography",
+      "SIEM"
+    ]
+  },
+  {
+    "job_id": "JOB_07912",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "Spotify",
+    "salary_min": 80000.0,
+    "salary_max": 160000.0,
+    "salary_avg": 120000.0,
+    "clean_location": "San Francisco",
+    "clean_experience": "Mid",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Go",
+      "SQL",
+      "Git",
+      "Python",
+      "System Design",
+      "C++"
+    ]
+  },
+  {
+    "job_id": "JOB_03272",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "PayPal",
+    "salary_min": 131040.0,
+    "salary_max": 131040.0,
+    "salary_avg": 131040.0,
+    "clean_location": "Berlin",
+    "clean_experience": "Not Specified",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Terraform",
+      "AWS",
+      "CI/CD"
+    ]
+  },
+  {
+    "job_id": "JOB_05512",
+    "title": "Software Engineer",
+    "standard_title": "Software Engineer",
+    "company": "SpaceX",
+    "salary_min": 138104.5595238095,
+    "salary_max": 186847.3452380952,
+    "salary_avg": 162475.95238095237,
+    "clean_location": "New York",
+    "clean_experience": "Lead",
+    "clean_remote": true,
+    "skills_extracted": [
+      "Go",
+      "Java",
+      "SQL",
+      "Agile",
+      "System Design"
+    ]
+  },
+  {
+    "job_id": "JOB_01522",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Amazon",
+    "salary_min": 115200.0,
+    "salary_max": 230400.0,
+    "salary_avg": 172800.0,
+    "clean_location": "London",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "Kubernetes",
+      "Terraform",
+      "AWS",
+      "Bash",
+      "Docker",
+      "Jenkins"
+    ]
+  },
+  {
+    "job_id": "JOB_06935",
+    "title": "DevOps Engineer",
+    "standard_title": "DevOps Engineer",
+    "company": "Airbnb",
+    "salary_min": 141285.0053333333,
+    "salary_max": 191150.3013333333,
+    "salary_avg": 166217.65333333332,
+    "clean_location": "Toronto",
+    "clean_experience": "Lead",
+    "clean_remote": false,
+    "skills_extracted": [
+      "AWS",
+      "Git",
+      "Docker",
+      "Bash"
+    ]
+  },
+  {
+    "job_id": "JOB_03431",
+    "title": "Machine Learning Engineer",
+    "standard_title": "Machine Learning Engineer",
+    "company": "Netflix",
+    "salary_min": 118560.0,
+    "salary_max": 237120.0,
+    "salary_avg": 177840.0,
+    "clean_location": "Bengaluru",
+    "clean_experience": "Senior",
+    "clean_remote": true,
+    "skills_extracted": [
+      "MLOps",
+      "TensorFlow",
+      "PyTorch",
+      "Python",
+      "Docker",
+      "Machine Learning"
+    ]
+  }
+]

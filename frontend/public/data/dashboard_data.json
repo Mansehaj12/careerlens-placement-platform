@@ -1,0 +1,2835 @@
+{
+    "role_stats": [
+        {
+            "standard_title": "Backend Developer",
+            "avg_salary": 19500.0,
+            "min_salary": 1500.0,
+            "max_salary": 52000.0,
+            "count": 3257
+        },
+        {
+            "standard_title": "Data Analyst",
+            "avg_salary": 16232.0,
+            "min_salary": 1843.2,
+            "max_salary": 52000.0,
+            "count": 3177
+        },
+        {
+            "standard_title": "Data Scientist",
+            "avg_salary": 23149.0,
+            "min_salary": 1800.0,
+            "max_salary": 52000.0,
+            "count": 3025
+        },
+        {
+            "standard_title": "Frontend Developer",
+            "avg_salary": 17564.0,
+            "min_salary": 1200.0,
+            "max_salary": 52000.0,
+            "count": 4026
+        },
+        {
+            "standard_title": "Machine Learning Engineer",
+            "avg_salary": 25184.0,
+            "min_salary": 1500.0,
+            "max_salary": 57600.0,
+            "count": 3168
+        },
+        {
+            "standard_title": "Software Engineer",
+            "avg_salary": 18536.0,
+            "min_salary": 1080.0,
+            "max_salary": 96000.0,
+            "count": 17226
+        }
+    ],
+    "location_stats": [
+        {
+            "clean_location": "Bengaluru",
+            "avg_salary": 19123.0,
+            "count": 10524
+        },
+        {
+            "clean_location": "Hyderabad",
+            "avg_salary": 19796.0,
+            "count": 6060
+        },
+        {
+            "clean_location": "Other Tech Hub",
+            "avg_salary": 18933.0,
+            "count": 10590
+        },
+        {
+            "clean_location": "Remote",
+            "avg_salary": 19863.0,
+            "count": 6705
+        }
+    ],
+    "remote_stats": [
+        {
+            "clean_remote": "No",
+            "avg_salary": 19253.0,
+            "count": 23456
+        },
+        {
+            "clean_remote": "Yes",
+            "avg_salary": 19506.0,
+            "count": 10423
+        }
+    ],
+    "experience_stats": [
+        {
+            "clean_experience": "Entry",
+            "avg_salary": 16171.0,
+            "count": 7129
+        },
+        {
+            "clean_experience": "Intern",
+            "avg_salary": 12743.0,
+            "count": 3331
+        },
+        {
+            "clean_experience": "Lead",
+            "avg_salary": 25888.0,
+            "count": 4401
+        },
+        {
+            "clean_experience": "Mid",
+            "avg_salary": 19185.0,
+            "count": 9996
+        },
+        {
+            "clean_experience": "Not Specified",
+            "avg_salary": 19407.0,
+            "count": 2727
+        },
+        {
+            "clean_experience": "Senior",
+            "avg_salary": 22007.0,
+            "count": 6295
+        }
+    ],
+    "top_skills": [
+        {
+            "skill": "Python",
+            "count": 21692
+        },
+        {
+            "skill": "SQL",
+            "count": 20052
+        },
+        {
+            "skill": "Git",
+            "count": 15522
+        },
+        {
+            "skill": "Java",
+            "count": 15456
+        },
+        {
+            "skill": "Excel",
+            "count": 5035
+        },
+        {
+            "skill": "Agile",
+            "count": 3833
+        },
+        {
+            "skill": "Docker",
+            "count": 3665
+        },
+        {
+            "skill": "Scikit-Learn",
+            "count": 3219
+        },
+        {
+            "skill": "PyTorch",
+            "count": 3174
+        },
+        {
+            "skill": "Pandas",
+            "count": 3172
+        },
+        {
+            "skill": "Statistics",
+            "count": 2973
+        },
+        {
+            "skill": "TensorFlow",
+            "count": 2900
+        },
+        {
+            "skill": "React",
+            "count": 2530
+        },
+        {
+            "skill": "HTML5",
+            "count": 2515
+        },
+        {
+            "skill": "CSS3",
+            "count": 2511
+        }
+    ],
+    "skills_by_role": {
+        "Software Engineer": [
+            {
+                "skill": "Git",
+                "count": 15522
+            },
+            {
+                "skill": "Python",
+                "count": 15521
+            },
+            {
+                "skill": "SQL",
+                "count": 15484
+            },
+            {
+                "skill": "Java",
+                "count": 15456
+            },
+            {
+                "skill": "Docker",
+                "count": 2158
+            },
+            {
+                "skill": "Go",
+                "count": 2144
+            },
+            {
+                "skill": "C++",
+                "count": 2124
+            },
+            {
+                "skill": "System Design",
+                "count": 2101
+            },
+            {
+                "skill": "Agile",
+                "count": 792
+            },
+            {
+                "skill": "Excel",
+                "count": 778
+            }
+        ],
+        "Frontend Developer": [
+            {
+                "skill": "React",
+                "count": 2530
+            },
+            {
+                "skill": "HTML5",
+                "count": 2515
+            },
+            {
+                "skill": "CSS3",
+                "count": 2511
+            },
+            {
+                "skill": "JavaScript",
+                "count": 2467
+            },
+            {
+                "skill": "TypeScript",
+                "count": 1569
+            },
+            {
+                "skill": "Tailwind",
+                "count": 1548
+            },
+            {
+                "skill": "Redux",
+                "count": 1532
+            },
+            {
+                "skill": "Vite",
+                "count": 1509
+            },
+            {
+                "skill": "Next.js",
+                "count": 1473
+            },
+            {
+                "skill": "Agile",
+                "count": 612
+            }
+        ],
+        "Backend Developer": [
+            {
+                "skill": "Node.js",
+                "count": 1736
+            },
+            {
+                "skill": "PostgreSQL",
+                "count": 1684
+            },
+            {
+                "skill": "REST APIs",
+                "count": 1658
+            },
+            {
+                "skill": "Express",
+                "count": 1631
+            },
+            {
+                "skill": "gRPC",
+                "count": 1594
+            },
+            {
+                "skill": "Redis",
+                "count": 1565
+            },
+            {
+                "skill": "MongoDB",
+                "count": 1559
+            },
+            {
+                "skill": "Django",
+                "count": 1538
+            },
+            {
+                "skill": "Python",
+                "count": 1533
+            },
+            {
+                "skill": "Agile",
+                "count": 661
+            }
+        ],
+        "Machine Learning Engineer": [
+            {
+                "skill": "PyTorch",
+                "count": 1702
+            },
+            {
+                "skill": "Scikit-Learn",
+                "count": 1678
+            },
+            {
+                "skill": "MLOps",
+                "count": 1628
+            },
+            {
+                "skill": "Python",
+                "count": 1627
+            },
+            {
+                "skill": "Kubernetes",
+                "count": 1538
+            },
+            {
+                "skill": "SQL",
+                "count": 1521
+            },
+            {
+                "skill": "Docker",
+                "count": 1507
+            },
+            {
+                "skill": "AWS",
+                "count": 1485
+            },
+            {
+                "skill": "TensorFlow",
+                "count": 1461
+            },
+            {
+                "skill": "Agile",
+                "count": 611
+            }
+        ],
+        "Data Scientist": [
+            {
+                "skill": "Pandas",
+                "count": 1548
+            },
+            {
+                "skill": "Scikit-Learn",
+                "count": 1541
+            },
+            {
+                "skill": "Machine Learning",
+                "count": 1537
+            },
+            {
+                "skill": "Python",
+                "count": 1513
+            },
+            {
+                "skill": "R",
+                "count": 1504
+            },
+            {
+                "skill": "PyTorch",
+                "count": 1472
+            },
+            {
+                "skill": "Statistics",
+                "count": 1466
+            },
+            {
+                "skill": "SQL",
+                "count": 1466
+            },
+            {
+                "skill": "TensorFlow",
+                "count": 1439
+            },
+            {
+                "skill": "Excel",
+                "count": 601
+            }
+        ],
+        "Data Analyst": [
+            {
+                "skill": "Excel",
+                "count": 1900
+            },
+            {
+                "skill": "Tableau",
+                "count": 1642
+            },
+            {
+                "skill": "Pandas",
+                "count": 1624
+            },
+            {
+                "skill": "SQL",
+                "count": 1581
+            },
+            {
+                "skill": "Data Visualization",
+                "count": 1545
+            },
+            {
+                "skill": "Power BI",
+                "count": 1518
+            },
+            {
+                "skill": "Statistics",
+                "count": 1507
+            },
+            {
+                "skill": "Python",
+                "count": 1498
+            },
+            {
+                "skill": "A/B Testing",
+                "count": 1422
+            },
+            {
+                "skill": "Agile",
+                "count": 588
+            }
+        ]
+    },
+    "sample_jobs": [
+        {
+            "company": "Team Lease hiring for Leading Agro Chemical Company!!",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 18000.0,
+            "salary_max": 30000.0,
+            "salary_avg": 24000.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Ikya Human Capital Solutions Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 18480.0,
+            "salary_max": 18480.0,
+            "salary_avg": 18480.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Alpha Management Consultants",
+            "standard_title": "Software Engineer",
+            "title": "Senior Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6000.0,
+            "salary_max": 15600.0,
+            "salary_avg": 10800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "People Plus Management Services",
+            "standard_title": "Frontend Developer",
+            "title": "Entry Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12752.244,
+            "salary_max": 17253.035999999996,
+            "salary_avg": 15002.64,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "HCLTech",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 21834.666032608697,
+            "salary_max": 29541.01875,
+            "salary_avg": 25687.842391304348,
+            "clean_skills_str": "Node.js, PostgreSQL, MongoDB, Redis, gRPC, Excel, Agile"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, C++, System Design, Docker"
+        },
+        {
+            "company": "Carlson Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "MIRUM",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7128.000000000001,
+            "salary_max": 29700.000000000004,
+            "salary_avg": 18414.000000000004,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 42572.0,
+            "salary_max": 42572.0,
+            "salary_avg": 42572.0,
+            "clean_skills_str": "Docker, PyTorch, Kubernetes"
+        },
+        {
+            "company": "Munsar Services hiring for A Leading Fertlizer Company",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 5400.0,
+            "salary_max": 7800.0,
+            "salary_avg": 6600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Paytm",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Not Specified",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "TensorFlow, MLOps, Kubernetes"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Not Specified",
+            "salary_min": 17298.27630541872,
+            "salary_max": 23403.550295566503,
+            "salary_avg": 20350.91330049261,
+            "clean_skills_str": "Python, Express, Django, PostgreSQL, MongoDB"
+        },
+        {
+            "company": "Amazon India Software Dev Centre Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Suryoday Micro Finance Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 3600.0,
+            "salary_max": 6000.0,
+            "salary_avg": 4800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Backend Developer",
+            "title": "Mid Backend Developer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 15762.5768,
+            "salary_max": 21325.8392,
+            "salary_avg": 18544.208,
+            "clean_skills_str": "Python, Express, PostgreSQL, MongoDB, REST APIs, gRPC"
+        },
+        {
+            "company": "BrowserStack",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 12130.777575757576,
+            "salary_max": 16412.228484848485,
+            "salary_avg": 14271.50303030303,
+            "clean_skills_str": "Python, Excel, Pandas, Statistics, R, PyTorch"
+        },
+        {
+            "company": "Mark Design",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Analytics Quotient Services India Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Client of Professional Recruitment Consultancy",
+            "standard_title": "Frontend Developer",
+            "title": "Mid Frontend Developer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 5400.0,
+            "salary_max": 24000.0,
+            "salary_avg": 14700.0,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "Cred",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 10692.0,
+            "salary_max": 44550.0,
+            "salary_avg": 27621.0,
+            "clean_skills_str": "Java, C++, Docker, Agile"
+        },
+        {
+            "company": "ELIPSIQ SOLUTIONS hiring for A Reputed Client of Elipsiq Solutions",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 12000.0,
+            "salary_max": 18000.0,
+            "salary_avg": 15000.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "HCLTech",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 31200.0,
+            "salary_max": 31200.0,
+            "salary_avg": 31200.0,
+            "clean_skills_str": "Node.js, PostgreSQL, Redis, REST APIs, Agile"
+        },
+        {
+            "company": "Zomato",
+            "standard_title": "Data Scientist",
+            "title": "Intern Data Scientist",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 33280.0,
+            "salary_max": 33280.0,
+            "salary_avg": 33280.0,
+            "clean_skills_str": "Python, Excel, R, Scikit-Learn, TensorFlow"
+        },
+        {
+            "company": "Johnson Lifts Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "JPMorgan Chase",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Nasdaq Corporate Solutions (India) Pvt Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Senior Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 12110.0,
+            "salary_max": 12110.0,
+            "salary_avg": 12110.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Pearson Education Services Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 27040.0,
+            "salary_max": 27040.0,
+            "salary_avg": 27040.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Electronica Finance Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 33280.0,
+            "salary_max": 33280.0,
+            "salary_avg": 33280.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "POGEYAN TECHNOLOGIES PRIVATE LIMITED",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 8425.0,
+            "salary_max": 8425.0,
+            "salary_avg": 8425.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "FocusmindsTech",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 3600.0,
+            "salary_max": 6000.0,
+            "salary_avg": 4800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6240.0,
+            "salary_max": 23400.0,
+            "salary_avg": 14820.0,
+            "clean_skills_str": "SQL, Power BI, Pandas, Agile"
+        },
+        {
+            "company": "Infosys",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Hyderabad",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 3840.0,
+            "salary_max": 14400.0,
+            "salary_avg": 9120.0,
+            "clean_skills_str": "Python, SQL, Power BI, Statistics, Data Visualization"
+        },
+        {
+            "company": "TEACHWELL INSTITUTE",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Masymbol",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "BrowserStack",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 29120.0,
+            "salary_max": 29120.0,
+            "salary_avg": 29120.0,
+            "clean_skills_str": "Python, Go, SQL"
+        },
+        {
+            "company": "Infosys",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 4800.0,
+            "salary_max": 18000.0,
+            "salary_avg": 11400.0,
+            "clean_skills_str": "Python, Excel, Statistics, A/B Testing"
+        },
+        {
+            "company": "Zomato",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 12004.679347826088,
+            "salary_max": 16241.625,
+            "salary_avg": 14123.152173913044,
+            "clean_skills_str": "Scikit-Learn, MLOps, Kubernetes"
+        },
+        {
+            "company": "Capgemini India",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 12240.0,
+            "salary_max": 12240.0,
+            "salary_avg": 12240.0,
+            "clean_skills_str": "Python, Node.js, Django, PostgreSQL, Redis, gRPC, Agile"
+        },
+        {
+            "company": "Appronix Technologies Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Prasha Solutions Pvt. Lt.d.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "YOGAM BPO",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Capgemini India",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 5045.0,
+            "salary_max": 5045.0,
+            "salary_avg": 5045.0,
+            "clean_skills_str": "Python, Node.js, Django, PostgreSQL, Redis"
+        },
+        {
+            "company": "JPMorgan Chase",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 4752.0,
+            "salary_max": 17820.0,
+            "salary_avg": 11286.0,
+            "clean_skills_str": "SQL, Excel, Tableau, Pandas"
+        },
+        {
+            "company": "RATEIN INFOTECH (I) PVT. LTD.",
+            "standard_title": "Software Engineer",
+            "title": "Senior Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Zframez Technologies Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "TalentMate Consultants",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Wipro",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 26965.0,
+            "salary_max": 26965.0,
+            "salary_avg": 26965.0,
+            "clean_skills_str": "Python, Docker, MLOps, Kubernetes"
+        },
+        {
+            "company": "Renderindia Infotech",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Careernet Technologies Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "IQ Business Systems Pvt. Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "ACKTRON SECURITY SYSTEM (P) LTD",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 15732.487290794978,
+            "salary_max": 21285.129864016733,
+            "salary_avg": 18508.808577405856,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "AllianceData",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Saarathi Healthcare Pvt. Ltd.",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 2100.0,
+            "salary_max": 3000.0,
+            "salary_avg": 2550.0,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "Jetking Infotrain Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 15015.0,
+            "salary_max": 15015.0,
+            "salary_avg": 15015.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Talent Excellence Management Consultant hiring for Assistant manager - production - ppc - auto mnc small scales industry chennai",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 4200.0,
+            "salary_max": 5100.0,
+            "salary_avg": 4650.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 8316.0,
+            "salary_max": 38016.0,
+            "salary_avg": 23166.0,
+            "clean_skills_str": "Python, Docker, TensorFlow, PyTorch, Kubernetes, AWS, Agile"
+        },
+        {
+            "company": "Cred",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 10971.031783783785,
+            "salary_max": 14843.160648648647,
+            "salary_avg": 12907.096216216216,
+            "clean_skills_str": "Python, C++, Go, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 6912.0,
+            "salary_max": 25920.0,
+            "salary_avg": 16416.0,
+            "clean_skills_str": "Python, Tableau, Power BI, Pandas, Agile"
+        },
+        {
+            "company": "KNR Management Consultants Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Freshworks",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 47840.0,
+            "salary_max": 47840.0,
+            "salary_avg": 47840.0,
+            "clean_skills_str": "Java, C++, Go, System Design, SQL, Docker"
+        },
+        {
+            "company": "Confidential hiring for Enzen Global Solutions Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Target Corporation India Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 47840.0,
+            "salary_max": 47840.0,
+            "salary_avg": 47840.0,
+            "clean_skills_str": "Python, Docker, Scikit-Learn, PyTorch, MLOps, Kubernetes"
+        },
+        {
+            "company": "The Global Institute of Technology and Management (GITM)",
+            "standard_title": "Software Engineer",
+            "title": "Entry Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 31200.0,
+            "salary_max": 31200.0,
+            "salary_avg": 31200.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Paytm",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 5702.400000000001,
+            "salary_max": 23760.000000000004,
+            "salary_avg": 14731.200000000004,
+            "clean_skills_str": "Java, C++, System Design, Git, SQL, Excel"
+        },
+        {
+            "company": "developmen India",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Allure medspa",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7128.000000000001,
+            "salary_max": 29700.000000000004,
+            "salary_avg": 18414.000000000004,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Atos Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 11670.0,
+            "salary_max": 11670.0,
+            "salary_avg": 11670.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Clinnovo Research Labs Private Limited.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 7128.000000000001,
+            "salary_max": 29700.000000000004,
+            "salary_avg": 18414.000000000004,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Ons Learning and Placements",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "A Konnect",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Newell Rubbermaid",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 20708.0,
+            "salary_max": 20708.0,
+            "salary_avg": 20708.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Cambio Consulting",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Infosys",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 21426.9168997669,
+            "salary_max": 28989.35815850816,
+            "salary_avg": 25208.13752913753,
+            "clean_skills_str": "SQL, Docker, Scikit-Learn, PyTorch, MLOps, Agile"
+        },
+        {
+            "company": "TCS",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 19294.44012755102,
+            "salary_max": 26104.24252551021,
+            "salary_avg": 22699.34132653061,
+            "clean_skills_str": "Python, Node.js, Express, MongoDB, gRPC, Excel"
+        },
+        {
+            "company": "Directi",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 4320.0,
+            "salary_max": 19200.0,
+            "salary_avg": 11760.0,
+            "clean_skills_str": "JavaScript, CSS3, Tailwind, Vite"
+        },
+        {
+            "company": "HI Destination Management Pvt Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 1800.0,
+            "salary_max": 7800.0,
+            "salary_avg": 4800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Vishleshan Software Solutions Pvt. Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 39520.0,
+            "salary_max": 39520.0,
+            "salary_avg": 39520.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "premastrologer",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Go, System Design, Git, SQL, Docker"
+        },
+        {
+            "company": "Vision Beyond Corporation",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "JLL",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 16883.0,
+            "salary_max": 16883.0,
+            "salary_avg": 16883.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Wipro",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 10243.114249363867,
+            "salary_max": 13858.331043256996,
+            "salary_avg": 12050.722646310433,
+            "clean_skills_str": "Python, Django, PostgreSQL, MongoDB, Redis, REST APIs"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Data Scientist",
+            "title": "Senior Data Scientist",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "Pandas, Statistics, PyTorch"
+        },
+        {
+            "company": "CADS Software India (P) Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "L&T Infotech",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Java, C++, Go, System Design"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Not Specified",
+            "salary_min": 13254.705714285714,
+            "salary_max": 17932.83714285714,
+            "salary_avg": 15593.771428571428,
+            "clean_skills_str": "SQL, Pandas, A/B Testing"
+        },
+        {
+            "company": "HFI Wealth Creators Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 3600.0,
+            "salary_max": 4200.0,
+            "salary_avg": 3900.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Hexaware Technologies Ltd (Hexaware- BPS)",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 2400.0,
+            "salary_max": 6600.0,
+            "salary_avg": 4500.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Savy Hr Management",
+            "standard_title": "Software Engineer",
+            "title": "Entry Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Accenture India",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 9000.0,
+            "salary_max": 39600.0,
+            "salary_avg": 24300.0,
+            "clean_skills_str": "Node.js, PostgreSQL, MongoDB, Redis, REST APIs, gRPC"
+        },
+        {
+            "company": "Indian Institute of Technology Bombay",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Confidential",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 23113.562695214103,
+            "salary_max": 31271.29070528967,
+            "salary_avg": 27192.42670025189,
+            "clean_skills_str": "Python, Pandas, Scikit-Learn, Machine Learning"
+        },
+        {
+            "company": "Ikya Human Capital Solutions Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Acktron Security System P Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 18521.713160621763,
+            "salary_max": 25058.788393782383,
+            "salary_avg": 21790.25077720208,
+            "clean_skills_str": "Python, SQL, Docker, Scikit-Learn, PyTorch, Agile"
+        },
+        {
+            "company": "Surgical Information Systems India Pvt.Ltd. ( SIS Software (I) Pvt.Ltd)",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "HTML5, Tailwind, Next.js"
+        },
+        {
+            "company": "Cognizant",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7128.000000000001,
+            "salary_max": 29700.000000000004,
+            "salary_avg": 18414.000000000004,
+            "clean_skills_str": "Python, Java, C++, System Design, SQL, Excel"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "Python, Java, Git, SQL, Docker"
+        },
+        {
+            "company": "ResBird Technologies Private Limited,",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Accenture India",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 2764.8,
+            "salary_max": 12902.4,
+            "salary_avg": 7833.6,
+            "clean_skills_str": "SQL, Excel, Pandas, Statistics, R, PyTorch, Machine Learning"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, C++, Go, Git, SQL"
+        },
+        {
+            "company": "Yogam BPO",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 2400.0,
+            "salary_max": 3600.0,
+            "salary_avg": 3000.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Wipro",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "C++, System Design, Git, SQL, Docker"
+        },
+        {
+            "company": "Infosys",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 35360.0,
+            "salary_max": 35360.0,
+            "salary_avg": 35360.0,
+            "clean_skills_str": "Python, Express, MongoDB, gRPC, Agile"
+        },
+        {
+            "company": "Confidential",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 5400.0,
+            "salary_max": 24000.0,
+            "salary_avg": 14700.0,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "Axis Jobs",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 3300.0,
+            "salary_max": 5700.0,
+            "salary_avg": 4500.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Puravankara Projects Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "GLEUCK LLP",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 3000.0,
+            "salary_max": 4800.0,
+            "salary_avg": 3900.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Balmer Lawrie & Co Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Go, SQL"
+        },
+        {
+            "company": "Classic Search Pvt Ltd hiring for Our Client",
+            "standard_title": "Software Engineer",
+            "title": "Entry Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Techs to Suit Inc",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 4200.0,
+            "salary_max": 9000.0,
+            "salary_avg": 6600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "NATIONAL PLACEMENT SERVICES",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Resource Weaver",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Z-Axis Tech Solutions (India) Pvt Ltd hiring for Evam Tech Labs",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "STUDIO BRAHMA PVT. LTD.",
+            "standard_title": "Software Engineer",
+            "title": "Entry Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 10747.0,
+            "salary_max": 10747.0,
+            "salary_avg": 10747.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Uneecops Technologies Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Ekam IT Solutions India Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 21426.9168997669,
+            "salary_max": 28989.35815850816,
+            "salary_avg": 25208.13752913753,
+            "clean_skills_str": "Python, SQL, Scikit-Learn, TensorFlow, PyTorch, Kubernetes"
+        },
+        {
+            "company": "Allegis Services India Pvt. Ltd. hiring for One of the leading client of the Allegis group",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 2100.0,
+            "salary_max": 4800.0,
+            "salary_avg": 3450.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Razorpay",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Java, Go, SQL, Docker, Agile"
+        },
+        {
+            "company": "Premium hiring for Samaksh Consulting",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "SMART SPOC",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 14507.142477203646,
+            "salary_max": 19627.310410334343,
+            "salary_avg": 17067.226443768996,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "TCS",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 47840.0,
+            "salary_max": 47840.0,
+            "salary_avg": 47840.0,
+            "clean_skills_str": "Python, Java, Go, Git, SQL, Docker, Agile"
+        },
+        {
+            "company": "BrowserStack",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7800.0,
+            "salary_max": 34320.0,
+            "salary_avg": 21060.0,
+            "clean_skills_str": "Python, Express, Django, MongoDB, Redis, Agile"
+        },
+        {
+            "company": "Cred",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 12004.679347826088,
+            "salary_max": 16241.625,
+            "salary_avg": 14123.152173913044,
+            "clean_skills_str": "Python, Scikit-Learn, PyTorch"
+        },
+        {
+            "company": "Zoho",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 27560.0,
+            "salary_max": 27560.0,
+            "salary_avg": 27560.0,
+            "clean_skills_str": "Statistics, R, TensorFlow, Machine Learning"
+        },
+        {
+            "company": "Instancy Software India Pvt. Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 1800.0,
+            "salary_max": 4800.0,
+            "salary_avg": 3300.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "L&T Infotech",
+            "standard_title": "Software Engineer",
+            "title": "Entry Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Go, Git, Agile"
+        },
+        {
+            "company": "ROLAND & ASSOCIATES",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "TCS",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 42443.0,
+            "salary_max": 42443.0,
+            "salary_avg": 42443.0,
+            "clean_skills_str": "SQL, Pandas, Scikit-Learn, PyTorch, Machine Learning, Agile"
+        },
+        {
+            "company": "QuadLabs Technologies Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Not Specified",
+            "salary_min": 2400.0,
+            "salary_max": 3000.0,
+            "salary_avg": 2700.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "GLEUCK LLP",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6000.0,
+            "salary_max": 10800.0,
+            "salary_avg": 8400.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Nimble Technologies",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 45760.0,
+            "salary_max": 45760.0,
+            "salary_avg": 45760.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 33280.0,
+            "salary_max": 33280.0,
+            "salary_avg": 33280.0,
+            "clean_skills_str": "Excel, Pandas, Statistics, TensorFlow"
+        },
+        {
+            "company": "Capgemini India",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 2304.0,
+            "salary_max": 10137.6,
+            "salary_avg": 6220.8,
+            "clean_skills_str": "Python, Node.js, Express, Django, PostgreSQL, gRPC, Excel, Agile"
+        },
+        {
+            "company": "PhonePe",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 14507.142477203646,
+            "salary_max": 19627.310410334343,
+            "salary_avg": 17067.226443768996,
+            "clean_skills_str": "JavaScript, TypeScript, React, HTML5, Next.js, Agile"
+        },
+        {
+            "company": "The Vertical Recruiters",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 2400.0,
+            "salary_max": 5400.0,
+            "salary_avg": 3900.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "MK Management Consultants",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Accenture India",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7020.0,
+            "salary_max": 31200.0,
+            "salary_avg": 19110.0,
+            "clean_skills_str": "JavaScript, TypeScript, HTML5, Redux, Tailwind, Vite, Excel"
+        },
+        {
+            "company": "Future Group",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Not Specified",
+            "salary_min": 15732.487290794978,
+            "salary_max": 21285.129864016733,
+            "salary_avg": 18508.808577405856,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Jobspire",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6000.0,
+            "salary_max": 12000.0,
+            "salary_avg": 9000.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, C++, Docker, Excel, Agile"
+        },
+        {
+            "company": "ROLAND & ASSOCIATES",
+            "standard_title": "Software Engineer",
+            "title": "Mid Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Cognizant",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 19311.649460916444,
+            "salary_max": 26127.525741239893,
+            "salary_avg": 22719.58760107817,
+            "clean_skills_str": "SQL, Statistics, R, PyTorch, Machine Learning"
+        },
+        {
+            "company": "Creative Indians hiring for A leading client of Creative Indians",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 8400.0,
+            "salary_avg": 7800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Le Royal Meridien",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 3300.0,
+            "salary_max": 3900.0,
+            "salary_avg": 3600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Paytm",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 12130.777575757576,
+            "salary_max": 16412.228484848485,
+            "salary_avg": 14271.50303030303,
+            "clean_skills_str": "SQL, Statistics, R, Scikit-Learn"
+        },
+        {
+            "company": "Infosys",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 2851.2000000000003,
+            "salary_max": 11880.000000000002,
+            "salary_avg": 7365.600000000001,
+            "clean_skills_str": "Python, C++, Go, System Design, Git"
+        },
+        {
+            "company": "Indian Institute of Technology Bombay",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 7128.000000000001,
+            "salary_max": 33264.0,
+            "salary_avg": 20196.0,
+            "clean_skills_str": "Python, Pandas, Scikit-Learn, Machine Learning"
+        },
+        {
+            "company": "Core Edge Solutions",
+            "standard_title": "Software Engineer",
+            "title": "Senior Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Zomato",
+            "standard_title": "Software Engineer",
+            "title": "Intern Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Intern",
+            "salary_min": 8909.0,
+            "salary_max": 8909.0,
+            "salary_avg": 8909.0,
+            "clean_skills_str": "Python, C++, Go, System Design, Git, Docker"
+        },
+        {
+            "company": "L&T Infotech",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 20800.0,
+            "salary_max": 20800.0,
+            "salary_avg": 20800.0,
+            "clean_skills_str": "Excel, Scikit-Learn, TensorFlow, PyTorch"
+        },
+        {
+            "company": "Accenture",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 14069.0,
+            "salary_max": 14069.0,
+            "salary_avg": 14069.0,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "iHackers",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 22744.0,
+            "salary_max": 22744.0,
+            "salary_avg": 22744.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Enterprise IT Solutions",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 11109.0,
+            "salary_max": 11109.0,
+            "salary_avg": 11109.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Shell Infotech",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 37440.0,
+            "salary_max": 37440.0,
+            "salary_avg": 37440.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "BOSS Computec Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "EINS Inst of Mgmnt Technology & Research Pvt Ltd hiring for Business Development Manager (chembur, Thane, Dadar, Goregaon)",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 1800.0,
+            "salary_max": 6000.0,
+            "salary_avg": 3900.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "WISDOM BRIDGE MANAGEMENT CONSULTANTS hiring for Leading Global IT Firm in India",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 2700.0,
+            "salary_max": 4200.0,
+            "salary_avg": 3450.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Orcapod Consulting Services",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 5400.0,
+            "salary_max": 24000.0,
+            "salary_avg": 14700.0,
+            "clean_skills_str": "JavaScript, React, HTML5, CSS3"
+        },
+        {
+            "company": "Swiggy",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 8992.524836065573,
+            "salary_max": 12166.35713114754,
+            "salary_avg": 10579.440983606555,
+            "clean_skills_str": "Python, SQL, Excel, Tableau, A/B Testing, Data Visualization, Agile"
+        },
+        {
+            "company": "Capgemini India",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 10920.0,
+            "salary_max": 49920.0,
+            "salary_avg": 30420.0,
+            "clean_skills_str": "SQL, PyTorch, Kubernetes"
+        },
+        {
+            "company": "Guybro Chemical Pvt. Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 19078.0,
+            "salary_max": 19078.0,
+            "salary_avg": 19078.0,
+            "clean_skills_str": "C++, Go, Docker"
+        },
+        {
+            "company": "Unitforce technologies Pvt. Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 21788.0,
+            "salary_max": 21788.0,
+            "salary_avg": 21788.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "ATDS",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 28213.0,
+            "salary_max": 28213.0,
+            "salary_avg": 28213.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Hindco Recruitment Consultants hiring for Leading FMCG Company",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Vodafone India Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Confidential",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Liases Foras Real Estate Rating and Research",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 14400.0,
+            "salary_avg": 10800.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "GE India Technology Pvt. Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Cambio Consulting",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 13300.0,
+            "salary_max": 13300.0,
+            "salary_avg": 13300.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 8100.0,
+            "salary_max": 36000.0,
+            "salary_avg": 22050.0,
+            "clean_skills_str": "JavaScript, TypeScript, CSS3, Tailwind, Vite, Next.js, Agile"
+        },
+        {
+            "company": "Bobtech Solutions Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 20782.308088888887,
+            "salary_max": 28117.240355555557,
+            "salary_avg": 24449.774222222222,
+            "clean_skills_str": "Python, C++, Go, Docker"
+        },
+        {
+            "company": "Future Focus Infotech Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 17107.058638877075,
+            "salary_max": 23144.84404083369,
+            "salary_avg": 20125.951339855383,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "V Connect Solutions hiring for Airtel (bharti Telecom) Private Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 1800.0,
+            "salary_max": 3000.0,
+            "salary_avg": 2400.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Wipro",
+            "standard_title": "Data Analyst",
+            "title": "Data Analyst",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 7200.0,
+            "salary_max": 27000.0,
+            "salary_avg": 17100.0,
+            "clean_skills_str": "Excel, Statistics, A/B Testing, Data Visualization, Agile"
+        },
+        {
+            "company": "ONS SEARCH",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 6912.0,
+            "salary_max": 28800.0,
+            "salary_avg": 17856.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "The Nielsen Company",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 16050.635163078234,
+            "salary_max": 21715.565220635257,
+            "salary_avg": 18883.100191856745,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Kalpataru Power Transmission Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "Yes",
+            "clean_experience": "Mid",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "CZ Insights",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 18000.0,
+            "salary_max": 20400.0,
+            "salary_avg": 19200.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Flipkart",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 10800.0,
+            "salary_max": 45000.0,
+            "salary_avg": 27900.0,
+            "clean_skills_str": "Python, C++, Go, SQL, Docker"
+        },
+        {
+            "company": "Paytm",
+            "standard_title": "Data Scientist",
+            "title": "Data Scientist",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 5760.0,
+            "salary_max": 26880.0,
+            "salary_avg": 16320.0,
+            "clean_skills_str": "SQL, Scikit-Learn, PyTorch, Agile"
+        },
+        {
+            "company": "Trigent Software Limited",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 28227.0,
+            "salary_max": 28227.0,
+            "salary_avg": 28227.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Tech Mahindra",
+            "standard_title": "Machine Learning Engineer",
+            "title": "Machine Learning Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 8064.0,
+            "salary_max": 36864.0,
+            "salary_avg": 22464.0,
+            "clean_skills_str": "SQL, Excel, Scikit-Learn, MLOps"
+        },
+        {
+            "company": "Brainsearch Consulting Pvt Ltd hiring for Leading E-commerce & Product Development Company @ Delhincr",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 24000.0,
+            "salary_max": 42000.0,
+            "salary_avg": 33000.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Continental Automotive Components (India) Pvt Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 17675.0,
+            "salary_max": 17675.0,
+            "salary_avg": 17675.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Allegis Services India Pvt. Ltd.",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Hyderabad",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 12740.525019762845,
+            "salary_max": 17237.18090909091,
+            "salary_avg": 14988.852964426876,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Premium hiring for Independent HR Consulting",
+            "standard_title": "Software Engineer",
+            "title": "Lead Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 7200.0,
+            "salary_max": 30000.0,
+            "salary_avg": 18600.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Mindtree",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Intern",
+            "salary_min": 10971.031783783785,
+            "salary_max": 14843.160648648647,
+            "salary_avg": 12907.096216216216,
+            "clean_skills_str": "Java, System Design, Docker, Excel"
+        },
+        {
+            "company": "Jasmin Infotech Pvt. Ltd.,",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 29120.0,
+            "salary_max": 29120.0,
+            "salary_avg": 29120.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Krishna Enterprises (Housing & Infrastructures)",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Remote",
+            "clean_remote": "No",
+            "clean_experience": "Lead",
+            "salary_min": 17948.0,
+            "salary_max": 17948.0,
+            "salary_avg": 17948.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Dalmia Biz Private Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Senior",
+            "salary_min": 12000.0,
+            "salary_max": 14400.0,
+            "salary_avg": 13200.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Fortune Park Hotels Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "No",
+            "clean_experience": "Mid",
+            "salary_min": 27043.0,
+            "salary_max": 27043.0,
+            "salary_avg": 27043.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "IBGRD",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Other Tech Hub",
+            "clean_remote": "No",
+            "clean_experience": "Entry",
+            "salary_min": 7128.000000000001,
+            "salary_max": 29700.000000000004,
+            "salary_avg": 18414.000000000004,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "HCL Technologies Ltd",
+            "standard_title": "Software Engineer",
+            "title": "Software Engineer",
+            "clean_location": "Bengaluru",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 9745.0,
+            "salary_max": 9745.0,
+            "salary_avg": 9745.0,
+            "clean_skills_str": "Python, Java, Git, SQL"
+        },
+        {
+            "company": "Flipkart",
+            "standard_title": "Backend Developer",
+            "title": "Backend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Senior",
+            "salary_min": 7800.0,
+            "salary_max": 34320.0,
+            "salary_avg": 21060.0,
+            "clean_skills_str": "Python, Express, PostgreSQL, Redis"
+        },
+        {
+            "company": "Freshworks",
+            "standard_title": "Frontend Developer",
+            "title": "Frontend Developer",
+            "clean_location": "Remote",
+            "clean_remote": "Yes",
+            "clean_experience": "Lead",
+            "salary_min": 8019.000000000001,
+            "salary_max": 35640.0,
+            "salary_avg": 21829.5,
+            "clean_skills_str": "TypeScript, CSS3, Redux"
+        }
+    ],
+    "totals": {
+        "total_jobs": 33879,
+        "global_avg_salary": 19330.568509274177,
+        "remote_ratio": 30.76537087871543
+    }
+}

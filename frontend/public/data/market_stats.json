@@ -1,0 +1,593 @@
+{
+  "role_stats": [
+    {
+      "standard_title": "Backend Developer",
+      "avg_salary": 111395.0,
+      "min_salary": 28800.0,
+      "max_salary": 225000.0,
+      "job_count": 824
+    },
+    {
+      "standard_title": "Cybersecurity Analyst",
+      "avg_salary": 111157.0,
+      "min_salary": 28800.0,
+      "max_salary": 210000.0,
+      "job_count": 872
+    },
+    {
+      "standard_title": "Data Analyst",
+      "avg_salary": 93806.0,
+      "min_salary": 23040.0,
+      "max_salary": 176800.0,
+      "job_count": 843
+    },
+    {
+      "standard_title": "Data Scientist",
+      "avg_salary": 122820.0,
+      "min_salary": 32640.0,
+      "max_salary": 255000.0,
+      "job_count": 824
+    },
+    {
+      "standard_title": "DevOps Engineer",
+      "avg_salary": 120531.0,
+      "min_salary": 30720.0,
+      "max_salary": 240000.0,
+      "job_count": 848
+    },
+    {
+      "standard_title": "Frontend Developer",
+      "avg_salary": 107993.0,
+      "min_salary": 26880.0,
+      "max_salary": 210000.0,
+      "job_count": 867
+    },
+    {
+      "standard_title": "Machine Learning Engineer",
+      "avg_salary": 138380.0,
+      "min_salary": 36480.0,
+      "max_salary": 285000.0,
+      "job_count": 864
+    },
+    {
+      "standard_title": "Product Manager",
+      "avg_salary": 123246.0,
+      "min_salary": 34560.0,
+      "max_salary": 255000.0,
+      "job_count": 820
+    },
+    {
+      "standard_title": "Software Engineer",
+      "avg_salary": 118974.0,
+      "min_salary": 30720.0,
+      "max_salary": 240000.0,
+      "job_count": 839
+    }
+  ],
+  "location_stats": [
+    {
+      "clean_location": "Austin",
+      "avg_salary": 117141.0,
+      "job_count": 553
+    },
+    {
+      "clean_location": "Bengaluru",
+      "avg_salary": 113994.0,
+      "job_count": 536
+    },
+    {
+      "clean_location": "Berlin",
+      "avg_salary": 115534.0,
+      "job_count": 530
+    },
+    {
+      "clean_location": "Boston",
+      "avg_salary": 116968.0,
+      "job_count": 555
+    },
+    {
+      "clean_location": "Hyderabad",
+      "avg_salary": 115591.0,
+      "job_count": 549
+    },
+    {
+      "clean_location": "London",
+      "avg_salary": 118177.0,
+      "job_count": 528
+    },
+    {
+      "clean_location": "New York",
+      "avg_salary": 116159.0,
+      "job_count": 516
+    },
+    {
+      "clean_location": "Remote",
+      "avg_salary": 116324.0,
+      "job_count": 2184
+    },
+    {
+      "clean_location": "San Francisco",
+      "avg_salary": 115759.0,
+      "job_count": 563
+    },
+    {
+      "clean_location": "Seattle",
+      "avg_salary": 121139.0,
+      "job_count": 520
+    },
+    {
+      "clean_location": "Toronto",
+      "avg_salary": 115062.0,
+      "job_count": 567
+    }
+  ],
+  "experience_stats": [
+    {
+      "clean_experience": "Intern",
+      "avg_salary": 66941.0,
+      "job_count": 1250
+    },
+    {
+      "clean_experience": "Entry",
+      "avg_salary": 99212.0,
+      "job_count": 1266
+    },
+    {
+      "clean_experience": "Mid",
+      "avg_salary": 117138.0,
+      "job_count": 1317
+    },
+    {
+      "clean_experience": "Senior",
+      "avg_salary": 141548.0,
+      "job_count": 1252
+    },
+    {
+      "clean_experience": "Lead",
+      "avg_salary": 159963.0,
+      "job_count": 1262
+    },
+    {
+      "clean_experience": "Not Specified",
+      "avg_salary": 113749.0,
+      "job_count": 1254
+    }
+  ],
+  "remote_stats": [
+    {
+      "clean_remote": "On-site/Hybrid",
+      "avg_salary": 116050.0,
+      "job_count": 5080
+    },
+    {
+      "clean_remote": "Remote",
+      "avg_salary": 117313.0,
+      "job_count": 2521
+    }
+  ],
+  "top_skills": [
+    {
+      "skill": "Python",
+      "count": 2722
+    },
+    {
+      "skill": "SQL",
+      "count": 2188
+    },
+    {
+      "skill": "Machine Learning",
+      "count": 1688
+    },
+    {
+      "skill": "Agile",
+      "count": 1499
+    },
+    {
+      "skill": "Docker",
+      "count": 1267
+    },
+    {
+      "skill": "Linux",
+      "count": 993
+    },
+    {
+      "skill": "A/B Testing",
+      "count": 879
+    },
+    {
+      "skill": "Git",
+      "count": 868
+    },
+    {
+      "skill": "Scikit-Learn",
+      "count": 864
+    },
+    {
+      "skill": "MLOps",
+      "count": 864
+    },
+    {
+      "skill": "TensorFlow",
+      "count": 862
+    },
+    {
+      "skill": "AWS",
+      "count": 853
+    },
+    {
+      "skill": "Kubernetes",
+      "count": 850
+    },
+    {
+      "skill": "System Design",
+      "count": 839
+    },
+    {
+      "skill": "Pandas",
+      "count": 829
+    }
+  ],
+  "skills_by_role": {
+    "Data Scientist": [
+      {
+        "skill": "Machine Learning",
+        "count": 824
+      },
+      {
+        "skill": "Statistics",
+        "count": 442
+      },
+      {
+        "skill": "Python",
+        "count": 430
+      },
+      {
+        "skill": "Pandas",
+        "count": 426
+      },
+      {
+        "skill": "Scikit-Learn",
+        "count": 424
+      },
+      {
+        "skill": "TensorFlow",
+        "count": 420
+      },
+      {
+        "skill": "SQL",
+        "count": 416
+      },
+      {
+        "skill": "PyTorch",
+        "count": 405
+      },
+      {
+        "skill": "R",
+        "count": 401
+      },
+      {
+        "skill": "Agile",
+        "count": 111
+      }
+    ],
+    "DevOps Engineer": [
+      {
+        "skill": "Linux",
+        "count": 440
+      },
+      {
+        "skill": "Bash",
+        "count": 431
+      },
+      {
+        "skill": "CI/CD",
+        "count": 429
+      },
+      {
+        "skill": "AWS",
+        "count": 422
+      },
+      {
+        "skill": "Kubernetes",
+        "count": 414
+      },
+      {
+        "skill": "Jenkins",
+        "count": 414
+      },
+      {
+        "skill": "Docker",
+        "count": 406
+      },
+      {
+        "skill": "Git",
+        "count": 404
+      },
+      {
+        "skill": "Terraform",
+        "count": 399
+      },
+      {
+        "skill": "Agile",
+        "count": 125
+      }
+    ],
+    "Machine Learning Engineer": [
+      {
+        "skill": "MLOps",
+        "count": 864
+      },
+      {
+        "skill": "Machine Learning",
+        "count": 864
+      },
+      {
+        "skill": "Python",
+        "count": 449
+      },
+      {
+        "skill": "TensorFlow",
+        "count": 442
+      },
+      {
+        "skill": "Scikit-Learn",
+        "count": 440
+      },
+      {
+        "skill": "Kubernetes",
+        "count": 436
+      },
+      {
+        "skill": "AWS",
+        "count": 431
+      },
+      {
+        "skill": "SQL",
+        "count": 427
+      },
+      {
+        "skill": "PyTorch",
+        "count": 422
+      },
+      {
+        "skill": "Docker",
+        "count": 411
+      }
+    ],
+    "Backend Developer": [
+      {
+        "skill": "MongoDB",
+        "count": 426
+      },
+      {
+        "skill": "Node.js",
+        "count": 422
+      },
+      {
+        "skill": "Express",
+        "count": 421
+      },
+      {
+        "skill": "gRPC",
+        "count": 419
+      },
+      {
+        "skill": "Django",
+        "count": 418
+      },
+      {
+        "skill": "PostgreSQL",
+        "count": 417
+      },
+      {
+        "skill": "REST APIs",
+        "count": 417
+      },
+      {
+        "skill": "Python",
+        "count": 405
+      },
+      {
+        "skill": "Redis",
+        "count": 384
+      },
+      {
+        "skill": "Agile",
+        "count": 123
+      }
+    ],
+    "Software Engineer": [
+      {
+        "skill": "System Design",
+        "count": 839
+      },
+      {
+        "skill": "Java",
+        "count": 504
+      },
+      {
+        "skill": "Python",
+        "count": 471
+      },
+      {
+        "skill": "Git",
+        "count": 464
+      },
+      {
+        "skill": "C++",
+        "count": 462
+      },
+      {
+        "skill": "SQL",
+        "count": 459
+      },
+      {
+        "skill": "Go",
+        "count": 457
+      },
+      {
+        "skill": "Docker",
+        "count": 450
+      },
+      {
+        "skill": "Agile",
+        "count": 138
+      }
+    ],
+    "Product Manager": [
+      {
+        "skill": "Agile",
+        "count": 507
+      },
+      {
+        "skill": "A/B Testing",
+        "count": 465
+      },
+      {
+        "skill": "Product Roadmap",
+        "count": 464
+      },
+      {
+        "skill": "Scrum",
+        "count": 462
+      },
+      {
+        "skill": "User Research",
+        "count": 460
+      },
+      {
+        "skill": "Analytics",
+        "count": 455
+      },
+      {
+        "skill": "SQL",
+        "count": 449
+      },
+      {
+        "skill": "Wireframing",
+        "count": 446
+      }
+    ],
+    "Cybersecurity Analyst": [
+      {
+        "skill": "Network Security",
+        "count": 560
+      },
+      {
+        "skill": "SIEM",
+        "count": 558
+      },
+      {
+        "skill": "Linux",
+        "count": 553
+      },
+      {
+        "skill": "Cryptography",
+        "count": 551
+      },
+      {
+        "skill": "Python",
+        "count": 542
+      },
+      {
+        "skill": "Penetration Testing",
+        "count": 539
+      },
+      {
+        "skill": "Wireshark",
+        "count": 525
+      },
+      {
+        "skill": "Agile",
+        "count": 117
+      }
+    ],
+    "Frontend Developer": [
+      {
+        "skill": "React",
+        "count": 456
+      },
+      {
+        "skill": "Next.js",
+        "count": 447
+      },
+      {
+        "skill": "CSS3",
+        "count": 445
+      },
+      {
+        "skill": "TypeScript",
+        "count": 438
+      },
+      {
+        "skill": "Vite",
+        "count": 435
+      },
+      {
+        "skill": "JavaScript",
+        "count": 434
+      },
+      {
+        "skill": "Redux",
+        "count": 429
+      },
+      {
+        "skill": "Tailwind",
+        "count": 429
+      },
+      {
+        "skill": "HTML5",
+        "count": 420
+      },
+      {
+        "skill": "Agile",
+        "count": 131
+      }
+    ],
+    "Data Analyst": [
+      {
+        "skill": "Excel",
+        "count": 444
+      },
+      {
+        "skill": "SQL",
+        "count": 437
+      },
+      {
+        "skill": "Tableau",
+        "count": 431
+      },
+      {
+        "skill": "Python",
+        "count": 425
+      },
+      {
+        "skill": "Power BI",
+        "count": 419
+      },
+      {
+        "skill": "Data Visualization",
+        "count": 417
+      },
+      {
+        "skill": "A/B Testing",
+        "count": 414
+      },
+      {
+        "skill": "Pandas",
+        "count": 403
+      },
+      {
+        "skill": "Statistics",
+        "count": 385
+      },
+      {
+        "skill": "Agile",
+        "count": 135
+      }
+    ]
+  },
+  "total_jobs": 7601,
+  "avg_salary_global": 116469.0,
+  "remote_percentage": 33.2
+}

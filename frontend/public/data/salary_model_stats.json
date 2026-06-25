@@ -1,0 +1,184 @@
+{
+    "r2_score": 0.21459328239688757,
+    "rmse": 8543.359257305096,
+    "total_training_samples": 33879,
+    "feature_importances": [
+        {
+            "feature": "clean_experience_Intern",
+            "importance": 7509.88032827829,
+            "coefficient": -7509.88032827829
+        },
+        {
+            "feature": "clean_experience_Lead",
+            "importance": 6278.3142123902135,
+            "coefficient": 6278.3142123902135
+        },
+        {
+            "feature": "standard_title_Machine Learning Engineer",
+            "importance": 5108.4415413734205,
+            "coefficient": 5108.4415413734205
+        },
+        {
+            "feature": "standard_title_Frontend Developer",
+            "importance": 3636.20762916207,
+            "coefficient": -3636.20762916207
+        },
+        {
+            "feature": "standard_title_Data Analyst",
+            "importance": 3214.0665830604767,
+            "coefficient": -3214.0665830604767
+        },
+        {
+            "feature": "standard_title_Data Scientist",
+            "importance": 3111.8605283571574,
+            "coefficient": 3111.8605283571574
+        },
+        {
+            "feature": "clean_experience_Senior",
+            "importance": 2894.6481606619454,
+            "coefficient": 2894.6481606619454
+        },
+        {
+            "feature": "clean_experience_Entry",
+            "importance": 2624.216088930338,
+            "coefficient": -2624.216088930338
+        },
+        {
+            "feature": "Analytics",
+            "importance": 1699.9920652890066,
+            "coefficient": -1699.9920652890066
+        },
+        {
+            "feature": "Vite",
+            "importance": 1143.4335464971416,
+            "coefficient": 1143.4335464971416
+        },
+        {
+            "feature": "Tailwind",
+            "importance": 1031.499516698306,
+            "coefficient": 1031.499516698306
+        },
+        {
+            "feature": "Go",
+            "importance": 931.375364269804,
+            "coefficient": 931.375364269804
+        },
+        {
+            "feature": "Git",
+            "importance": 921.214962586925,
+            "coefficient": -921.214962586925
+        },
+        {
+            "feature": "standard_title_Software Engineer",
+            "importance": 859.8139840929318,
+            "coefficient": -859.8139840929318
+        },
+        {
+            "feature": "MongoDB",
+            "importance": 795.1509925427152,
+            "coefficient": 795.1509925427152
+        },
+        {
+            "feature": "Next.js",
+            "importance": 786.2665568228568,
+            "coefficient": 786.2665568228568
+        },
+        {
+            "feature": "Redux",
+            "importance": 690.2019773890421,
+            "coefficient": 690.2019773890421
+        },
+        {
+            "feature": "System Design",
+            "importance": 688.6275675083168,
+            "coefficient": 688.6275675083168
+        },
+        {
+            "feature": "clean_experience_Mid",
+            "importance": 680.8724682396241,
+            "coefficient": 680.8724682396241
+        },
+        {
+            "feature": "Java",
+            "importance": 527.7381093126053,
+            "coefficient": -527.7381093126053
+        }
+    ],
+    "categories": {
+        "titles": [
+            "Software Engineer",
+            "Frontend Developer",
+            "Backend Developer",
+            "Machine Learning Engineer",
+            "Data Scientist",
+            "Data Analyst"
+        ],
+        "experience": [
+            "Lead",
+            "Mid",
+            "Senior",
+            "Entry",
+            "Not Specified",
+            "Intern"
+        ],
+        "locations": [
+            "Bengaluru",
+            "Hyderabad",
+            "Remote",
+            "Other Tech Hub"
+        ],
+        "skills": [
+            "Python",
+            "Java",
+            "C++",
+            "Go",
+            "System Design",
+            "Git",
+            "SQL",
+            "Docker",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "HTML5",
+            "CSS3",
+            "Redux",
+            "Tailwind",
+            "Vite",
+            "Next.js",
+            "Node.js",
+            "Express",
+            "Django",
+            "PostgreSQL",
+            "MongoDB",
+            "Redis",
+            "REST APIs",
+            "gRPC",
+            "Excel",
+            "Tableau",
+            "Power BI",
+            "Pandas",
+            "Statistics",
+            "A/B Testing",
+            "Data Visualization",
+            "R",
+            "Scikit-Learn",
+            "TensorFlow",
+            "PyTorch",
+            "Machine Learning",
+            "MLOps",
+            "Kubernetes",
+            "AWS",
+            "CI/CD",
+            "Terraform",
+            "Linux",
+            "Bash",
+            "Jenkins",
+            "Product Roadmap",
+            "Agile",
+            "User Research",
+            "Scrum",
+            "Analytics",
+            "Wireframing"
+        ]
+    }
+}

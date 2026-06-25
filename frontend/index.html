@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CareerLens: AI-Powered Job Market Intelligence & Placement Analytics Platform. Bridging the skill gap with data-driven insights." />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN Fallback for Dev Environment MIME-type or cache locks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              darkBg: "var(--color-bg)",
+              darkCard: "var(--color-card)",
+              glassBorder: "var(--color-border)",
+              glassHoverBorder: "var(--color-border-hover)",
+              textMain: "var(--color-text-main)",
+              textMuted: "var(--color-text-muted)",
+              brandBlue: "var(--color-primary)",
+              brandCyan: "var(--color-accent)",
+              brandPurple: "var(--color-purple)",
+              brandSuccess: "var(--color-success)",
+              brandWarning: "var(--color-warning)",
+              brandDanger: "var(--color-danger)"
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Inline script to prevent theme flash -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+    
+    <title>CareerLens | AI-Powered Job Market Intelligence & Placement Analytics</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

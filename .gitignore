@@ -1,0 +1,38 @@
+# Python / Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+Backend/.env
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# Databases
+Backend/careerlens.db
+*.db
+*.sqlite3
+
+# Datasets & Large Files
+Datasets/raw_jobs.csv
+Datasets/student_profiles.csv
+Datasets/naukri_raw.csv
+Datasets/cleaned_jobs.csv
+Backend/raw_job_postings.csv
+
+# IDEs and OS files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

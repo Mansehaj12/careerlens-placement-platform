@@ -1,0 +1,28 @@
+{
+    "accuracy": 0.942,
+    "precision": 0.9316874135546335,
+    "recall": 0.942,
+    "f1_score": 0.9351155462184874,
+    "feature_importances": [
+        {
+            "feature": "projects",
+            "importance": 0.34774901799959307
+        },
+        {
+            "feature": "cgpa",
+            "importance": 0.327091275319851
+        },
+        {
+            "feature": "internships",
+            "importance": 0.2071991258809277
+        },
+        {
+            "feature": "certifications",
+            "importance": 0.087297075755721
+        },
+        {
+            "feature": "skills_count",
+            "importance": 0.03066350504390727
+        }
+    ]
+}

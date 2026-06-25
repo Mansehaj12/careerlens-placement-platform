@@ -1,0 +1,17 @@
+{
+    "before": {
+        "total_records": 52000,
+        "missing_salaries": 7389,
+        "missing_locations": 2579,
+        "missing_experience": 4160,
+        "duplicate_records": 18121
+    },
+    "after": {
+        "total_records": 33879,
+        "missing_salaries": 0,
+        "missing_locations": 0,
+        "missing_experience": 2727,
+        "duplicate_records": 3565,
+        "outliers_filtered": 766
+    }
+}

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #f3f8fc; /* Beautiful subtle sky grey-blue light background */
+    --color-card: #ffffff; /* White card */
+    --color-border: rgba(14, 165, 233, 0.08); /* Soft sky blue border */
+    --color-border-hover: rgba(14, 165, 233, 0.16);
+    --color-text-main: #0f172a; /* Slate 900 */
+    --color-text-muted: #64748b; /* Slate 500 */
+    --color-primary: #0284c7; /* Sky Blue */
+    --color-accent: #0d9488; /* Sky Green / Teal */
+    --color-purple: #0891b2; /* Cyan */
+    --color-success: #10b981; /* Emerald */
+    --color-warning: #f59e0b; /* Amber */
+    --color-danger: #ef4444; /* Red */
+    
+    --bg-gradient: 
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(20, 184, 166, 0.04) 0px, transparent 50%);
+    --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.02), 0 2px 8px -1px rgba(15, 23, 42, 0.02);
+    --shadow-card-hover: 0 12px 30px -4px rgba(14, 165, 233, 0.08), 0 4px 12px -2px rgba(14, 165, 233, 0.04);
+    --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.06);
+  }
+
+  .dark {
+    --color-bg: #070c14; /* Deep twilight sky dark background */
+    --color-card: #0c1524; /* Midnight sky card */
+    --color-border: rgba(56, 189, 248, 0.06); /* Soft sky blue dark border */
+    --color-border-hover: rgba(56, 189, 248, 0.14);
+    --color-text-main: #f1f5f9; /* Slate 100 */
+    --color-text-muted: #94a3b8; /* Slate 400 */
+    --color-primary: #38bdf8; /* Bright Sky Blue */
+    --color-accent: #2dd4bf; /* Bright Mint / Sky Green */
+    --color-purple: #22d3ee; /* Bright Cyan */
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-danger: #f87171;
+
+    --bg-gradient: 
+      radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(45, 212, 191, 0.04) 0px, transparent 50%);
+    --shadow-card: 0 4px 24px -6px rgba(0, 0, 0, 0.4), 0 2px 10px -4px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 4px 16px -4px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.08);
+  }
+
+  body {
+    @apply bg-darkBg text-textMain min-h-screen overflow-x-hidden antialiased;
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Custom Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+    background-color: var(--color-border);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-border-hover);
+  }
+
+  /* Smooth transition for theme colors */
+  body, header, footer, main, select, input, textarea, button, a {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s ease;
+  }
+}
+
+@layer components {
+  /* Dynamic Cards */
+  .glass-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+  }
+
+  /* Form Elements */
+  .form-label {
+    @apply text-xs font-semibold uppercase tracking-wider mb-2 block;
+    color: var(--color-text-muted);
+  }
+  .form-input {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    @apply rounded-xl px-4 py-3 text-sm w-full outline-none transition-all duration-200;
+  }
+  .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+  .form-select {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    @apply rounded-xl px-4 py-3 text-sm w-full outline-none transition-all duration-200 cursor-pointer;
+  }
+  .form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    @apply font-semibold rounded-xl px-6 py-3 shadow-md flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.3);
+  }
+  .btn-secondary {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    @apply font-semibold rounded-xl px-6 py-3 flex items-center justify-center gap-2 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-border-hover);
+  }
+
+  /* Text Gradients */
+  .gradient-text-blue-cyan {
+    background-image: linear-gradient(135deg, var(--color-text-main) 30%, var(--color-primary) 100%);
+    @apply bg-clip-text text-transparent;
+  }
+  .gradient-brand {
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-purple) 100%);
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Skeleton Pulsing Shimmer */
+  .skeleton {
+    background-color: var(--color-secondary);
+    @apply rounded-xl relative overflow-hidden;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
