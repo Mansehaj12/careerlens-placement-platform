@@ -6,6 +6,10 @@
 [![Tailwind CSS v3](https://img.shields.io/badge/Tailwind-v3-skyblue.svg)](https://tailwindcss.com/)
 [![Build Status](https://img.shields.io/badge/Build-Passing-success.svg)]()
 
+### 🌐 Live Deployment
+* **Live Web App (React):** [https://careerlens-placement-platform.vercel.app/](https://careerlens-placement-platform.vercel.app/)
+* **Production API (Flask):** [https://sehaj1104.pythonanywhere.com/](https://sehaj1104.pythonanywhere.com/)
+
 **CareerLens** is a production-quality, end-to-end data engineering and predictive machine learning SaaS application. It analyzes global technology job postings, standardizes salary data, parses candidate resumes, and evaluates placement probabilities based on academic and project profiles.
 
 Developed with modern clean architecture, CareerLens looks like a real-world startup product.
