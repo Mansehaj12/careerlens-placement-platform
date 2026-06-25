@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { IndianRupee, ShieldAlert, Sparkles, Plus, Check, Brain, Search, Briefcase, MapPin, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 
 export default function SalaryPredictor() {
   const [metadata, setMetadata] = useState(null);
@@ -91,7 +92,7 @@ export default function SalaryPredictor() {
     setPredicting(true);
     setApiError(false);
 
-    fetch('http://127.0.0.1:5000/api/predict/salary', {
+    fetch(`${API_BASE_URL}/api/predict/salary`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

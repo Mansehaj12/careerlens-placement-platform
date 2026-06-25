@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { Award, ShieldAlert, Sparkles, AlertCircle, FileText, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 
 export default function PlacementAnalytics() {
   const [cgpa, setCgpa] = useState(7.0);
@@ -51,7 +52,7 @@ export default function PlacementAnalytics() {
     setSimulating(true);
     setApiError(false);
 
-    fetch('http://127.0.0.1:5000/api/predict/placement', {
+    fetch(`${API_BASE_URL}/api/predict/placement`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

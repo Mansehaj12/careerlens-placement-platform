@@ -7,6 +7,7 @@ import {
   Briefcase, IndianRupee, MapPin, Activity, Search, Sparkles, Globe, ShieldCheck, Database, Layers
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 
 export default function MarketDashboard() {
   const [data, setData] = useState(null);
@@ -32,7 +33,7 @@ export default function MarketDashboard() {
   }, [searchQuery]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api/market/stats')
+    fetch(`${API_BASE_URL}/api/market/stats`)
       .then((res) => {
         if (!res.ok) throw new Error('API offline');
         return res.json();

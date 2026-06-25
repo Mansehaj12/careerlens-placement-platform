@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Upload, FileText, CheckCircle2, AlertTriangle, ArrowRight, BookOpen, ShieldAlert, Sparkles, Check, Plus } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '../config';
 
 export default function ResumeMatcher() {
   const [selectedRole, setSelectedRole] = useState('Software Engineer');
@@ -63,7 +64,7 @@ export default function ResumeMatcher() {
 
     formData.append('file', file);
 
-    fetch('http://127.0.0.1:5000/api/analyze/resume', {
+    fetch(`${API_BASE_URL}/api/analyze/resume`, {
       method: 'POST',
       body: formData
     })
