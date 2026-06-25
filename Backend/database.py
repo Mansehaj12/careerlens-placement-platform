@@ -10,9 +10,11 @@ if os.path.exists(dotenv_path):
 else:
     load_dotenv()  # Fallback to standard search
 
-DB_PATH = "Backend/careerlens.db"
-CLEANED_JOBS_CSV = "Datasets/cleaned_jobs.csv"
-STUDENTS_CSV = "Datasets/student_profiles.csv"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+DB_PATH = os.path.join(BASE_DIR, "Backend", "careerlens.db")
+CLEANED_JOBS_CSV = os.path.join(BASE_DIR, "Datasets", "cleaned_jobs.csv")
+STUDENTS_CSV = os.path.join(BASE_DIR, "Datasets", "student_profiles.csv")
 
 def get_db_connection():
     db_url = os.environ.get("DATABASE_URL")

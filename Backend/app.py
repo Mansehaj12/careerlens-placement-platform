@@ -23,13 +23,15 @@ app = Flask(__name__)
 # Enable CORS for React frontend (default port 5173 or other hosts)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-# Paths to models and metadata
-SALARY_MODEL_PATH = "Models/salary_model.joblib"
-SALARY_ENCODER_PATH = "Models/salary_encoder.joblib"
-PLACEMENT_MODEL_PATH = "Models/placement_model.joblib"
-DASHBOARD_DATA_PATH = "Frontend/public/data/dashboard_data.json"
-QUALITY_DATA_PATH = "Frontend/public/data/data_quality.json"
-PLACEMENT_STATS_PATH = "Frontend/public/data/placement_model_stats.json"
+# Paths to models and metadata relative to the project root
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SALARY_MODEL_PATH = os.path.join(BASE_DIR, "Models", "salary_model.joblib")
+SALARY_ENCODER_PATH = os.path.join(BASE_DIR, "Models", "salary_encoder.joblib")
+PLACEMENT_MODEL_PATH = os.path.join(BASE_DIR, "Models", "placement_model.joblib")
+DASHBOARD_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "dashboard_data.json")
+QUALITY_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "data_quality.json")
+PLACEMENT_STATS_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "placement_model_stats.json")
 
 # Global model placeholders loaded on startup
 salary_model = None
