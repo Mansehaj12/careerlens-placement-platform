@@ -277,6 +277,8 @@ def get_salary_percentile(salary):
     prob = 1 / (1 + np.exp(-0.07056 * z**3 - 1.5976 * z))
     return min(99.9, max(0.1, prob * 100))
 
+# Load models and initialize DB on module import (required for WSGI/production servers)
+load_models()
+
 if __name__ == "__main__":
-    load_models()
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
