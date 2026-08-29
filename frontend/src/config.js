@@ -1,4 +1,5 @@
 // Configuration for backend API URL
-// In development, it defaults to the local Flask server (http://127.0.0.1:5000)
-// In production, Vite will use the VITE_API_URL environment variable from the hosting service (e.g. Vercel)
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000';
+// In local development (npm run dev), defaults to http://127.0.0.1:5000
+// In production (Vercel build), defaults to live PythonAnywhere API if VITE_API_URL is unset
+export const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://127.0.0.1:5000' : 'https://sehaj1104.pythonanywhere.com');
+
