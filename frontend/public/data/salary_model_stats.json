@@ -5,103 +5,103 @@
     "feature_importances": [
         {
             "feature": "clean_experience_Intern",
-            "importance": 7509.88032827829,
-            "coefficient": -7509.88032827829
+            "importance": 7509.880328275795,
+            "coefficient": -7509.880328275795
         },
         {
             "feature": "clean_experience_Lead",
-            "importance": 6278.3142123902135,
-            "coefficient": 6278.3142123902135
+            "importance": 6278.3142123927055,
+            "coefficient": 6278.3142123927055
         },
         {
             "feature": "standard_title_Machine Learning Engineer",
-            "importance": 5108.4415413734205,
-            "coefficient": 5108.4415413734205
+            "importance": 5108.441541373765,
+            "coefficient": 5108.441541373765
         },
         {
             "feature": "standard_title_Frontend Developer",
-            "importance": 3636.20762916207,
-            "coefficient": -3636.20762916207
+            "importance": 3636.20762916175,
+            "coefficient": -3636.20762916175
         },
         {
             "feature": "standard_title_Data Analyst",
-            "importance": 3214.0665830604767,
-            "coefficient": -3214.0665830604767
+            "importance": 3214.066583060142,
+            "coefficient": -3214.066583060142
         },
         {
             "feature": "standard_title_Data Scientist",
-            "importance": 3111.8605283571574,
-            "coefficient": 3111.8605283571574
+            "importance": 3111.860528357494,
+            "coefficient": 3111.860528357494
         },
         {
             "feature": "clean_experience_Senior",
-            "importance": 2894.6481606619454,
-            "coefficient": 2894.6481606619454
+            "importance": 2894.6481606644425,
+            "coefficient": 2894.6481606644425
         },
         {
             "feature": "clean_experience_Entry",
-            "importance": 2624.216088930338,
-            "coefficient": -2624.216088930338
+            "importance": 2624.216088927843,
+            "coefficient": -2624.216088927843
         },
         {
             "feature": "Analytics",
-            "importance": 1699.9920652890066,
-            "coefficient": -1699.9920652890066
+            "importance": 1699.992065289006,
+            "coefficient": -1699.992065289006
         },
         {
             "feature": "Vite",
-            "importance": 1143.4335464971416,
-            "coefficient": 1143.4335464971416
+            "importance": 1143.4335464971452,
+            "coefficient": 1143.4335464971452
         },
         {
             "feature": "Tailwind",
-            "importance": 1031.499516698306,
-            "coefficient": 1031.499516698306
+            "importance": 1031.4995166983113,
+            "coefficient": 1031.4995166983113
         },
         {
             "feature": "Go",
-            "importance": 931.375364269804,
-            "coefficient": 931.375364269804
+            "importance": 931.3753642698042,
+            "coefficient": 931.3753642698042
         },
         {
             "feature": "Git",
-            "importance": 921.214962586925,
-            "coefficient": -921.214962586925
+            "importance": 921.2149625869201,
+            "coefficient": -921.2149625869201
         },
         {
             "feature": "standard_title_Software Engineer",
-            "importance": 859.8139840929318,
-            "coefficient": -859.8139840929318
+            "importance": 859.8139840925967,
+            "coefficient": -859.8139840925967
         },
         {
             "feature": "MongoDB",
-            "importance": 795.1509925427152,
-            "coefficient": 795.1509925427152
+            "importance": 795.1509925427179,
+            "coefficient": 795.1509925427179
         },
         {
             "feature": "Next.js",
-            "importance": 786.2665568228568,
-            "coefficient": 786.2665568228568
+            "importance": 786.2665568228598,
+            "coefficient": 786.2665568228598
         },
         {
             "feature": "Redux",
-            "importance": 690.2019773890421,
-            "coefficient": 690.2019773890421
+            "importance": 690.2019773890415,
+            "coefficient": 690.2019773890415
         },
         {
             "feature": "System Design",
-            "importance": 688.6275675083168,
-            "coefficient": 688.6275675083168
+            "importance": 688.6275675083172,
+            "coefficient": 688.6275675083172
         },
         {
             "feature": "clean_experience_Mid",
-            "importance": 680.8724682396241,
-            "coefficient": 680.8724682396241
+            "importance": 680.8724682421198,
+            "coefficient": 680.8724682421198
         },
         {
             "feature": "Java",
-            "importance": 527.7381093126053,
-            "coefficient": -527.7381093126053
+            "importance": 527.7381093126071,
+            "coefficient": -527.7381093126071
         }
     ],
     "categories": {

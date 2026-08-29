@@ -19,16 +19,19 @@ STUDENTS_CSV = os.path.join(BASE_DIR, "Datasets", "student_profiles.csv")
 def get_db_connection():
     db_url = os.environ.get("DATABASE_URL")
     if db_url:
-        import psycopg2
-        from psycopg2.extras import DictCursor
-        conn = psycopg2.connect(db_url, cursor_factory=DictCursor)
-        return conn, "postgres"
-    else:
-        # Resolve DB path relative to project root if DB_PATH doesn't exist
-        os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-        conn = sqlite3.connect(DB_PATH)
-        conn.row_factory = sqlite3.Row
-        return conn, "sqlite"
+        try:
+            import psycopg2
+            from psycopg2.extras import DictCursor
+            conn = psycopg2.connect(db_url, cursor_factory=DictCursor, connect_timeout=3)
+            return conn, "postgres"
+        except Exception as e:
+            print(f"PostgreSQL connection failed ({e}). Falling back to local SQLite.")
+    
+    # Fallback to local SQLite
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn, "sqlite"
 
 def check_connection():
     try:

@@ -41,10 +41,10 @@ def train_salary_model():
     cat_df = pd.DataFrame(cat_encoded, columns=cat_feature_names, index=df.index)
     
     # 2. Multi-hot Encode Skills
-    skills_dummies = pd.DataFrame(0, index=df.index, columns=ALL_SKILLS)
-    for idx, row in df.iterrows():
-        skills = [s.strip() for s in str(row["clean_skills_str"]).split(",") if s.strip()]
-        skills_dummies.loc[idx, [s for s in skills if s in ALL_SKILLS]] = 1
+    from sklearn.preprocessing import MultiLabelBinarizer
+    skills_series = df["clean_skills_str"].fillna("").apply(lambda s: [x.strip() for x in str(s).split(",") if x.strip()])
+    mlb = MultiLabelBinarizer(classes=ALL_SKILLS)
+    skills_dummies = pd.DataFrame(mlb.fit_transform(skills_series), columns=ALL_SKILLS, index=df.index)
         
     X = pd.concat([cat_df, skills_dummies], axis=1)
     y = df["salary_avg"]
