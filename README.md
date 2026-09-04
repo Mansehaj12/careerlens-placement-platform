@@ -1,4 +1,4 @@
-# CareerLens: AI-Powered Job Market Intelligence & Placement Analytics Platform
+# CareerLens 2.0: AI-Powered Tech Market Intelligence & Placement Analytics Platform
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![React 19](https://img.shields.io/badge/React-19-cyan.svg)](https://react.dev/)
@@ -7,36 +7,50 @@
 [![Build Status](https://img.shields.io/badge/Build-Passing-success.svg)]()
 
 ### 🌐 Live Deployment
-* **Live Web App (React):** [https://careerlens-placement-platform.vercel.app/](https://careerlens-placement-platform.vercel.app/)
+* **Live Web App (React + Vite):** [https://careerlens-placement-platform.vercel.app/](https://careerlens-placement-platform.vercel.app/)
 * **Production API (Flask):** [https://sehaj1104.pythonanywhere.com/](https://sehaj1104.pythonanywhere.com/)
+* **Version Evolution Guide:** [PROJECT_EVOLUTION_V1_TO_V2.md](PROJECT_EVOLUTION_V1_TO_V2.md)
 
-**CareerLens** is a production-quality, end-to-end data engineering and predictive machine learning SaaS application. It analyzes global technology job postings, standardizes salary data, parses candidate resumes, and evaluates placement probabilities based on academic and project profiles.
+**CareerLens 2.0** is an enterprise-grade data engineering and predictive machine learning SaaS application. It aggregates technology job market data, standardizes compensation figures, evaluates candidate resumes with a role-aware multi-dimensional ATS engine, models placement probabilities, and provides cross-validated model benchmarking.
 
-Developed with modern clean architecture, CareerLens looks like a real-world startup product.
+Built with clean architecture, modern glassmorphism, and fault-tolerant client fallbacks.
 
 ---
 
-## 🌟 Core Product Features
+## 🌟 Core Product Modules
 
-### 1. Job Market Intelligence Dashboard
-- **Dynamic Visualizations**: Uses Recharts to render salary areas by standard roles, skill demand lists, remote work distributions, and experience requirements.
-- **Processed Jobs Browser**: Displays an interactive, filterable search table of cleaned records stored inside the SQLite relational database.
-- **Pipeline Data Quality Report**: Displays **Before vs. After** data cleaning comparison metrics, highlighting duplicates dropped, missing fields resolved, and salary outliers filtered.
+### 1. Job Market Intelligence Dashboard (`/`)
+- **Dynamic Visualizations**: Utilizes Recharts to render market distributions across standard roles, skill demand hierarchies, remote work prevalence, and experience tiers.
+- **Processed Jobs Explorer**: Filterable, searchable table of cleaned market records backed by SQLite/relational storage.
+- **Pipeline Data Quality Audit**: Before vs. After ETL metrics detailing duplicate elimination, null-value imputation, and outlier filtering.
 
-### 2. Machine Learning Salary Predictor
-- **Ridge Regression Inference**: Estimates base salary levels in real-time, outputting range bounds based on the model's standard deviation (RMSE: ~$24,198).
-- **Market Percentile Dial**: Calculates where the candidate sits in the market salary distribution.
-- **ML Coefficient Importance**: Renders a bar chart representing the trained regression weights for each role, location, experience tier, and skill.
+### 2. Machine Learning Salary Predictor (`/predict-salary`)
+- **Ridge Regularization ($\alpha=50$)**: Employs an $L_2$-penalized regression model cross-validated across 5 folds to stabilize feature weights and prevent collinear coefficient distortion.
+- **Empirical Uncertainty Quantification**: Provides realistic salary ranges based on 5-Fold CV MAE ($\pm\text{₹}4.35\text{L}$) and percentile bounds.
+- **Market Standing Percentile**: Visualizes where a candidate's profile ranks relative to the broader engineering compensation distribution.
+- **Feature Weight Interpretability**: Interactive chart illustrating the relative influence of roles, locations, experience tiers, and individual technical skills.
 
-### 3. PDF Resume Skill Gap Analyzer
-- **NLP PDF Parser**: Uses `pypdf` in the Flask backend to parse uploaded resume PDFs.
-- **Weighted Skill Intersection**: Compares extracted tech keywords against required market keywords for the target role, outputting a weighted compatibility score.
-- **Learning Roadmap**: Highlights missing skills and suggests specific online courses (Udemy/Coursera/Docker Labs) to bridge the gap.
+### 3. Resume ATS & Gap Analyzer (`/resume-analyzer`)
+- **Multi-Dimensional Role-Specific ATS Engine**:
+  $$\text{ATS Score} = (0.55 \times \text{Domain Skills}) + (0.18 \times \text{Measurable Metrics}) + (0.15 \times \text{Standard Sections}) + (0.12 \times \text{Action Verbs})$$
+- **Role Taxonomy with Synonyms**: Supports distinct requirements for Software Engineers, Frontend Developers, Backend Developers, Data Scientists, and ML Engineers.
+- **Live Dropdown Re-Evaluation**: Upload once—switching target roles immediately recalculates ATS compatibility and skill gaps on the fly without re-parsing.
+- **Measurable Impact Extraction**: Automatically detects quantifiable accomplishments (metrics, percentages, performance benchmarks).
+- **Targeted Learning Roadmap**: Identifies missing core technologies and recommends targeted resources to bridge domain gaps.
 
-### 4. Student Placement & What-If Simulator
-- **Decision Tree Classification**: Fits a classifier on 5,000 student academic profiles to predict placement likelihood.
-- **Real-Time Sliders**: Slide the CGPA bar, toggle internship counts, or add projects and certifications. The system calls the ML classifier in real-time to recalculate the placement probability dial.
-- **Actionable Critique**: Details automated suggestions based on deficiencies (e.g. academic thresholds, project gaps).
+### 4. Student Placement What-If Simulator (`/placement`)
+- **Calibrated Starting Baseline**: Initialized to a realistic starting position (**5.0 CGPA, 0 Skills, 0 Internships, 0 Projects** $\to$ baseline **~35% risk tier**).
+- **Real-Time Interactive Sliders**: Dynamically evaluate marginal gains from boosting CGPA, completing internships, publishing projects, or earning certifications.
+- **Actionable Critique**: Automated diagnostic feedback identifying high-leverage areas for profile improvement.
+
+### 5. ML Model Benchmarks (`/benchmarks`)
+- **Comparative Algorithm Matrix**: Side-by-side performance comparison of Logistic Regression, Random Forest, and Gradient Boosting.
+- **Production Metrics**: Evaluates Accuracy, ROC-AUC, Precision, Recall, F1 Score, and Cross-Validation Variance.
+
+### 6. Glassmorphic 2.0 Design System
+- **Atmospheric Aurora Lighting**: Multi-stop ambient glow layer providing subtle depth.
+- **Glassmorphism**: Translucent cards with `backdrop-filter: blur(14px)` and specular top borders.
+- **Dynamic Dark/Light Adaptation**: Live `MutationObserver` synchronization adapting Recharts palettes, tooltip colors, and typography contrasts seamlessly.
 
 ---
 
@@ -44,40 +58,45 @@ Developed with modern clean architecture, CareerLens looks like a real-world sta
 
 ```
 ├── Datasets/
-│   ├── generate_dataset.py     # Messy simulation generator (52,000 jobs, 5,000 students)
-│   ├── pipeline.py             # Pandas cleaning pipeline, outlier detection, quality reports
-│   ├── raw_jobs.csv            # Intentionally messy generated CSV (git ignored)
-│   ├── cleaned_jobs.csv        # Cleaned dataset ready for DB injection
-│   ├── student_profiles.csv    # Student training records (git ignored)
-│   └── data_quality.json       # JSON file comparing metrics before/after ETL
+│   ├── generate_dataset.py       # Simulation generator (52,000 jobs, 5,000 students)
+│   ├── pipeline.py               # Pandas cleaning pipeline, outlier detection, quality reports
+│   ├── raw_jobs.csv              # Raw simulated CSV (git ignored)
+│   ├── cleaned_jobs.csv          # Cleaned dataset ready for DB injection
+│   ├── student_profiles.csv      # Student training records (git ignored)
+│   └── data_quality.json         # ETL before/after validation metrics
 ├── Models/
-│   ├── train_models.py         # Trains Ridge Regressor and Decision Tree Classifier
-│   ├── salary_model.joblib      # Serialized salary predictor weights
-│   ├── salary_encoder.joblib    # Serialized categorical encoder
-│   └── placement_model.joblib   # Serialized placement classifier model
+│   ├── train_models.py           # Trains Ridge Regressor & Placement Classifiers with 5-Fold CV
+│   ├── salary_model.joblib        # Serialized Ridge salary predictor
+│   ├── salary_encoder.joblib      # Serialized categorical encoder
+│   └── placement_model.joblib     # Serialized placement classifier
 ├── Backend/
-│   ├── app.py                  # Flask endpoints for stats, ML prediction & NLP PDF parsing
-│   ├── database.py             # SQLite DB initializer & automatic seeder
-│   ├── parser.py               # PDF resume text extraction and skill indexer
-│   ├── requirements.txt        # Backend dependencies list
-│   └── careerlens.db           # SQLite database file (created on startup)
-├── Frontend/
-│   ├── public/data/            # Loaded by React for client fallbacks
+│   ├── app.py                    # Flask REST API endpoints (prediction, stats, PDF parser)
+│   ├── database.py               # SQLite DB initializer & automatic seeder
+│   ├── parser.py                 # Multi-dimensional ATS engine & NLP text extraction
+│   ├── requirements.txt          # Python dependencies
+│   └── careerlens.db             # Local SQLite database
+├── frontend/
+│   ├── public/data/              # Model statistics, benchmarks, and fallback datasets
+│   │   ├── model_benchmarks.json
+│   │   ├── placement_model_stats.json
+│   │   └── salary_model_stats.json
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx               # Header routing tabs
-│   │   │   ├── MarketDashboard.jsx      # Analytics visualizations & ETL metrics
-│   │   │   ├── SalaryPredictor.jsx      # Predictor calculator & coefficient charts
-│   │   │   ├── ResumeMatcher.jsx        # PDF uploader, score match, & roadmap
-│   │   │   └── PlacementAnalytics.jsx   # Placement probability & What-If ML simulator
-│   │   ├── App.jsx                      # Page layout routing
-│   │   ├── index.css                    # Tailwind CSS configuration imports
-│   │   └── main.jsx                     # Render mount
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── package.json
-├── Documentation/
-│   └── DEPLOYMENT.md           # Production deployment steps (Vercel, Render, PostgreSQL)
+│   │   │   ├── Navbar.jsx             # Header navigation with theme toggle
+│   │   │   ├── MarketDashboard.jsx    # Analytics visualizations & ETL audit
+│   │   │   ├── SalaryPredictor.jsx    # Ridge salary estimator & weights
+│   │   │   ├── ResumeMatcher.jsx      # Multi-dimensional ATS resume analyzer
+│   │   │   ├── PlacementAnalytics.jsx # Calibrated What-If simulator
+│   │   │   └── ModelBenchmarks.jsx    # Comparative algorithm evaluation
+│   │   ├── App.jsx                    # Root layout with aurora ambient lighting
+│   │   ├── config.js                  # Dynamic API base URL configuration
+│   │   ├── index.css                  # Tailwind styles & glassmorphic system
+│   │   └── main.jsx                   # Application entry point
+│   ├── vercel.json                    # Vercel SPA route rewrite rules
+│   ├── package.json
+│   └── vite.config.js
+├── vercel.json                        # Root Vercel SPA rewrite configuration
+├── PROJECT_EVOLUTION_V1_TO_V2.md      # Comprehensive v1.0 -> v2.0 transformation report
 └── README.md
 ```
 
@@ -85,36 +104,32 @@ Developed with modern clean architecture, CareerLens looks like a real-world sta
 
 ## 🚀 Local Installation & Setup
 
-### 1. Generate Datasets & Clean
-Execute the simulation generator and ETL pipeline to generate raw datasets and clean standard CSVs:
+### 1. Generate Datasets & Run ETL Pipeline
 ```bash
-# Generate 52,000 jobs & 5,000 student records
+# Generate simulation records
 python Datasets/generate_dataset.py
 
-# Clean duplicates, impute salaries, check outliers
+# Execute cleaning pipeline and generate data quality metrics
 python Datasets/pipeline.py
 ```
 
-### 2. Train the Machine Learning Models
-Fit the Ridge regression and Decision Tree models and serialize them:
+### 2. Train & Benchmark Machine Learning Models
 ```bash
-# Train ML predictors and serialize models
+# Fit Ridge regression and placement classifiers with cross-validation
 python Models/train_models.py
 ```
-*This compiles stats, weights, and model files, saving them to `Models/` and copying JSON configs into `Frontend/public/data/`.*
+*This updates model files in `Models/` and exports benchmark JSONs into `frontend/public/data/`.*
 
-### 3. Run the Flask REST API Server
-Start the Flask web server. On startup, it automatically runs the database initializer (`Backend/database.py`), creates the database tables, and seeds them with your cleaned jobs and student records:
+### 3. Launch Flask Backend Server
 ```bash
-# Install backend requirements
+# Install dependencies
 pip install -r Backend/requirements.txt
 
-# Start the server (runs on http://127.0.0.1:5000)
+# Start backend server (runs on http://127.0.0.1:5000)
 python Backend/app.py
 ```
 
-### 4. Run the React Frontend
-Open a new terminal, navigate to the frontend folder, install packages, and spin up the Vite development server:
+### 4. Launch React Frontend
 ```bash
 cd frontend
 npm install
@@ -124,37 +139,10 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 🔍 Code Walkthrough & Design Decisions
+## 🛡️ Architecture & Resilience
 
-### 1. Hybrid Client-Server Architecture
-To guarantee that your resume website can be previewed even if a live server is not hosted, the React frontend is written with **Dynamic Fallback Handlers**. If the Flask API server is offline, the React app automatically catches the network error, toggles a fallback state, and runs predictions/simulations client-side using static JSON datasets and pre-coded logit equations:
-```javascript
-// Fallback client simulation if Flask backend is offline
-const executeClientSimulation = () => {
-  const logit = -7.5 + (0.95 * cgpa) + (1.6 * internships) + (0.75 * projects) + (0.5 * certifications) + (0.1 * skillsCount);
-  const prob = 1 / (1 + Math.exp(-logit));
-  const score = Math.round(prob * 100);
-  
-  setResults({
-    placement_probability: prob,
-    employability_score: score,
-    suggestions: suggestions
-  });
-};
-```
-This shows recruiters that you can design resilient systems that handle service disruptions gracefully.
+### Hybrid Client-Server Failover
+The frontend features **Dynamic Fallback Handlers**. If the remote Flask API server is unreachable, the application gracefully falls back to client-side mathematical simulation using cached model stats and logit equations, ensuring zero user disruption during outages.
 
-### 2. Multi-hot Vector Coding for Text Processing
-To predict salaries, we represent unstructured skills by training a Ridge model on multi-hot vectors mapping the presence of 50 technical keywords. The Flask server replicates this preprocessing vectorization on inputs:
-```python
-# Multi-hot encode incoming skills array
-skills_dummies = pd.DataFrame(0, index=[0], columns=parser.ALL_SKILLS)
-for s in skills:
-    if s in parser.ALL_SKILLS:
-        skills_dummies.loc[0, s] = 1
-        
-# Concatenate categorical one-hot vectors and predict
-X_pred = pd.concat([cat_encoded_df, skills_dummies], axis=1)
-predicted = salary_model.predict(X_pred)[0]
-```
-This demonstrates the ability to translate conceptual ML math into clean production APIs.
+### Single Page Application (SPA) Routing on Vercel
+Configured with wildcard rewrites in `vercel.json` (`/(.*) -> /index.html`), ensuring deep links and browser refreshes across all subroutes (`/predict-salary`, `/placement`, `/resume-analyzer`, `/benchmarks`) load seamlessly without `404: NOT_FOUND` errors.
