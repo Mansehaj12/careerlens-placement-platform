@@ -1,107 +1,112 @@
 {
-    "r2_score": 0.21459328239688757,
-    "rmse": 8543.359257305096,
+    "best_model": "Ridge (Baseline)",
+    "r2_score": 0.2186,
+    "rmse": 8604.44,
+    "mae": 5215.74,
+    "empirical_margin_mae": 5215.74,
+    "empirical_margin_p80": 9293.62,
+    "validation_strategy": "5-Fold Cross-Validation",
     "total_training_samples": 33879,
     "feature_importances": [
         {
             "feature": "clean_experience_Intern",
-            "importance": 7509.880328275795,
-            "coefficient": -7509.880328275795
+            "importance": 6339.9634447204935,
+            "coefficient": -6339.9634447204935
         },
         {
             "feature": "clean_experience_Lead",
-            "importance": 6278.3142123927055,
-            "coefficient": 6278.3142123927055
+            "importance": 5326.553051738386,
+            "coefficient": 5326.553051738386
         },
         {
             "feature": "standard_title_Machine Learning Engineer",
-            "importance": 5108.441541373765,
-            "coefficient": 5108.441541373765
+            "importance": 3794.6755461256,
+            "coefficient": 3794.6755461256
         },
         {
-            "feature": "standard_title_Frontend Developer",
-            "importance": 3636.20762916175,
-            "coefficient": -3636.20762916175
+            "feature": "experience_role_Lead_Machine Learning Engineer",
+            "importance": 3784.715441091959,
+            "coefficient": 3784.715441091959
         },
         {
-            "feature": "standard_title_Data Analyst",
-            "importance": 3214.066583060142,
-            "coefficient": -3214.066583060142
+            "feature": "experience_role_Intern_Machine Learning Engineer",
+            "importance": 3686.972328167708,
+            "coefficient": -3686.972328167708
         },
         {
-            "feature": "standard_title_Data Scientist",
-            "importance": 3111.860528357494,
-            "coefficient": 3111.860528357494
+            "feature": "experience_role_Senior_Machine Learning Engineer",
+            "importance": 2919.8602581291298,
+            "coefficient": 2919.8602581291298
         },
         {
             "feature": "clean_experience_Senior",
-            "importance": 2894.6481606644425,
-            "coefficient": 2894.6481606644425
+            "importance": 2899.7163167432914,
+            "coefficient": 2899.7163167432914
+        },
+        {
+            "feature": "standard_title_Data Analyst",
+            "importance": 2824.2420524047398,
+            "coefficient": -2824.2420524047398
+        },
+        {
+            "feature": "standard_title_Frontend Developer",
+            "importance": 2199.278946038187,
+            "coefficient": -2199.278946038187
         },
         {
             "feature": "clean_experience_Entry",
-            "importance": 2624.216088927843,
-            "coefficient": -2624.216088927843
+            "importance": 2114.865397154738,
+            "coefficient": -2114.865397154738
+        },
+        {
+            "feature": "standard_title_Data Scientist",
+            "importance": 2112.7498341182513,
+            "coefficient": 2112.7498341182513
+        },
+        {
+            "feature": "experience_role_Lead_Data Scientist",
+            "importance": 1978.4139410801997,
+            "coefficient": 1978.4139410801997
+        },
+        {
+            "feature": "experience_role_Intern_Data Scientist",
+            "importance": 1869.287598472317,
+            "coefficient": -1869.287598472317
+        },
+        {
+            "feature": "experience_role_Senior_Data Scientist",
+            "importance": 1539.225723047013,
+            "coefficient": 1539.225723047013
         },
         {
             "feature": "Analytics",
-            "importance": 1699.992065289006,
-            "coefficient": -1699.992065289006
+            "importance": 1259.471286697209,
+            "coefficient": -1259.471286697209
         },
         {
-            "feature": "Vite",
-            "importance": 1143.4335464971452,
-            "coefficient": 1143.4335464971452
+            "feature": "experience_role_Lead_Data Analyst",
+            "importance": 1243.134900590296,
+            "coefficient": -1243.134900590296
         },
         {
-            "feature": "Tailwind",
-            "importance": 1031.4995166983113,
-            "coefficient": 1031.4995166983113
+            "feature": "experience_role_Intern_Backend Developer",
+            "importance": 1186.7259444516935,
+            "coefficient": -1186.7259444516935
         },
         {
-            "feature": "Go",
-            "importance": 931.3753642698042,
-            "coefficient": 931.3753642698042
+            "feature": "experience_role_Not Specified_Data Analyst",
+            "importance": 1096.5285803104239,
+            "coefficient": -1096.5285803104239
         },
         {
-            "feature": "Git",
-            "importance": 921.2149625869201,
-            "coefficient": -921.2149625869201
+            "feature": "experience_role_Entry_Software Engineer",
+            "importance": 1042.2194975215568,
+            "coefficient": -1042.2194975215568
         },
         {
-            "feature": "standard_title_Software Engineer",
-            "importance": 859.8139840925967,
-            "coefficient": -859.8139840925967
-        },
-        {
-            "feature": "MongoDB",
-            "importance": 795.1509925427179,
-            "coefficient": 795.1509925427179
-        },
-        {
-            "feature": "Next.js",
-            "importance": 786.2665568228598,
-            "coefficient": 786.2665568228598
-        },
-        {
-            "feature": "Redux",
-            "importance": 690.2019773890415,
-            "coefficient": 690.2019773890415
-        },
-        {
-            "feature": "System Design",
-            "importance": 688.6275675083172,
-            "coefficient": 688.6275675083172
-        },
-        {
-            "feature": "clean_experience_Mid",
-            "importance": 680.8724682421198,
-            "coefficient": 680.8724682421198
-        },
-        {
-            "feature": "Java",
-            "importance": 527.7381093126071,
-            "coefficient": -527.7381093126071
+            "feature": "experience_role_Mid_Backend Developer",
+            "importance": 1009.8894286389656,
+            "coefficient": -1009.8894286389656
         }
     ],
     "categories": {
@@ -126,6 +131,10 @@
             "Hyderabad",
             "Remote",
             "Other Tech Hub"
+        ],
+        "remotes": [
+            "No",
+            "Yes"
         ],
         "skills": [
             "Python",

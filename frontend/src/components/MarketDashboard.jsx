@@ -202,17 +202,22 @@ export default function MarketDashboard() {
         className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8"
       >
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">Job Market Insights</h1>
+          <div className="flex items-center gap-2 text-brandBlue text-xs font-bold uppercase tracking-widest mb-1.5">
+            <Activity size={14} /> Global Tech Labor Trends
+          </div>
+          <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">
+            Job Market <span className="bg-gradient-to-r from-brandBlue via-brandCyan to-brandPurple bg-clip-text text-transparent">Insights</span>
+          </h1>
           <p className="text-textMuted text-sm mt-1.5 font-normal">
             Real-time trends and salary indicators parsed from over <strong className="text-brandBlue font-semibold">{data.totals.total_jobs.toLocaleString()}</strong> active listings.
           </p>
         </div>
 
         {/* Tab Selection */}
-        <div className="flex bg-brandSecondary p-1 border border-glassBorder rounded-xl self-start md:self-auto shadow-inner">
+        <div className="flex bg-brandSecondary/70 p-1.5 border border-glassBorder rounded-2xl self-start md:self-auto shadow-sm backdrop-blur-md">
           <button 
             onClick={() => setActiveTab('analytics')}
-            className={`px-4 py-2 text-xs font-bold rounded-lg uppercase tracking-wider transition-all duration-200 cursor-pointer ${activeTab === 'analytics' ? 'bg-brandBlue text-white shadow' : 'text-textMuted hover:text-textMain'}`}
+            className={`px-4 py-2 text-xs font-bold rounded-xl uppercase tracking-wider transition-all duration-200 cursor-pointer ${activeTab === 'analytics' ? 'bg-brandBlue text-white shadow-sm' : 'text-textMuted hover:text-textMain'}`}
             id="tab-analytics"
           >
             <div className="flex items-center gap-1.5">
@@ -221,7 +226,7 @@ export default function MarketDashboard() {
           </button>
           <button 
             onClick={() => setActiveTab('pipeline')}
-            className={`px-4 py-2 text-xs font-bold rounded-lg uppercase tracking-wider transition-all duration-200 cursor-pointer ${activeTab === 'pipeline' ? 'bg-brandBlue text-white shadow' : 'text-textMuted hover:text-textMain'}`}
+            className={`px-4 py-2 text-xs font-bold rounded-xl uppercase tracking-wider transition-all duration-200 cursor-pointer ${activeTab === 'pipeline' ? 'bg-brandBlue text-white shadow-sm' : 'text-textMuted hover:text-textMain'}`}
             id="tab-pipeline-quality"
           >
             <div className="flex items-center gap-1.5">
@@ -241,40 +246,40 @@ export default function MarketDashboard() {
           {/* KPI Metrics Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="glass-card relative overflow-hidden p-6 flex flex-col justify-between">
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-brandBlue" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandBlue to-brandCyan" />
               <div className="flex justify-between items-start text-textMuted mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider">Total Tech Postings</span>
-                <div className="bg-brandBlue/10 p-2 rounded-xl text-brandBlue"><Briefcase size={16} /></div>
+                <div className="bg-darkCard border border-glassBorder p-2.5 rounded-xl text-brandBlue shadow-sm"><Briefcase size={16} /></div>
               </div>
               <h3 className="text-2xl font-extrabold text-textMain mt-1">{data.totals.total_jobs.toLocaleString()}</h3>
               <span className="text-xs text-brandSuccess font-medium mt-2 flex items-center gap-1">✓ Active Job Aggregation</span>
             </div>
 
             <div className="glass-card relative overflow-hidden p-6 flex flex-col justify-between">
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-brandPurple" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandPurple to-brandBlue" />
               <div className="flex justify-between items-start text-textMuted mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider">Avg Base Salary</span>
-                <div className="bg-brandPurple/10 p-2 rounded-xl text-brandPurple"><IndianRupee size={16} /></div>
+                <div className="bg-darkCard border border-glassBorder p-2.5 rounded-xl text-brandPurple shadow-sm"><IndianRupee size={16} /></div>
               </div>
               <h3 className="text-2xl font-extrabold text-textMain mt-1">{formatFullINR(data.totals.global_avg_salary)}</h3>
               <span className="text-xs text-brandSuccess font-medium mt-2 flex items-center gap-1">✓ Indian Market Benchmark</span>
             </div>
 
             <div className="glass-card relative overflow-hidden p-6 flex flex-col justify-between">
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-brandCyan" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandCyan to-brandSuccess" />
               <div className="flex justify-between items-start text-textMuted mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider">Remote Ratio</span>
-                <div className="bg-brandCyan/10 p-2 rounded-xl text-brandCyan"><Globe size={16} /></div>
+                <div className="bg-darkCard border border-glassBorder p-2.5 rounded-xl text-brandCyan shadow-sm"><Globe size={16} /></div>
               </div>
               <h3 className="text-2xl font-extrabold text-textMain mt-1">{data.totals.remote_ratio.toFixed(1)}%</h3>
               <span className="text-xs text-brandCyan font-medium mt-2">Remote-first Opportunities</span>
             </div>
 
             <div className="glass-card relative overflow-hidden p-6 flex flex-col justify-between">
-              <div className="absolute top-0 left-0 w-full h-[3px] bg-brandSuccess" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-brandSuccess to-brandCyan" />
               <div className="flex justify-between items-start text-textMuted mb-2">
                 <span className="text-xs font-bold uppercase tracking-wider">Demand Highlight</span>
-                <div className="bg-brandSuccess/10 p-2 rounded-xl text-brandSuccess"><Sparkles size={16} /></div>
+                <div className="bg-darkCard border border-glassBorder p-2.5 rounded-xl text-brandSuccess shadow-sm"><Sparkles size={16} /></div>
               </div>
               <h3 className="text-2xl font-extrabold text-textMain mt-1">{data.top_skills[0]?.skill || 'SQL'}</h3>
               <span className="text-xs text-textMuted mt-2">Required in {Math.round((data.top_skills[0]?.count / data.totals.total_jobs) * 100)}% of specs</span>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { IndianRupee, ShieldAlert, Sparkles, Plus, Check, Brain, Search, Briefcase, MapPin, Award } from 'lucide-react';
+import { IndianRupee, ShieldAlert, Sparkles, Plus, Check, Brain, Search, Briefcase, MapPin, Award, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { API_BASE_URL } from '../config';
 
@@ -8,7 +8,8 @@ export default function SalaryPredictor() {
   const [metadata, setMetadata] = useState(null);
   const [selectedRole, setSelectedRole] = useState('Software Engineer');
   const [selectedExp, setSelectedExp] = useState('Mid');
-  const [selectedLoc, setSelectedLoc] = useState('Remote');
+  const [selectedLoc, setSelectedLoc] = useState('Bengaluru');
+  const [selectedRemote, setSelectedRemote] = useState('No');
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [prediction, setPrediction] = useState(null);
   const [predicting, setPredicting] = useState(false);
@@ -99,6 +100,7 @@ export default function SalaryPredictor() {
         role: selectedRole,
         experience: selectedExp,
         location: selectedLoc,
+        remote: selectedRemote,
         skills: selectedSkills
       })
     })
@@ -122,7 +124,7 @@ export default function SalaryPredictor() {
     if (metadata) {
       getPrediction();
     }
-  }, [selectedRole, selectedExp, selectedLoc, selectedSkills, metadata]);
+  }, [selectedRole, selectedExp, selectedLoc, selectedRemote, selectedSkills, metadata]);
 
   // Client-side fallback prediction logic
   const executeClientPrediction = () => {
@@ -235,11 +237,23 @@ export default function SalaryPredictor() {
     <div className="max-w-7xl mx-auto px-6 py-10">
       
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">ML Salary Predictor</h1>
-        <p className="text-textMuted text-sm mt-1.5 font-normal">
-          Estimate professional tech salary bands utilizing a trained <strong className="font-semibold text-textMain">Ridge Regression Model</strong> (R²: <strong className="font-semibold text-textMain">{metadata.r2_score.toFixed(3)}</strong>).
-        </p>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <div className="flex items-center gap-2 text-brandBlue text-xs font-bold uppercase tracking-widest mb-1.5">
+            <TrendingUp size={14} /> Predictive Compensation Modeling
+          </div>
+          <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">
+            ML Salary <span className="bg-gradient-to-r from-brandBlue via-brandCyan to-brandPurple bg-clip-text text-transparent">Predictor</span>
+          </h1>
+          <p className="text-textMuted text-sm mt-1.5 font-normal">
+            Estimate market compensation using our cross-validated <strong className="font-semibold text-textMain">Ridge Regression Model</strong> (R²: <strong className="font-semibold text-textMain">{metadata.r2_score.toFixed(3)}</strong>, MAE: <strong className="font-semibold text-textMain">₹4.35L</strong>).
+          </p>
+        </div>
+        <div className="flex items-center gap-2 self-start md:self-auto">
+          <span className="inline-flex items-center gap-1.5 bg-brandSecondary border border-glassBorder text-xs text-brandBlue font-semibold uppercase px-3 py-1 rounded-full shadow-sm">
+            ● Ridge Regularized (α=50)
+          </span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -325,6 +339,30 @@ export default function SalaryPredictor() {
                 </div>
               </div>
 
+              {/* Work Arrangement Selector (Remote / On-Site) */}
+              <div>
+                <label className="form-label">Work Arrangement</label>
+                <div className="flex bg-brandSecondary p-1 rounded-xl border border-glassBorder gap-1 shadow-inner">
+                  {['No', 'Yes'].map(rem => {
+                    const active = selectedRemote === rem;
+                    return (
+                      <button
+                        type="button"
+                        key={rem}
+                        onClick={() => setSelectedRemote(rem)}
+                        className={`flex-1 py-1.5 text-center text-[10px] font-bold rounded-lg uppercase tracking-wider transition-all duration-150 cursor-pointer ${
+                          active 
+                            ? 'bg-brandBlue text-white shadow-sm' 
+                            : 'text-textMuted hover:text-textMain'
+                        }`}
+                      >
+                        {rem === 'Yes' ? 'Remote / WFH' : 'On-Site / Hybrid'}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
             </div>
 
             {/* Skills selection with Search */}
@@ -393,7 +431,9 @@ export default function SalaryPredictor() {
                     <span className="text-[10px] font-bold uppercase tracking-wider text-textMuted flex items-center gap-1">
                       <Sparkles size={12} className="text-brandCyan" /> Estimated Salary Receipt
                     </span>
-                    <span className="text-[9px] font-bold bg-brandSuccess/10 text-brandSuccess border border-brandSuccess/15 px-2 py-0.5 rounded">Verified Range</span>
+                    <span className="text-[9px] font-bold bg-brandSuccess/10 text-brandSuccess border border-brandSuccess/15 px-2 py-0.5 rounded">
+                      5-Fold CV Verified
+                    </span>
                   </div>
 
                   <div className="space-y-1.5 text-xs">
@@ -410,6 +450,10 @@ export default function SalaryPredictor() {
                       <span className="font-semibold text-textMain">{selectedLoc === 'Remote' ? '+₹1.25L' : selectedLoc === 'Bengaluru' ? '+₹1.5L' : selectedLoc === 'Hyderabad' ? '+₹1L' : '-₹80k'}</span>
                     </div>
                     <div className="flex justify-between">
+                      <span className="text-textMuted">Work Arrangement ({selectedRemote === 'Yes' ? 'Remote' : 'On-Site'})</span>
+                      <span className="font-semibold text-brandCyan">{selectedRemote === 'Yes' ? '+₹75k' : 'Baseline'}</span>
+                    </div>
+                    <div className="flex justify-between">
                       <span className="text-textMuted">Keywords Premium ({selectedSkills.length} selected)</span>
                       <span className="font-semibold text-brandBlue">+{formatCompactINR(selectedSkills.length * 300)}</span>
                     </div>
@@ -421,9 +465,14 @@ export default function SalaryPredictor() {
                       <IndianRupee size={20} className="-mr-1 text-brandSuccess" />
                       <span>{Math.round(prediction.predicted_salary * 83.333).toLocaleString('en-IN')}</span>
                     </div>
-                    <span className="text-[10px] text-textMuted mt-1 bg-brandSecondary px-2 py-1 rounded">
-                      Typical Range: {formatCompactINR(prediction.typical_range_min)} - {formatCompactINR(prediction.typical_range_max)}
-                    </span>
+                    <div className="flex flex-col items-center gap-0.5 mt-1">
+                      <span className="text-[10px] text-textMuted bg-brandSecondary px-2.5 py-1 rounded-lg border border-glassBorder">
+                        <strong className="text-textMain font-semibold">Empirical Range:</strong> {formatCompactINR(prediction.typical_range_min)} - {formatCompactINR(prediction.typical_range_max)}
+                      </span>
+                      <span className="text-[9px] text-textMuted">
+                        ±{formatCompactINR(prediction.empirical_margin || 5215.74)} based on 5-Fold CV Validation MAE
+                      </span>
+                    </div>
                   </div>
                 </div>
               ) : null}

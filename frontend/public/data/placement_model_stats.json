@@ -1,28 +1,31 @@
 {
-    "accuracy": 0.942,
-    "precision": 0.9316874135546335,
-    "recall": 0.942,
-    "f1_score": 0.9351155462184874,
+    "best_model": "Random Forest Classifier",
+    "validation_strategy": "5-Fold Stratified Cross-Validation",
+    "accuracy": 0.9432,
+    "precision": 0.9317,
+    "recall": 0.9432,
+    "f1_score": 0.9265,
+    "roc_auc": 0.9063,
     "feature_importances": [
         {
-            "feature": "projects",
-            "importance": 0.34774901799959307
+            "feature": "cgpa",
+            "importance": 0.3589249149703613
         },
         {
-            "feature": "cgpa",
-            "importance": 0.327091275319851
+            "feature": "projects",
+            "importance": 0.24815000034677182
         },
         {
             "feature": "internships",
-            "importance": 0.2071991258809277
-        },
-        {
-            "feature": "certifications",
-            "importance": 0.087297075755721
+            "importance": 0.24657219696026217
         },
         {
             "feature": "skills_count",
-            "importance": 0.03066350504390727
+            "importance": 0.0790572938992529
+        },
+        {
+            "feature": "certifications",
+            "importance": 0.06729559382335198
         }
     ]
 }

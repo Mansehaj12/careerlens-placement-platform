@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Activity, TrendingUp, Sparkles, Award, Sun, Moon } from 'lucide-react';
+import { Activity, TrendingUp, Sparkles, Award, Sun, Moon, Cpu } from 'lucide-react';
 
 export default function Navbar({ theme, toggleTheme }) {
   const navItems = [
     { path: '/', label: 'Job Market Insights', icon: <Activity size={16} /> },
     { path: '/predict-salary', label: 'Salary Predictor', icon: <TrendingUp size={16} /> },
     { path: '/resume-analyzer', label: 'Resume Gap Analyzer', icon: <Sparkles size={16} /> },
-    { path: '/placement', label: 'Placement Analytics', icon: <Award size={16} /> }
+    { path: '/placement', label: 'Placement Analytics', icon: <Award size={16} /> },
+    { path: '/benchmarks', label: 'Model Benchmarks', icon: <Cpu size={16} /> }
   ];
 
   return (

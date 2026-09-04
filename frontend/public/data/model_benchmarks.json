@@ -1,0 +1,81 @@
+{
+    "timestamp": "2026-09-04T15:55:53.325643",
+    "validation_protocol": "5-Fold Cross-Validation with stratified splits for classification",
+    "salary_prediction": {
+        "task": "Regression",
+        "target": "salary_avg (USD)",
+        "models": {
+            "Ridge (Baseline)": {
+                "r2_mean": 0.2186,
+                "r2_std": 0.0111,
+                "rmse_mean": 8604.44,
+                "rmse_std": 176.91,
+                "mae_mean": 5215.74,
+                "mae_std": 89.26
+            },
+            "Random Forest Regressor": {
+                "r2_mean": 0.1947,
+                "r2_std": 0.0068,
+                "rmse_mean": 8735.11,
+                "rmse_std": 154.69,
+                "mae_mean": 5463.24,
+                "mae_std": 74.8
+            },
+            "HistGradientBoosting Regressor": {
+                "r2_mean": 0.218,
+                "r2_std": 0.0103,
+                "rmse_mean": 8607.86,
+                "rmse_std": 172.23,
+                "mae_mean": 5230.65,
+                "mae_std": 88.13
+            }
+        },
+        "selected_model": "Ridge (Baseline)",
+        "selection_rationale": "Ridge with L2 regularization (alpha=50) achieved the highest cross-validated R2 and lowest MAE, while preserving 100% linear interpretability and sub-millisecond inference.",
+        "prediction_range": {
+            "method": "Empirical Prediction Range",
+            "metric": "Validation Fold Mean Absolute Error (MAE)",
+            "margin_usd": 5215.74,
+            "formula": "Predicted Salary +/- $5,215.74",
+            "note": "Reported as an empirical error range derived from 5-fold cross-validation out-of-fold residuals, avoiding unverified Gaussian distribution assumptions."
+        }
+    },
+    "placement_prediction": {
+        "task": "Binary Classification",
+        "target": "placed (0 = Unplaced, 1 = Placed)",
+        "models": {
+            "Decision Tree (Baseline)": {
+                "accuracy_mean": 0.9368,
+                "accuracy_std": 0.0031,
+                "f1_mean": 0.9237,
+                "f1_std": 0.0066,
+                "roc_auc_mean": 0.8673,
+                "roc_auc_std": 0.0208,
+                "precision_mean": 0.9197,
+                "recall_mean": 0.9368
+            },
+            "Random Forest Classifier": {
+                "accuracy_mean": 0.9432,
+                "accuracy_std": 0.0049,
+                "f1_mean": 0.9265,
+                "f1_std": 0.007,
+                "roc_auc_mean": 0.9063,
+                "roc_auc_std": 0.0099,
+                "precision_mean": 0.9317,
+                "recall_mean": 0.9432
+            },
+            "HistGradientBoosting Classifier": {
+                "accuracy_mean": 0.9346,
+                "accuracy_std": 0.0057,
+                "f1_mean": 0.9253,
+                "f1_std": 0.0079,
+                "roc_auc_mean": 0.8887,
+                "roc_auc_std": 0.0143,
+                "precision_mean": 0.9201,
+                "recall_mean": 0.9346
+            }
+        },
+        "selected_model": "Random Forest Classifier",
+        "selection_rationale": "Random Forest with max_depth=6 and min_samples_split=5 achieved the highest ROC-AUC (0.9063 vs baseline 0.8673), producing smooth calibrated probability distributions without the sharp boundary artifacts of a single decision tree."
+    }
+}

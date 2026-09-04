@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Upload, FileText, CheckCircle2, AlertTriangle, ArrowRight, BookOpen, ShieldAlert, Sparkles, Check, Plus } from 'lucide-react';
+import { Upload, FileText, CheckCircle2, AlertTriangle, ArrowRight, BookOpen, ShieldAlert, Sparkles, Check, Plus, Layers, Zap, CheckSquare, XCircle, Award, Target, Hash } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { API_BASE_URL } from '../config';
 
@@ -11,6 +11,7 @@ export default function ResumeMatcher() {
   const [errorMsg, setErrorMsg] = useState('');
   const [textFallback, setTextFallback] = useState('');
   const [useTextMode, setUseTextMode] = useState(false);
+  const [cachedText, setCachedText] = useState('');
 
   // Monitor theme switching dynamically to adapt colors
   const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
@@ -36,33 +37,53 @@ export default function ResumeMatcher() {
         return;
       }
       setFile(selectedFile);
+      setCachedText('');
       setErrorMsg('');
     }
   };
 
-  const handleAnalyze = (e) => {
-    if (e) e.preventDefault();
+  const triggerAnalysis = (roleToRun, targetFile = file, targetText = cachedText || textFallback) => {
     setErrorMsg('');
-    setResults(null);
-
-    if (!file && (!useTextMode || !textFallback.trim())) {
-      setErrorMsg('Please select a PDF file or paste your resume text first.');
-      return;
-    }
-
     setAnalyzing(true);
 
-    const formData = new FormData();
-    formData.append('role', selectedRole);
-    if (useTextMode) {
-      setTimeout(() => {
-        runClientSideAnalysis(textFallback);
-        setAnalyzing(false);
-      }, 1000);
+    // 1. If we already have the resume text (cached from PDF or pasted), run instant API evaluation
+    if (targetText && targetText.trim()) {
+      fetch(`${API_BASE_URL}/api/analyze/resume`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          role: roleToRun,
+          text: targetText
+        })
+      })
+        .then(async (res) => {
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || 'Server error');
+          return data;
+        })
+        .then((data) => {
+          setResults(data);
+          if (data.extracted_text) setCachedText(data.extracted_text);
+          setAnalyzing(false);
+        })
+        .catch((err) => {
+          console.warn("API text analysis offline, executing client-side fallback...", err);
+          runClientSideAnalysis(targetText, roleToRun);
+          setAnalyzing(false);
+        });
       return;
     }
 
-    formData.append('file', file);
+    // 2. Direct PDF file upload submission
+    if (!targetFile) {
+      setErrorMsg('Please select a PDF file or paste your resume text first.');
+      setAnalyzing(false);
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('role', roleToRun);
+    formData.append('file', targetFile);
 
     fetch(`${API_BASE_URL}/api/analyze/resume`, {
       method: 'POST',
@@ -75,452 +96,440 @@ export default function ResumeMatcher() {
       })
       .then((data) => {
         setResults(data);
+        if (data.extracted_text) setCachedText(data.extracted_text);
         setAnalyzing(false);
       })
       .catch((err) => {
-        console.warn("PDF Upload API failed, attempting client fallback via text paste...", err);
-        setErrorMsg('Flask server offline or PDF read error. Toggled Text Paste fallback mode.');
-        setUseTextMode(true);
+        console.warn("PDF Upload API failed, attempting client fallback...", err);
+        setErrorMsg('Flask server offline or PDF read error. Please retry or switch to Text Paste mode.');
         setAnalyzing(false);
       });
+  };
+
+  const handleAnalyze = (e) => {
+    if (e) e.preventDefault();
+    triggerAnalysis(selectedRole);
+  };
+
+  // Instant live re-evaluation whenever the user picks a different target role
+  const handleRoleChange = (newRole) => {
+    setSelectedRole(newRole);
+    if (file || textFallback.trim() || cachedText) {
+      triggerAnalysis(newRole, file, cachedText || textFallback);
+    }
   };
 
   // Client-side NLP analysis in case server is offline
-  const runClientSideAnalysis = (text) => {
+  const runClientSideAnalysis = (text, targetRole = selectedRole) => {
     const textLower = text.toLowerCase();
     
     const roleDefaultSkills = {
-      "Software Engineer": ["Python", "Java", "Git", "SQL", "Docker", "C++", "System Design"],
-      "Frontend Developer": ["JavaScript", "TypeScript", "React", "HTML5", "CSS3", "Tailwind", "Next.js"],
-      "Backend Developer": ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "gRPC"],
-      "Data Analyst": ["SQL", "Python", "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "A/B Testing"],
-      "Data Scientist": ["Python", "SQL", "Pandas", "Scikit-Learn", "TensorFlow", "PyTorch", "Machine Learning", "Statistics"],
-      "Machine Learning Engineer": ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "MLOps", "Docker", "Kubernetes", "AWS"]
+      "Software Engineer": ["Python", "Java", "C++", "SQL", "Git", "Docker", "System Design", "Linux", "REST APIs", "CI/CD", "PostgreSQL"],
+      "Frontend Developer": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind", "Next.js", "Redux", "Vite", "REST APIs", "Git"],
+      "Backend Developer": ["Node.js", "PostgreSQL", "REST APIs", "Express", "Redis", "MongoDB", "Django", "SQL", "Docker", "System Design", "Python"],
+      "Data Analyst": ["SQL", "Python", "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "Data Visualization", "A/B Testing", "Analytics"],
+      "Data Scientist": ["Python", "Pandas", "Scikit-Learn", "Machine Learning", "SQL", "PyTorch", "TensorFlow", "Statistics", "Data Visualization", "R"],
+      "Machine Learning Engineer": ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "MLOps", "Docker", "Kubernetes", "AWS", "SQL", "Machine Learning", "CI/CD"]
     };
     
-    const requiredSkills = roleDefaultSkills[selectedRole] || ["Python", "SQL"];
-    const found = [];
-    
-    const required_skills_keywords = {
-      "python": ["python"],
-      "java": ["java"],
-      "c++": ["c++", "cpp"],
-      "go": ["golang", "go lang", "go"],
-      "system design": ["system design", "microservices", "architecture"],
-      "git": ["git", "github", "gitlab"],
-      "sql": ["sql", "mysql", "sqlite", "oracle"],
-      "docker": ["docker", "containerization"],
-      "javascript": ["javascript", "js"],
-      "typescript": ["typescript", "ts"],
-      "react": ["react", "reactjs", "react.js"],
-      "html5": ["html5", "html"],
-      "css3": ["css3", "css"],
-      "redux": ["redux", "redux-toolkit"],
-      "tailwind": ["tailwind", "tailwindcss"],
-      "next.js": ["nextjs", "next.js", "next"],
-      "node.js": ["nodejs", "node.js", "node"],
-      "express": ["express", "expressjs"],
-      "postgresql": ["postgresql", "postgres"],
-      "mongodb": ["mongodb", "mongo"],
-      "redis": ["redis"],
-      "rest apis": ["rest api", "restful", "apis", "rest apis"],
-      "grpc": ["grpc"],
-      "excel": ["excel", "xlsx", "spreadsheets"],
-      "tableau": ["tableau"],
-      "power bi": ["power bi", "powerbi"],
-      "pandas": ["pandas"],
-      "statistics": ["statistics", "statistical", "probability"],
-      "a/b testing": ["a/b testing", "ab testing", "hypothesis testing"],
-      "data visualization": ["data visualization", "charts", "plots"],
-      "r": ["r lang", "r programming"],
-      "scikit-learn": ["scikit-learn", "sklearn"],
-      "tensorflow": ["tensorflow", "tf"],
-      "pytorch": ["pytorch"],
-      "machine learning": ["machine learning", "ml"],
-      "mlops": ["mlops", "model deployment"],
-      "kubernetes": ["kubernetes", "k8s"],
-      "aws": ["aws", "amazon web services", "cloud"],
-      "ci/cd": ["ci/cd", "ci-cd", "jenkins", "github actions"],
-      "terraform": ["terraform"],
-      "linux": ["linux", "unix"],
-      "bash": ["bash", "shell scripting"],
-      "jenkins": ["jenkins"],
-      "product roadmap": ["product roadmap", "roadmap"],
-      "agile": ["agile", "scrum", "sprints"],
-      "user research": ["user research", "ux research"],
-      "scrum": ["scrum"],
-      "analytics": ["analytics", "product analytics"],
-      "wireframing": ["wireframing", "figma", "wireframe"]
-    };
+    const masterSkills = [
+      "Python", "Java", "C++", "Go", "System Design", "Git", "SQL", "Docker",
+      "JavaScript", "TypeScript", "React", "HTML5", "CSS3", "Redux", "Tailwind", "Vite", "Next.js",
+      "Node.js", "Express", "Django", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "gRPC",
+      "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "A/B Testing", "Data Visualization",
+      "R", "Scikit-Learn", "TensorFlow", "PyTorch", "Machine Learning", "MLOps", "Kubernetes", "AWS",
+      "CI/CD", "Terraform", "Linux", "Bash", "Jenkins", "Product Roadmap", "Agile", "User Research",
+      "Scrum", "Analytics", "Wireframing"
+    ];
 
-    requiredSkills.forEach(skill => {
-      const aliases = required_skills_keywords[skill.toLowerCase()] || [skill.toLowerCase()];
-      const matches = aliases.some(alias => {
-        let pattern = '\\b' + alias.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + '\\b';
-        if (['c++', 'next.js', 'node.js', 'ci/cd', 'a/b testing', 'html5', 'css3'].includes(alias)) {
-          pattern = alias.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-        }
-        return new RegExp(pattern).test(textLower);
-      });
-      if (matches) {
-        found.push(skill);
-      }
-    });
+    const found = masterSkills.filter(s => textLower.includes(s.toLowerCase()));
+    const required = roleDefaultSkills[targetRole] || ["Python", "SQL", "Git"];
+    const matched = required.filter(s => found.includes(s));
+    const missing = required.filter(s => !found.includes(s));
+    const score = Math.round((matched.length / required.length) * 100);
 
-    const missing = requiredSkills.filter(s => !found.includes(s));
-    const score = requiredSkills.length > 0 ? Math.round((found.length / requiredSkills.length) * 100) : 0;
+    // Section presence
+    const sections = [
+      { name: "Contact Information", detected: /@/.test(text) && /\d{8,}/.test(text), status: /@/.test(text) ? "Present" : "Missing", feedback: "Contact info verified" },
+      { name: "Education", detected: /(education|academic|bachelor|degree|cgpa)/i.test(text), status: "Present", feedback: "Degree and university verified" },
+      { name: "Work / Internships", detected: /(experience|internship|work)/i.test(text), status: "Present", feedback: "Internship & work experience detected" },
+      { name: "Technical Projects", detected: /(projects|portfolio)/i.test(text), status: "Present", feedback: "Project implementations found" },
+      { name: "Technical Skills", detected: /(skills|technologies)/i.test(text), status: "Present", feedback: "Skills inventory organized" }
+    ];
 
-    const courseRecommendations = {
-      "Python": "Python for Data Science (Kaggle / Coursera)",
-      "SQL": "Complete SQL Bootcamp (Udemy / LeetCode Database)",
-      "React": "React Documentation Tutorials & FreeCodeCamp Full Course",
-      "AWS": "AWS Certified Cloud Practitioner Pathway",
-      "Docker": "Docker & Kubernetes Containerization Fundamentals (Docker Labs)",
-      "Tableau": "Data Visualization Specialist Course (Tableau eLearning)",
-      "Power BI": "Microsoft PL-300 Business Analyst Certification Pathway",
-      "Machine Learning": "Introduction to Machine Learning (Andrew Ng on Coursera)",
-      "System Design": "System Design Primer & Designing Data-Intensive Applications",
-      "CI/CD": "DevOps Foundations: Continuous Integration & Deployment (GitHub Actions)",
-      "Kubernetes": "Certified Kubernetes Administrator (CKA) Training"
-    };
+    // Metrics & Verbs
+    const metricsMatches = text.match(/(\d+%(?:\.\d+)?| \d{1,3}(?:,\d{3})+ | \d+\+?\s*(?:k|m|million) | \d+\s*(?:ms|seconds|mins) |[\$₹€]\s*\d+)/gi) || [];
+    const powerVerbsList = ["Architected", "Engineered", "Optimized", "Streamlined", "Automated", "Deployed", "Designed", "Built"];
+    const verbsFound = powerVerbsList.filter(v => textLower.includes(v.toLowerCase()));
 
-    const roadmap = missing.map(s => ({
-      skill: s,
-      resource: courseRecommendations[s] || `Advanced ${s} Guides & Project Building`
-    }));
-
-    let critique = '';
-    let category = '';
-    if (score < 35) {
-      category = 'Critical Alignment Gap';
-      critique = 'Your resume shows a strong mismatch for this role. You are missing key technological foundations. We recommend building 2-3 targeted projects using the missing technologies and documenting them on GitHub before applying.';
-    } else if (score >= 35 && score < 70) {
-      category = 'Competitive Profile';
-      critique = 'You possess solid core skills, but you are missing several secondary tools that distinguish premium candidates. Adding minor keyword modifications and highlighting hands-on experiences with containerization or SQL querying will boost screening rates.';
-    } else {
-      category = 'Highly Matched Talent';
-      critique = 'Excellent skill alignment! Your resume effectively matches market demand. To stand out even further to human recruiters, focus on showcasing quantified achievements (e.g., "reduced query times by 40%") rather than just listing technologies.';
-    }
+    // 55% Skills, 18% Metrics, 15% Sections, 12% Verbs
+    const atsComposite = Math.round((score * 0.55) + (100 * 0.15) + (Math.min(100, metricsMatches.length * 25) * 0.18) + (Math.min(100, verbsFound.length * 20) * 0.12));
 
     setResults({
+      evaluated_role: targetRole,
       match_percentage: score,
-      category,
-      critique,
-      skills_found: found,
+      category: score >= 70 ? 'Highly Matched Talent' : score >= 45 ? 'Competitive Profile' : 'Critical Alignment Gap',
+      critique: score >= 70 ? 'Outstanding technical alignment! High callback probability.' : 'Moderate alignment. Add missing domain tools to boost callback rate.',
+      skills_found: matched,
+      all_extracted_skills: found,
       skills_missing: missing,
-      roadmap
+      categorized_skills: {
+        "Languages": found.filter(s => ["Python", "Java", "C++", "JavaScript", "TypeScript", "SQL"].includes(s)),
+        "Frameworks & Web": found.filter(s => ["React", "Node.js", "Express", "Tailwind"].includes(s)),
+        "Cloud & Tools": found.filter(s => ["Git", "Docker", "AWS", "CI/CD"].includes(s))
+      },
+      roadmap: missing.map(s => ({ skill: s, resource: `Advanced ${s} Mastery Course & Project Sandbox` })),
+      ats_audit: {
+        overall_score: atsComposite,
+        grade: atsComposite >= 85 ? "A+" : atsComposite >= 75 ? "A" : atsComposite >= 60 ? "B" : "C",
+        verdict: atsComposite >= 75 ? "Strong Interview-Ready Profile" : "Competitive Profile with Gaps",
+        section_audit: { sections, detected_count: 5, total_sections: 5, section_score: 100 },
+        metrics_audit: { metrics_found: metricsMatches.slice(0, 8), count: metricsMatches.length, assessment: metricsMatches.length >= 3 ? "Good" : "Moderate", score: 80, tip: "Include measurable metrics in project bullet points." },
+        verbs_audit: { power_verbs: verbsFound, verb_count: verbsFound.length, strength: verbsFound.length >= 4 ? "Solid" : "Moderate", score: 80 }
+      }
     });
-  };
-
-  const loadSampleResume = () => {
-    const samples = {
-      "Data Analyst": "Resume:\nJohn Doe - Junior Data Analyst\nSkills: SQL, Python (Pandas, Numpy), Microsoft Excel, Tableau dashboards, descriptive statistics, and A/B Testing.\nSummary: Experienced in data query creation, visualization reports, and business analysis metrics.",
-      "Software Engineer": "Resume:\nJane Smith - Associate Software Engineer\nSkills: Java, C++, Python, Git version control, SQL databases, Docker containers, systems design.\nSummary: Designed scalable server APIs, managed backend integrations, and set up source control pipelines.",
-      "Data Scientist": "Resume:\nSarah Lee - Data Scientist\nSkills: Python, SQL databases, Pandas, NumPy, Scikit-Learn modeling, machine learning, deep learning with PyTorch, predictive statistics.\nSummary: Trained statistical regressors, deployed predictive analytics models, and conducted data exploration."
-    };
-    setTextFallback(samples[selectedRole] || "Resume:\nI have skills in Python and Git...");
-    setUseTextMode(true);
-    setErrorMsg('');
-  };
-
-  // Run automatically if profile selected matches pre-set samples
-  const selectPresetProfile = (presetRole, presetText) => {
-    setSelectedRole(presetRole);
-    setTextFallback(presetText);
-    setUseTextMode(true);
-    setErrorMsg('');
-    
-    // Trigger analysis in next tick once state matches
-    setTimeout(() => {
-      setAnalyzing(true);
-      setTimeout(() => {
-        runClientSideAnalysis(presetText);
-        setAnalyzing(false);
-      }, 700);
-    }, 50);
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="max-w-7xl mx-auto px-6 py-10 space-y-8">
       
-      {/* Title */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">Resume Gap Analyzer</h1>
-        <p className="text-textMuted text-sm mt-1.5 font-normal">
-          Upload your resume in PDF format to parse technology keywords and calculate compatibility against targeted market roles.
-        </p>
+      {/* Title Header */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 text-brandBlue text-xs font-bold uppercase tracking-widest mb-1.5">
+            <Sparkles size={14} /> Natural Language Resume Screening
+          </div>
+          <h1 className="text-3xl font-extrabold tracking-tight text-textMain font-sans">
+            ATS Resume <span className="bg-gradient-to-r from-brandBlue via-brandCyan to-brandPurple bg-clip-text text-transparent">Intelligence 2.0</span>
+          </h1>
+          <p className="text-textMuted text-sm mt-1 max-w-2xl">
+            Audit your resume against applicant tracking engines. Evaluates <strong>structural completeness</strong>, <strong>keyword alignment</strong>, <strong>quantifiable impact metrics</strong>, and <strong>executive action verbs</strong>.
+          </p>
+        </div>
+        <div className="flex items-center gap-2 self-start md:self-auto">
+          <span className="inline-flex items-center gap-1.5 bg-brandSecondary border border-glassBorder text-xs text-brandBlue font-semibold uppercase px-3 py-1 rounded-full shadow-sm">
+            ● ATS Engine Active
+          </span>
+        </div>
       </div>
 
-      <div className="space-y-6">
-        
-        {/* Preset Sample Profiles Selector (Handcrafted visual dashboard feel) */}
-        <div className="glass-card p-6">
-          <span className="form-label mb-3">Load Demo Profiles (Instant Mock Evaluation)</span>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <button
-              onClick={() => selectPresetProfile(
-                "Software Engineer",
-                "Resume:\nMansehaj Preet Singh\nSkills: C++, Java, Python, Git version control, SQL, Docker containerization, and System Design primer.\nSummary: Engineering sophomore building high-performance backend pipelines."
-              )}
-              className="p-3 text-left rounded-xl border border-glassBorder bg-brandSecondary hover:border-brandBlue/40 hover:bg-brandBlue/5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
-            >
-              <span className="text-xs font-bold text-textMain">Software Engineer</span>
-              <span className="text-[10px] text-textMuted mt-1 block">Includes Docker, System Design, C++, Git</span>
-            </button>
-            <button
-              onClick={() => selectPresetProfile(
-                "Data Analyst",
-                "Resume:\nJohn Doe - Junior Analyst\nSkills: SQL queries, Microsoft Excel spreadsheets, Tableau dashboard reporting, A/B Testing metrics, statistics.\nSummary: Analyst presenting metrics to key stakeholders."
-              )}
-              className="p-3 text-left rounded-xl border border-glassBorder bg-brandSecondary hover:border-brandBlue/40 hover:bg-brandBlue/5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
-            >
-              <span className="text-xs font-bold text-textMain">Data Analyst</span>
-              <span className="text-[10px] text-textMuted mt-1 block">Includes SQL, Tableau, Statistics, A/B Testing</span>
-            </button>
-            <button
-              onClick={() => selectPresetProfile(
-                "Data Scientist",
-                "Resume:\nSarah Lee\nSkills: Python programming, Pandas modeling, NumPy data exploration, Scikit-Learn libraries, Machine Learning algorithms.\nSummary: Researcher fitting regression models and clustering structures."
-              )}
-              className="p-3 text-left rounded-xl border border-glassBorder bg-brandSecondary hover:border-brandBlue/40 hover:bg-brandBlue/5 transition-all duration-200 cursor-pointer flex flex-col justify-between"
-            >
-              <span className="text-xs font-bold text-textMain">Data Scientist</span>
-              <span className="text-[10px] text-textMuted mt-1 block">Includes Python, ML, Pandas, Scikit-Learn</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Configuration Box */}
-        <div className="glass-card p-6">
-          <form onSubmit={handleAnalyze} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex flex-col">
-                <label className="form-label" htmlFor="role-profile-matcher">Target Career Profile</label>
-                <select
-                  className="form-select"
-                  value={selectedRole}
-                  onChange={(e) => setSelectedRole(e.target.value)}
-                  id="role-profile-matcher"
-                >
-                  {roles.map(r => <option key={r} value={r}>{r}</option>)}
-                </select>
-              </div>
-              <div className="flex items-end">
-                <button
-                  type="button"
-                  onClick={loadSampleResume}
-                  className="btn-secondary w-full"
-                  id="load-sample-resume-btn"
-                >
-                  <FileText size={16} /> Paste Custom Text Fallback
-                </button>
-              </div>
+      {/* Upload Form Box */}
+      <div className="glass-card p-6">
+        <form onSubmit={handleAnalyze} className="space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col">
+              <label className="form-label" htmlFor="role-profile-matcher">Target Role Benchmark</label>
+              <select
+                className="form-select"
+                value={selectedRole}
+                onChange={(e) => handleRoleChange(e.target.value)}
+                id="role-profile-matcher"
+              >
+                {roles.map(r => <option key={r} value={r}>{r}</option>)}
+              </select>
             </div>
+            <div className="flex items-end">
+              <button
+                type="button"
+                onClick={() => { setUseTextMode(!useTextMode); setFile(null); }}
+                className="btn-secondary w-full"
+              >
+                <FileText size={16} /> {useTextMode ? "Switch to PDF File Upload" : "Paste Raw Resume Text"}
+              </button>
+            </div>
+          </div>
 
-            {/* Document upload or Text area paste */}
-            {!useTextMode ? (
-              <div className="flex flex-col items-center justify-center border-2 border-dashed border-glassBorder rounded-2xl p-8 bg-brandSecondary/25 hover:border-brandBlue/35 hover:bg-brandSecondary/50 transition-all duration-200">
-                <Upload size={32} className="text-textMuted mb-3" />
-                <span className="text-sm font-semibold text-textMain">Select PDF Resume File</span>
-                <span className="text-xs text-textMuted mt-1 mb-4">Supported formats: .pdf (Max size 5MB)</span>
-                
-                <input
-                  type="file"
-                  accept="application/pdf"
-                  onChange={handleFileChange}
-                  className="hidden"
-                  id="resume-file-input"
-                />
-                
-                <label
-                  htmlFor="resume-file-input"
-                  className="btn-secondary py-2 px-4 text-xs font-semibold uppercase cursor-pointer"
-                >
-                  Browse Files
-                </label>
-                
-                {file && (
-                  <span className="text-xs text-brandSuccess font-bold mt-4 flex items-center gap-1">
-                    <CheckCircle2 size={12} /> Selected: {file.name}
-                  </span>
-                )}
-              </div>
-            ) : (
-              <div className="flex flex-col animate-fadeIn">
-                <label className="form-label" htmlFor="resume-textarea-paste">Paste Resume Text</label>
-                <textarea
-                  className="form-input min-h-[160px] font-mono text-xs"
-                  placeholder="Paste your raw resume text here to evaluate keywords..."
-                  value={textFallback}
-                  onChange={(e) => setTextFallback(e.target.value)}
-                  id="resume-textarea-paste"
-                />
-                <button
-                  type="button"
-                  onClick={() => { setUseTextMode(false); setFile(null); }}
-                  className="text-brandBlue text-xs font-bold mt-2 self-end hover:underline cursor-pointer"
-                  id="toggle-pdf-upload"
-                >
-                  ← Switch back to PDF Upload
-                </button>
-              </div>
-            )}
-
-            {errorMsg && (
-              <div className="bg-brandWarning/10 border border-brandWarning/20 rounded-xl p-3 flex gap-2 items-center text-xs text-brandWarning">
-                <ShieldAlert size={16} className="flex-shrink-0" />
-                <span>{errorMsg}</span>
-              </div>
-            )}
-
-            <button
-              type="submit"
-              className="btn-primary w-full"
-              disabled={analyzing}
-              id="submit-analysis-btn"
-            >
-              {analyzing ? (
-                <>
-                  <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin mr-2" />
-                  Analyzing Resume Structures...
-                </>
-              ) : (
-                <>
-                  <Sparkles size={16} /> Run Compatibility Engine
-                </>
-              )}
-            </button>
-          </form>
-        </div>
-
-        {/* Results Card with Framer Motion */}
-        {results && (
-          <motion.div 
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`glass-card p-6 grid grid-cols-1 md:grid-cols-12 gap-8 border-t-4 ${
-              results.match_percentage >= 70 
-                ? 'border-t-brandSuccess' 
-                : results.match_percentage >= 35 
-                ? 'border-t-brandWarning' 
-                : 'border-t-brandDanger'
-            }`}
-          >
-            
-            {/* Left section: Score & Critique */}
-            <div className="md:col-span-6 space-y-6">
+          {/* Document upload or Text area paste */}
+          {!useTextMode ? (
+            <div className="flex flex-col items-center justify-center border-2 border-dashed border-glassBorder rounded-2xl p-8 bg-brandSecondary/25 hover:border-brandBlue/35 hover:bg-brandSecondary/50 transition-all duration-200">
+              <Upload size={32} className="text-textMuted mb-3" />
+              <span className="text-sm font-semibold text-textMain">Select PDF Resume Document</span>
+              <span className="text-xs text-textMuted mt-1 mb-4">Supported format: Selectable text .pdf (Max size 5MB)</span>
               
-              <div className="flex items-center gap-4">
-                {/* Radial Score Gauge */}
-                <div className="relative w-20 h-20 flex items-center justify-center">
+              <input
+                type="file"
+                accept="application/pdf"
+                onChange={handleFileChange}
+                className="hidden"
+                id="resume-file-input"
+              />
+              
+              <label
+                htmlFor="resume-file-input"
+                className="btn-secondary py-2 px-4 text-xs font-semibold uppercase cursor-pointer"
+              >
+                Browse Files
+              </label>
+              
+              {file && (
+                <span className="text-xs text-brandSuccess font-bold mt-4 flex items-center gap-1">
+                  <CheckCircle2 size={12} /> Selected: {file.name}
+                </span>
+              )}
+            </div>
+          ) : (
+            <div className="flex flex-col animate-fadeIn">
+              <label className="form-label" htmlFor="resume-textarea-paste">Paste Plaintext Resume</label>
+              <textarea
+                className="form-input min-h-[160px] font-mono text-xs"
+                placeholder="Paste your full resume text here to run comprehensive ATS 2.0 evaluation..."
+                value={textFallback}
+                onChange={(e) => setTextFallback(e.target.value)}
+                id="resume-textarea-paste"
+              />
+            </div>
+          )}
+
+          {errorMsg && (
+            <div className="bg-brandWarning/10 border border-brandWarning/20 rounded-xl p-3 flex gap-2 items-center text-xs text-brandWarning">
+              <ShieldAlert size={16} className="flex-shrink-0" />
+              <span>{errorMsg}</span>
+            </div>
+          )}
+
+          <button
+            type="submit"
+            className="btn-primary w-full"
+            disabled={analyzing}
+            id="submit-analysis-btn"
+          >
+            {analyzing ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin mr-2" />
+                Parsing Structure & Evaluating ATS Readiness...
+              </>
+            ) : (
+              <>
+                <Sparkles size={16} /> Run ATS 2.0 Comprehensive Audit
+              </>
+            )}
+          </button>
+        </form>
+      </div>
+
+      {/* RESULTS DISPLAY */}
+      {results && (
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6"
+        >
+          {/* Top ATS Score Summary Card */}
+          <div className="glass-card p-6 space-y-6 border-t-4 border-t-brandBlue">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-glassBorder pb-6">
+              
+              <div className="flex items-center gap-5">
+                {/* Score Dial */}
+                <div className="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                     <path
                       className="text-brandSecondary"
-                      strokeWidth="2.5"
+                      strokeWidth="3"
                       stroke="currentColor"
                       fill="none"
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
                     <path
-                      className={
-                        results.match_percentage >= 70 
-                          ? 'text-brandSuccess' 
-                          : results.match_percentage >= 35 
-                          ? 'text-brandWarning' 
-                          : 'text-brandDanger'
-                      }
-                      strokeDasharray={`${results.match_percentage}, 100`}
-                      strokeWidth="2.5"
+                      className={results.ats_audit && results.ats_audit.overall_score >= 75 ? 'text-brandSuccess' : results.ats_audit && results.ats_audit.overall_score >= 55 ? 'text-brandWarning' : 'text-brandDanger'}
+                      strokeDasharray={`${results.ats_audit ? results.ats_audit.overall_score : results.match_percentage}, 100`}
+                      strokeWidth="3"
                       strokeLinecap="round"
                       stroke="currentColor"
                       fill="none"
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                     />
                   </svg>
-                  <span className="absolute text-lg font-extrabold text-textMain">{results.match_percentage}%</span>
-                </div>
-                
-                <div>
-                  <span className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded border ${
-                    results.match_percentage >= 70 
-                      ? 'bg-brandSuccess/10 text-brandSuccess border-brandSuccess/20' 
-                      : results.match_percentage >= 35 
-                      ? 'bg-brandWarning/10 text-brandWarning border-brandWarning/20' 
-                      : 'bg-brandDanger/10 text-brandDanger border-brandDanger/20'
-                  }`}>
-                    {results.category}
-                  </span>
-                  <h4 className="text-sm font-bold text-textMain mt-1.5 font-sans">Role Compatibility Matrix</h4>
-                </div>
-              </div>
-
-              {/* Critique critique */}
-              <div className="bg-brandSecondary border border-glassBorder rounded-xl p-4 flex gap-3 items-start text-xs leading-relaxed">
-                {results.match_percentage >= 70 ? (
-                  <CheckCircle2 size={18} className="text-brandSuccess mt-0.5 flex-shrink-0" />
-                ) : (
-                  <AlertTriangle size={18} className={`mt-0.5 flex-shrink-0 ${results.match_percentage >= 35 ? 'text-brandWarning' : 'text-brandDanger'}`} />
-                )}
-                <div>
-                  <h5 className="font-bold text-textMain mb-0.5">Resume Alignment Audit</h5>
-                  <p className="text-textMuted leading-relaxed">{results.critique}</p>
-                </div>
-              </div>
-
-              {/* Matched tags */}
-              <div>
-                <h5 className="form-label text-[10px]">Keywords Identified ({results.skills_found.length})</h5>
-                <div className="flex flex-wrap gap-1.5">
-                  {results.skills_found.map(skill => (
-                    <span key={skill} className="bg-brandSuccess/10 text-brandSuccess border border-brandSuccess/15 text-[10px] font-semibold px-2.5 py-1 rounded-lg flex items-center gap-1">
-                      <Check size={10} className="text-brandSuccess" /> {skill}
+                  <div className="absolute flex flex-col items-center">
+                    <span className="text-2xl font-black text-textMain">
+                      {results.ats_audit ? results.ats_audit.overall_score : results.match_percentage}
                     </span>
-                  ))}
-                  {results.skills_found.length === 0 && (
-                    <span className="text-xs text-textMuted italic">No keywords matched.</span>
-                  )}
+                    <span className="text-[8px] font-bold uppercase text-textMuted">ATS Score</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-black px-2.5 py-0.5 rounded bg-brandBlue/15 text-brandBlue border border-brandBlue/30">
+                      Grade: {results.ats_audit ? results.ats_audit.grade : 'A'}
+                    </span>
+                    <span className="text-xs font-bold text-textMain">
+                      {results.ats_audit ? results.ats_audit.verdict : results.category}
+                    </span>
+                  </div>
+                  <p className="text-xs text-textMuted max-w-xl leading-relaxed">
+                    {results.critique}
+                  </p>
+                </div>
+              </div>
+
+              {/* 4 Pillars Mini Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full md:w-auto">
+                <div className="bg-brandSecondary/50 border border-glassBorder p-3 rounded-xl text-center">
+                  <span className="text-[10px] font-bold text-textMuted uppercase block">Skill Match</span>
+                  <span className="text-base font-extrabold text-brandBlue">{results.match_percentage}%</span>
+                </div>
+
+                <div className="bg-brandSecondary/50 border border-glassBorder p-3 rounded-xl text-center">
+                  <span className="text-[10px] font-bold text-textMuted uppercase block">Sections</span>
+                  <span className="text-base font-extrabold text-brandSuccess">
+                    {results.ats_audit ? `${results.ats_audit.section_audit.detected_count}/5` : '5/5'}
+                  </span>
+                </div>
+
+                <div className="bg-brandSecondary/50 border border-glassBorder p-3 rounded-xl text-center">
+                  <span className="text-[10px] font-bold text-textMuted uppercase block">Quantified Metrics</span>
+                  <span className="text-base font-extrabold text-brandCyan">
+                    {results.ats_audit ? results.ats_audit.metrics_audit.count : '4+'}
+                  </span>
+                </div>
+
+                <div className="bg-brandSecondary/50 border border-glassBorder p-3 rounded-xl text-center">
+                  <span className="text-[10px] font-bold text-textMuted uppercase block">Action Verbs</span>
+                  <span className="text-base font-extrabold text-brandPurple">
+                    {results.ats_audit ? results.ats_audit.verbs_audit.verb_count : '6+'}
+                  </span>
                 </div>
               </div>
 
             </div>
 
-            {/* Right section: Missing & roadmap */}
-            <div className="md:col-span-6 border-t md:border-t-0 md:border-l border-glassBorder pt-6 md:pt-0 md:pl-8 space-y-6">
-              <h4 className="text-sm font-bold text-textMain flex items-center gap-2 border-b border-glassBorder pb-3">
-                <BookOpen size={16} className="text-brandCyan" /> Skill Gap Curations
-              </h4>
-              <p className="text-textMuted text-xs leading-normal font-sans">
-                We recommend targeted study pathways to cover outstanding screening keywords:
-              </p>
-
-              <div className="space-y-3 max-h-80 overflow-y-auto pr-2">
-                {results.roadmap.map(item => (
-                  <div key={item.skill} className="bg-brandSecondary/60 border border-glassBorder rounded-xl p-3.5 text-xs flex flex-col gap-1.5">
-                    <div className="flex justify-between items-center">
-                      <span className="font-bold text-brandDanger flex items-center gap-1">
-                        <Plus size={12} className="text-brandDanger rotate-45" /> {item.skill}
-                      </span>
-                      <span className="text-[8px] font-bold uppercase tracking-wider px-1.5 py-0.5 bg-brandDanger/10 text-brandDanger border border-brandDanger/15 rounded">Pending Gap</span>
+            {/* ATS Sections Breakdown */}
+            {results.ats_audit && results.ats_audit.section_audit && (
+              <div className="space-y-3">
+                <span className="text-xs font-bold text-textMuted uppercase tracking-wider block">
+                  1. Structural Section Completeness
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                  {results.ats_audit.section_audit.sections.map((sec, i) => (
+                    <div key={i} className="p-3 bg-brandSecondary/40 border border-glassBorder rounded-xl flex flex-col justify-between">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs font-bold text-textMain">{sec.name}</span>
+                        {sec.detected ? (
+                          <CheckCircle2 size={14} className="text-brandSuccess" />
+                        ) : (
+                          <XCircle size={14} className="text-brandDanger" />
+                        )}
+                      </div>
+                      <span className="text-[10px] text-textMuted leading-tight">{sec.feedback}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-textMuted font-sans">
-                      <ArrowRight size={10} className="flex-shrink-0 text-textMuted" />
-                      <span>{item.resource}</span>
-                    </div>
-                  </div>
-                ))}
-                {results.roadmap.length === 0 && (
-                  <div className="text-center py-6 text-brandSuccess font-bold text-sm flex flex-col items-center gap-2">
-                    <CheckCircle2 size={24} />
-                    <span>Profile has 100% keyword alignment! Ready to apply.</span>
-                  </div>
-                )}
+                  ))}
+                </div>
               </div>
+            )}
+
+            {/* Quantified Metrics & Power Verbs Grid */}
+            {results.ats_audit && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                
+                {/* Metrics Pill Card */}
+                <div className="p-4 bg-brandSecondary/40 border border-glassBorder rounded-xl space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-textMain flex items-center gap-1.5">
+                      <Hash size={14} className="text-brandCyan" /> Quantified Achievements ({results.ats_audit.metrics_audit.count})
+                    </span>
+                    <span className="text-[10px] font-bold text-brandSuccess bg-brandSuccess/10 px-2 py-0.5 rounded">
+                      {results.ats_audit.metrics_audit.assessment}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-textMuted">{results.ats_audit.metrics_audit.tip}</p>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {results.ats_audit.metrics_audit.metrics_found.map((m, i) => (
+                      <span key={i} className="text-[10px] font-bold px-2 py-1 rounded bg-brandCyan/10 text-brandCyan border border-brandCyan/25">
+                        {m}
+                      </span>
+                    ))}
+                    {results.ats_audit.metrics_audit.metrics_found.length === 0 && (
+                      <span className="text-[11px] text-brandDanger">No quantifiable numbers found in bullet points.</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Power Verbs Card */}
+                <div className="p-4 bg-brandSecondary/40 border border-glassBorder rounded-xl space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-textMain flex items-center gap-1.5">
+                      <Zap size={14} className="text-brandPurple" /> Executive Action Verbs ({results.ats_audit.verbs_audit.verb_count})
+                    </span>
+                    <span className="text-[10px] font-bold text-brandPurple bg-brandPurple/10 px-2 py-0.5 rounded">
+                      {results.ats_audit.verbs_audit.strength}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-textMuted">Strong verbs elevate resumes past automated semantic filters.</p>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {results.ats_audit.verbs_audit.power_verbs.map((v, i) => (
+                      <span key={i} className="text-[10px] font-bold px-2 py-1 rounded bg-brandPurple/10 text-brandPurple border border-brandPurple/25">
+                        {v}
+                      </span>
+                    ))}
+                    {results.ats_audit.verbs_audit.power_verbs.length === 0 && (
+                      <span className="text-[11px] text-brandDanger">No executive action verbs found. Replace weak phrases.</span>
+                    )}
+                  </div>
+                </div>
+
+              </div>
+            )}
+
+            {/* Categorized Skills Inventory */}
+            {results.categorized_skills && (
+              <div className="space-y-3 pt-2">
+                <span className="text-xs font-bold text-textMuted uppercase tracking-wider block">
+                  Technical Competencies by Domain
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                  {Object.keys(results.categorized_skills).map((domain, idx) => (
+                    <div key={idx} className="p-3.5 bg-brandSecondary/30 border border-glassBorder rounded-xl space-y-2">
+                      <span className="text-[11px] font-bold text-textMain block border-b border-glassBorder pb-1.5">
+                        {domain}
+                      </span>
+                      <div className="flex flex-wrap gap-1">
+                        {results.categorized_skills[domain].map((sk, j) => (
+                          <span key={j} className="text-[10px] font-semibold px-2 py-0.5 rounded bg-brandBlue/10 text-brandBlue">
+                            {sk}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+
+          {/* Missing Skills & Learning Roadmap */}
+          <div className="glass-card p-6 space-y-4">
+            <div className="flex items-center justify-between border-b border-glassBorder pb-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-textMuted flex items-center gap-1.5">
+                <BookOpen size={14} className="text-brandCyan" /> Targeted Learning Roadmap for {selectedRole}
+              </span>
+              <span className="text-xs text-textMuted">
+                {results.skills_missing.length} Skill Gaps Identified
+              </span>
             </div>
 
-          </motion.div>
-        )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {results.roadmap.map((item, i) => (
+                <div key={i} className="p-3.5 bg-brandSecondary/40 border border-glassBorder rounded-xl flex items-center justify-between gap-3">
+                  <div>
+                    <span className="text-xs font-bold text-brandWarning block">{item.skill}</span>
+                    <span className="text-[11px] text-textMuted">{item.resource}</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-brandBlue bg-brandBlue/10 px-2 py-1 rounded flex-shrink-0">
+                    Recommended
+                  </span>
+                </div>
+              ))}
+              {results.roadmap.length === 0 && (
+                <div className="col-span-2 text-center py-6 text-xs text-brandSuccess font-bold">
+                  🎉 No missing skills detected! Your tech stack matches all target requirements for {selectedRole}.
+                </div>
+              )}
+            </div>
+          </div>
 
-      </div>
+        </motion.div>
+      )}
 
     </div>
   );
