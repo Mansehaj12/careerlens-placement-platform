@@ -246,12 +246,12 @@ export default function SalaryPredictor() {
             ML Salary <span className="bg-gradient-to-r from-brandBlue via-brandCyan to-brandPurple bg-clip-text text-transparent">Predictor</span>
           </h1>
           <p className="text-textMuted text-sm mt-1.5 font-normal">
-            Estimate market compensation using our cross-validated <strong className="font-semibold text-textMain">Ridge Regression Model</strong> (R²: <strong className="font-semibold text-textMain">{metadata.r2_score.toFixed(3)}</strong>, MAE: <strong className="font-semibold text-textMain">₹4.35L</strong>).
+            Estimate expected market compensation tailored to your target role, experience level, location, and technical skills.
           </p>
         </div>
         <div className="flex items-center gap-2 self-start md:self-auto">
           <span className="inline-flex items-center gap-1.5 bg-brandSecondary border border-glassBorder text-xs text-brandBlue font-semibold uppercase px-3 py-1 rounded-full shadow-sm">
-            ● Ridge Regularized (α=50)
+            ● Predictive ML Model
           </span>
         </div>
       </div>
@@ -432,7 +432,7 @@ export default function SalaryPredictor() {
                       <Sparkles size={12} className="text-brandCyan" /> Estimated Salary Receipt
                     </span>
                     <span className="text-[9px] font-bold bg-brandSuccess/10 text-brandSuccess border border-brandSuccess/15 px-2 py-0.5 rounded">
-                      5-Fold CV Verified
+                      Verified Estimate
                     </span>
                   </div>
 
@@ -467,10 +467,10 @@ export default function SalaryPredictor() {
                     </div>
                     <div className="flex flex-col items-center gap-0.5 mt-1">
                       <span className="text-[10px] text-textMuted bg-brandSecondary px-2.5 py-1 rounded-lg border border-glassBorder">
-                        <strong className="text-textMain font-semibold">Empirical Range:</strong> {formatCompactINR(prediction.typical_range_min)} - {formatCompactINR(prediction.typical_range_max)}
+                        <strong className="text-textMain font-semibold">Typical Range:</strong> {formatCompactINR(prediction.typical_range_min)} - {formatCompactINR(prediction.typical_range_max)}
                       </span>
                       <span className="text-[9px] text-textMuted">
-                        ±{formatCompactINR(prediction.empirical_margin || 5215.74)} based on 5-Fold CV Validation MAE
+                        ±{formatCompactINR(prediction.empirical_margin || 5215.74)} expected market variation
                       </span>
                     </div>
                   </div>
