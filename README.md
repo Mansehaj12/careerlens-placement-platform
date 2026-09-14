@@ -47,13 +47,7 @@ Built with clean architecture, modern glassmorphism, and fault-tolerant client f
 - **Comparative Algorithm Matrix**: Side-by-side performance comparison of Logistic Regression, Random Forest, and Gradient Boosting.
 - **Production Metrics**: Evaluates Accuracy, ROC-AUC, Precision, Recall, F1 Score, and Cross-Validation Variance.
 
-### 6. Hybrid RAG Career Intelligence & Citation Engine (`RAG/`)
-- **Hybrid Retrieval (BM25 + Dense Vectors)**: Combines exact keyword matching (BM25) with semantic vector search (`all-MiniLM-L6-v2` in ChromaDB) fused via Reciprocal Rank Fusion ($k=60$).
-- **Cross-Encoder Re-Ranking**: Deep interaction re-ranking (`ms-marco-MiniLM-L-6-v2`) scoring top candidate chunks for maximum precision.
-- **Hierarchical Section Chunking**: Injects parent role, company, and domain metadata into every chunk to eliminate context loss.
-- **Ragas Automated Evaluation**: Measures Faithfulness, Answer Relevance, and Context Precision.
-
-### 7. Glassmorphic 2.0 Design System
+### 6. Glassmorphic 2.0 Design System
 - **Atmospheric Aurora Lighting**: Multi-stop ambient glow layer providing subtle depth.
 - **Glassmorphism**: Translucent cards with `backdrop-filter: blur(14px)` and specular top borders.
 - **Dynamic Dark/Light Adaptation**: Live `MutationObserver` synchronization adapting Recharts palettes, tooltip colors, and typography contrasts seamlessly.
@@ -76,18 +70,11 @@ Built with clean architecture, modern glassmorphism, and fault-tolerant client f
 │   ├── salary_encoder.joblib      # Serialized categorical encoder
 │   └── placement_model.joblib     # Serialized placement classifier
 ├── Backend/
-│   ├── app.py                    # Flask REST API endpoints (prediction, stats, PDF parser, RAG endpoints)
+│   ├── app.py                    # Flask REST API endpoints (prediction, stats, PDF parser)
 │   ├── database.py               # SQLite DB initializer & automatic seeder
 │   ├── parser.py                 # Multi-dimensional ATS engine & NLP text extraction
 │   ├── requirements.txt          # Python dependencies
 │   └── careerlens.db             # Local SQLite database
-├── RAG/
-│   ├── src/                      # RAG core (chunker, embedder, retrievers, reranker, generator)
-│   ├── scripts/                  # Dataset preparation & index building scripts
-│   ├── app/                      # Standalone Streamlit interactive RAG app
-│   ├── data/                     # Cleaned JSONL chunks, BM25 index, and benchmark resumes
-│   ├── BUILD_LOG_A_TO_Z.md       # Master architectural reference & design decisions
-│   └── RESUME_AND_INTERVIEW_GUIDE.md # Interview defense & resume breakdown
 ├── frontend/
 │   ├── public/data/              # Model statistics, benchmarks, and fallback datasets
 │   │   ├── model_benchmarks.json
@@ -95,10 +82,10 @@ Built with clean architecture, modern glassmorphism, and fault-tolerant client f
 │   │   └── salary_model_stats.json
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx             # Header navigation with theme toggle & live status
+│   │   │   ├── Navbar.jsx             # Header navigation with theme toggle
 │   │   │   ├── MarketDashboard.jsx    # Analytics visualizations & ETL audit
 │   │   │   ├── SalaryPredictor.jsx    # Ridge salary estimator & weights
-│   │   │   ├── ResumeMatcher.jsx      # Multi-dimensional ATS resume analyzer + RAG citations
+│   │   │   ├── ResumeMatcher.jsx      # Multi-dimensional ATS resume analyzer
 │   │   │   ├── PlacementAnalytics.jsx # Calibrated What-If simulator
 │   │   │   └── ModelBenchmarks.jsx    # Comparative algorithm evaluation
 │   │   ├── App.jsx                    # Root layout with aurora ambient lighting

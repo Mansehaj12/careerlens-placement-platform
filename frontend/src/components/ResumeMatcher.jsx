@@ -528,34 +528,6 @@ export default function ResumeMatcher() {
             </div>
           </div>
 
-          {/* RAG Market Intelligence Citations Card */}
-          {results.rag_insights && (
-            <div className="glass-card p-6 space-y-4 border-l-4 border-l-brandPurple">
-              <div className="flex items-center justify-between border-b border-glassBorder pb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-brandPurple flex items-center gap-1.5">
-                  <Sparkles size={14} /> AI RAG Ground-Truth Citations (4,900+ Specs)
-                </span>
-                <span className="text-[10px] font-semibold bg-brandPurple/10 text-brandPurple px-2.5 py-0.5 rounded-full">
-                  Hybrid Search + Cross-Encoder
-                </span>
-              </div>
-              
-              <div className="text-xs text-textMain leading-relaxed whitespace-pre-line bg-brandSecondary/20 p-4 rounded-xl font-sans">
-                {results.rag_insights.report}
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                {results.rag_insights.citations?.map((c, idx) => (
-                  <div key={idx} className="p-3 bg-darkCard border border-glassBorder rounded-xl text-xs space-y-1">
-                    <span className="font-bold text-brandBlue block">{c.company}</span>
-                    <span className="text-[11px] text-textMuted block">{c.title}</span>
-                    <span className="text-[10px] font-mono text-emerald-400">Re-rank Score: {c.rerank_score}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
         </motion.div>
       )}
 

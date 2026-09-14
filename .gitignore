@@ -18,7 +18,9 @@ frontend/*.local
 Backend/careerlens.db
 *.db
 *.sqlite3
-RAG/data/chroma_db/
+
+# Experimental / Local RAG directory
+RAG/
 
 # Datasets & Large Files
 Datasets/raw_jobs.csv
