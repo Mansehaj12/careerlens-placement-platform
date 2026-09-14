@@ -41,6 +41,27 @@ PLACEMENT_STATS_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "pla
 SALARY_STATS_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "salary_model_stats.json")
 BENCHMARK_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "model_benchmarks.json")
 
+# Paths to RAG system
+RAG_DIR = os.path.join(BASE_DIR, "RAG")
+if RAG_DIR not in sys.path:
+    sys.path.insert(0, RAG_DIR)
+
+rag_pipeline_instance = None
+
+def get_rag_pipeline():
+    """Lazy loader for CareerLens RAG Pipeline."""
+    global rag_pipeline_instance
+    if rag_pipeline_instance is None:
+        try:
+            from src.pipeline import CareerLensPipeline
+            bm25_p = os.path.join(RAG_DIR, "data", "bm25_index.pkl")
+            chroma_p = os.path.join(RAG_DIR, "data", "chroma_db")
+            rag_pipeline_instance = CareerLensPipeline(bm25_path=bm25_p, chroma_dir=chroma_p)
+            print("[+] CareerLens RAG Engine successfully loaded in Flask backend.")
+        except Exception as e:
+            print(f"[!] Warning: RAG pipeline initialization deferred: {e}")
+    return rag_pipeline_instance
+
 # Global model placeholders loaded on startup
 salary_model = None
 salary_encoder = None
@@ -326,6 +347,31 @@ def analyze_resume():
             category = "Highly Matched Talent"
             critique = "Outstanding technical alignment! Focus on showcasing quantified impact and high-scale metrics to clear executive screening rounds."
             
+        # 5. RAG Market Intelligence Enrichment
+        rag_insights = None
+        try:
+            rag_pipe = get_rag_pipeline()
+            if rag_pipe:
+                rag_out = rag_pipe.run_full_audit(
+                    candidate_profile=text,
+                    target_role=role,
+                    top_k=3
+                )
+                rag_insights = {
+                    "report": rag_out.get("report"),
+                    "citations": [
+                        {
+                            "company": c.get("metadata", {}).get("company"),
+                            "title": c.get("metadata", {}).get("title"),
+                            "chunk_id": c.get("chunk_id"),
+                            "rerank_score": c.get("rerank_score")
+                        }
+                        for c in rag_out.get("retrieved_chunks", [])
+                    ]
+                }
+        except Exception as e_rag:
+            print(f"[!] RAG resume enrichment note: {e_rag}")
+
         return jsonify({
             "evaluated_role": role,
             "extracted_text": text,
@@ -337,6 +383,7 @@ def analyze_resume():
             "skills_missing": skills_missing,
             "categorized_skills": categorized_skills,
             "roadmap": roadmap,
+            "rag_insights": rag_insights,
             "ats_audit": {
                 "overall_score": ats_readiness["overall_score"],
                 "grade": ats_readiness["grade"],
@@ -348,6 +395,111 @@ def analyze_resume():
         })
     except Exception as e:
         return jsonify({"error": f"Resume analysis error: {str(e)}"}), 500
+
+@app.route("/api/rag/audit", methods=["POST"])
+def rag_career_audit():
+    """Runs Hybrid RAG career audit with Cross-Encoder re-ranking and citations. Supports PDF uploads or JSON."""
+    try:
+        if "file" in request.files:
+            file = request.files["file"]
+            if not file or not file.filename.endswith(".pdf"):
+                return jsonify({"error": "Uploaded file must be a valid PDF document."}), 400
+            file_bytes = io.BytesIO(file.read())
+            profile = parser.extract_text_from_pdf(file_bytes)
+            target_role = request.form.get("target_role") or "Machine Learning Engineer"
+            exp_level = request.form.get("experience_level") or "Entry-level (0-2 yrs)"
+            location = request.form.get("location") or "Bangalore"
+            remote = request.form.get("remote") or "Hybrid"
+            cgpa = float(request.form.get("cgpa") or 8.2)
+            internships = int(request.form.get("internships") or 1)
+            projects = int(request.form.get("projects") or 3)
+            use_reranker = request.form.get("use_reranker", "true").lower() == "true"
+            top_k = int(request.form.get("top_k") or 4)
+        elif request.is_json:
+            data = request.get_json() or {}
+            profile = data.get("candidate_profile") or data.get("text") or ""
+            target_role = data.get("target_role") or "Machine Learning Engineer"
+            exp_level = data.get("experience_level") or "Entry-level (0-2 yrs)"
+            location = data.get("location") or "Bangalore"
+            remote = data.get("remote") or "Hybrid"
+            cgpa = float(data.get("cgpa", 8.2))
+            internships = int(data.get("internships", 1))
+            projects = int(data.get("projects", 3))
+            use_reranker = bool(data.get("use_reranker", True))
+            top_k = int(data.get("top_k", 4))
+        elif "text" in request.form or "candidate_profile" in request.form:
+            profile = request.form.get("candidate_profile") or request.form.get("text") or ""
+            target_role = request.form.get("target_role") or "Machine Learning Engineer"
+            exp_level = request.form.get("experience_level") or "Entry-level (0-2 yrs)"
+            location = request.form.get("location") or "Bangalore"
+            remote = request.form.get("remote") or "Hybrid"
+            cgpa = float(request.form.get("cgpa") or 8.2)
+            internships = int(request.form.get("internships") or 1)
+            projects = int(request.form.get("projects") or 3)
+            use_reranker = request.form.get("use_reranker", "true").lower() == "true"
+            top_k = int(request.form.get("top_k") or 4)
+        else:
+            return jsonify({"error": "No resume file or text content provided."}), 400
+
+        if not profile.strip():
+            return jsonify({"error": "Could not extract readable text from resume. Ensure the PDF contains selectable text."}), 400
+
+        pipeline = get_rag_pipeline()
+        if pipeline:
+            audit_result = pipeline.run_full_audit(
+                candidate_profile=profile,
+                target_role=target_role,
+                experience_level=exp_level,
+                location=location,
+                remote=remote,
+                cgpa=cgpa,
+                internships=internships,
+                projects=projects,
+                use_reranker=use_reranker,
+                top_k=top_k
+            )
+            audit_result["extracted_text"] = profile
+            return jsonify(audit_result)
+        else:
+            return jsonify({"error": "RAG pipeline not initialized"}), 503
+    except Exception as e:
+        return jsonify({"error": f"RAG audit failed: {str(e)}"}), 500
+
+@app.route("/api/rag/ablation", methods=["POST"])
+def rag_ablation():
+    """Runs ablation study comparing BM25, Dense Vector, and Hybrid + Re-ranker."""
+    try:
+        data = request.get_json() or {}
+        query = data.get("query", "Python FastAPI Docker Kubernetes")
+        pipeline = get_rag_pipeline()
+        if not pipeline:
+            return jsonify({"error": "RAG pipeline not initialized"}), 503
+
+        bm25_hits = pipeline.bm25_retriever.search(query, top_k=3) if pipeline.bm25_retriever else []
+        dense_hits = pipeline.dense_retriever.search(query, top_k=3)
+        hybrid_hits = pipeline.hybrid_retriever.search(query, top_k=6) if pipeline.hybrid_retriever else []
+        reranked_hits = pipeline.reranker.rerank(query, hybrid_hits, top_k=3) if pipeline.reranker else []
+
+        return jsonify({
+            "query": query,
+            "bm25_hits": bm25_hits,
+            "dense_hits": dense_hits,
+            "hybrid_reranked_hits": reranked_hits
+        })
+    except Exception as e:
+        return jsonify({"error": f"Ablation run failed: {str(e)}"}), 500
+
+@app.route("/api/rag/benchmarks", methods=["GET"])
+def rag_benchmarks():
+    """Returns automated evaluation metrics (RAG Triad)."""
+    try:
+        pipeline = get_rag_pipeline()
+        if not pipeline:
+            return jsonify({"error": "RAG pipeline not initialized"}), 503
+        metrics = pipeline.run_evaluation_suite()
+        return jsonify(metrics)
+    except Exception as e:
+        return jsonify({"error": f"Benchmark evaluation failed: {str(e)}"}), 500
 
 def get_salary_percentile(salary):
     """Estimate salary market percentile compared to global average."""
@@ -363,4 +515,4 @@ def get_salary_percentile(salary):
 load_models()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)

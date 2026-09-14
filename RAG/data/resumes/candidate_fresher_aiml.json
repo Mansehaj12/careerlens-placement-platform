@@ -1,0 +1,25 @@
+{
+  "name": "Aarav Sharma",
+  "target_role": "Machine Learning Engineer / AI Developer",
+  "experience_years": 0.5,
+  "skills": [
+    "Python",
+    "PyTorch",
+    "Scikit-Learn",
+    "Pandas",
+    "NumPy",
+    "SQL",
+    "Git",
+    "Flask"
+  ],
+  "education": "B.Tech in Computer Science (8.4 CGPA)",
+  "projects": [
+    "CareerLens: Placement Readiness & Salary Predictor using LightGBM and Random Forest",
+    "Computer Vision: Real-time Object Detection with YOLOv8 and OpenCV",
+    "NLP: Sentiment Analysis on Product Reviews using BERT and Hugging Face"
+  ],
+  "certifications": [
+    "Deep Learning Specialization (Coursera)",
+    "AWS Certified Cloud Practitioner"
+  ]
+}

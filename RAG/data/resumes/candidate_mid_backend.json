@@ -1,0 +1,25 @@
+{
+  "name": "Priya Patel",
+  "target_role": "Senior Backend Software Engineer",
+  "experience_years": 3.5,
+  "skills": [
+    "Python",
+    "FastAPI",
+    "Django",
+    "PostgreSQL",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "Git"
+  ],
+  "education": "B.E. in Information Technology",
+  "projects": [
+    "Scalable Microservices Backend: Built high-throughput API gateway processing 5,000 req/sec with FastAPI & Redis caching",
+    "Database Migration: Optimized slow PostgreSQL queries using indexing and partitioning, reducing P99 latency by 60%",
+    "Event-Driven Pipeline: Implemented asynchronous messaging with RabbitMQ and Celery"
+  ],
+  "certifications": [
+    "AWS Certified Solutions Architect Associate"
+  ]
+}

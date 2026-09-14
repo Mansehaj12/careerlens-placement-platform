@@ -1,0 +1,23 @@
+{
+  "name": "Rohan Gupta",
+  "target_role": "Data Analyst / BI Specialist",
+  "experience_years": 1.5,
+  "skills": [
+    "SQL",
+    "Power BI",
+    "Tableau",
+    "Excel",
+    "Python",
+    "Pandas",
+    "Data Cleaning",
+    "Storytelling"
+  ],
+  "education": "B.Sc in Statistics",
+  "projects": [
+    "E-Commerce Executive Dashboard: Designed automated Power BI dashboard tracking revenue, churn, and customer lifetime value",
+    "Supply Chain Analytics: Optimized inventory turnover by writing complex SQL window queries"
+  ],
+  "certifications": [
+    "Microsoft Certified: Power BI Data Analyst Associate"
+  ]
+}

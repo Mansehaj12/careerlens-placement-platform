@@ -1,0 +1,50 @@
+[
+  {
+    "id": "doc_tech_python",
+    "title": "Python Core & Advanced Engineering Standards",
+    "company": "Engineering Competency Framework",
+    "category": "Backend & Software Engineering",
+    "skills": "Python, GIL, Generators, Asyncio, Memory Management, Typing",
+    "location": "Global",
+    "min_exp": 0.0,
+    "max_exp": 8.0,
+    "salary": "Standard",
+    "description": "Python Engineering Competency Overview:\nRequirements & Core Concepts:\n- Deep understanding of Python internals: Global Interpreter Lock (GIL), garbage collection (reference counting + cyclic GC), and memory management.\n- Asynchronous programming using asyncio, event loops, coroutines, and task management.\n- Metaprogramming with decorators, dunder methods, generators, context managers, and descriptors.\n- Clean architecture: Type hinting (PEP 484), dataclasses, Pydantic validation, and modular packaging.\nInterview Expectations:\n- Candidates must explain time complexity of dictionary lookups (hash collisions and open addressing).\n- Ability to profile code with cProfile, memory_profiler, and optimize bottlenecks with vectorization or multiprocessing."
+  },
+  {
+    "id": "doc_tech_rag_llm",
+    "title": "Production LLM & RAG Systems Architecture",
+    "company": "AI Engineering Framework",
+    "category": "Data Science & AI",
+    "skills": "RAG, Vector DB, Chroma, FAISS, Embeddings, Cross-Encoders, Ragas, LangChain",
+    "location": "Global",
+    "min_exp": 1.0,
+    "max_exp": 6.0,
+    "salary": "High Tier",
+    "description": "Production RAG & Generative AI Standards:\nCore Architecture:\n- Dense vector retrieval using bi-encoders (all-MiniLM-L6-v2, BGE) combined with sparse keyword retrieval (BM25) via Reciprocal Rank Fusion (RRF).\n- Cross-Encoder re-ranking to calibrate semantic relevance and filter out noisy context before passing to LLM context windows.\n- Hierarchical section-aware chunking with parent-document metadata propagation to eliminate context fragmentation.\nEvaluation & Guardrails:\n- Quantitative evaluation using the RAG Triad: Context Precision, Context Recall, and Faithfulness (groundedness).\n- Hallucination mitigation through strict negative system prompts, source citation constraints, and similarity score cutoffs."
+  },
+  {
+    "id": "doc_tech_cloud_devops",
+    "title": "Cloud Infrastructure, Containers & Kubernetes Standards",
+    "company": "Cloud Engineering Framework",
+    "category": "DevOps & Cloud",
+    "skills": "Docker, Kubernetes, AWS, Terraform, CI/CD, Helm, Observability",
+    "location": "Global",
+    "min_exp": 1.0,
+    "max_exp": 7.0,
+    "salary": "High Tier",
+    "description": "Cloud & Container Orchestration Standards:\nCore Architecture & Requirements:\n- Docker containerization: Multi-stage builds, minimal base images (Alpine/Distroless), non-root users, and layer caching.\n- Kubernetes orchestration: Pod lifecycle, Deployments, ReplicaSets, Services (ClusterIP/NodePort/Ingress), ConfigMaps, Secrets, and Horizontal Pod Autoscaling (HPA).\n- Infrastructure as Code (IaC) using Terraform for AWS resources (VPC, EKS, RDS, S3, IAM roles).\n- CI/CD automation with GitHub Actions / GitLab CI, including automated linting, unit testing, image vulnerability scanning (Trivy), and deployment pipelines."
+  },
+  {
+    "id": "doc_tech_data_engineering",
+    "title": "Data Engineering, Streaming & Warehouse Standards",
+    "company": "Data Infrastructure Framework",
+    "category": "Data Engineering",
+    "skills": "SQL, Apache Spark, PySpark, Airflow, Snowflake, Kafka, Data Modeling",
+    "location": "Global",
+    "min_exp": 1.0,
+    "max_exp": 6.0,
+    "salary": "High Tier",
+    "description": "Data Engineering Competency Standards:\nCore Architecture & Requirements:\n- Distributed data processing with Apache Spark (PySpark): RDDs vs DataFrames, catalyst optimizer, partition tuning, shuffle minimization, and broadcast joins.\n- Data modeling: Star schema, snowflake schema, slowly changing dimensions (SCD Type 1 & 2), and columnar storage (Parquet/ORC).\n- Workflow orchestration using Apache Airflow: DAG architecture, operators, sensors, backfilling, and XCom best practices.\n- Advanced SQL: Window functions (ROW_NUMBER, RANK, DENSE_RANK), CTEs, indexing strategies (B-Tree, Hash), and query execution plan analysis (EXPLAIN ANALYZE)."
+  }
+]
