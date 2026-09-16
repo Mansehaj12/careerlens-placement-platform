@@ -142,7 +142,41 @@ export default function ResumeMatcher() {
       "Scrum", "Analytics", "Wireframing"
     ];
 
-    const found = masterSkills.filter(s => textLower.includes(s.toLowerCase()));
+    const skillPatterns = {
+      "C++": /(?:\bc\+\+(?:11|14|17|20|23)?(?!\w)|\bcpp\b|\bc\s*plus\s*plus\b)/i,
+      "Go": /(?:\bgolang\b|\bgo\b)/i,
+      "HTML5": /(?:\bhtml5\b|\bhtml\b)/i,
+      "CSS3": /(?:\bcss3\b|\bcss\b)/i,
+      "Next.js": /(?:\bnext\.?js\b|\bnextjs\b)/i,
+      "Node.js": /(?:\bnode\.?js\b|\bnodejs\b|\bnode\b)/i,
+      "React": /(?:\breact\.?js\b|\breactjs\b|\breact\b)/i,
+      "Express": /(?:\bexpress\.?js\b|\bexpress\b)/i,
+      "PostgreSQL": /(?:\bpostgresql\b|\bpostgres\b|\bpsql\b)/i,
+      "MongoDB": /(?:\bmongodb\b|\bmongo\b)/i,
+      "Kubernetes": /(?:\bkubernetes\b|\bk8s\b)/i,
+      "Tailwind": /(?:\btailwind\s*css\b|\btailwind\b)/i,
+      "REST APIs": /(?:\brest\s*apis?\b|\brestful\b|\bmicroservices\b|\brest\b)/i,
+      "System Design": /(?:\bsystem\s*design\b|\bdistributed\s*systems\b)/i,
+      "CI/CD": /(?:\bci\/cd\b|\bci-cd\b|\bgithub\s*actions\b|\bjenkins\b)/i,
+      "A/B Testing": /(?:\ba\/b\s*testing\b|\bexperimentation\b)/i,
+      "Machine Learning": /(?:\bmachine\s*learning\b|\bml\b)/i,
+      "Scikit-Learn": /(?:\bscikit-learn\b|\bsci-kit\b|\bsklearn\b)/i,
+      "Power BI": /(?:\bpower\s*bi\b|\bpowerbi\b)/i,
+      "Git": /(?:\bgit\b|\bgithub\b|\bgitlab\b)/i,
+      "AWS": /(?:\baws\b|\bamazon\s*web\s*services\b)/i,
+      "SQL": /(?:\bsql\b|\bmysql\b|\bsqlite\b|\bpl\/sql\b)/i,
+      "PyTorch": /(?:\bpytorch\b|\btorch\b)/i,
+      "TensorFlow": /(?:\btensorflow\b|\btf\b)/i,
+      "R": /(?:\br\s+programming\b|\blanguage\s+r\b|\br\s+stats\b|\br\s*studio\b|\b\/?r\b)/i
+    };
+
+    const found = masterSkills.filter(s => {
+      if (skillPatterns[s]) {
+        return skillPatterns[s].test(text);
+      }
+      const regex = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      return regex.test(text);
+    });
     const required = roleDefaultSkills[targetRole] || ["Python", "SQL", "Git"];
     const matched = required.filter(s => found.includes(s));
     const missing = required.filter(s => !found.includes(s));

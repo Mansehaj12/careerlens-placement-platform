@@ -58,23 +58,31 @@ ROLE_SKILL_REQUIREMENTS = {
 
 # Alias regex patterns for natural resume phrasing
 SKILL_PATTERNS = {
-    "C++": r'(?:\bc\+\+\b|\bcpp\b)',
+    "C++": r'(?:\bc\+\+(?:11|14|17|20|23)?(?!\w)|\bcpp\b|\bc\s*plus\s*plus\b)',
+    "Go": r'(?:\bgolang\b|\bgo\b)',
     "Next.js": r'(?:\bnext\.?js\b|\bnextjs\b)',
     "Node.js": r'(?:\bnode\.?js\b|\bnodejs\b|\bnode\b)',
     "React": r'(?:\breact\.?js\b|\breactjs\b|\breact\b)',
     "Express": r'(?:\bexpress\.?js\b|\bexpress\b)',
-    "PostgreSQL": r'(?:\bpostgresql\b|\bpostgres\b)',
+    "PostgreSQL": r'(?:\bpostgresql\b|\bpostgres\b|\bpsql\b)',
     "MongoDB": r'(?:\bmongodb\b|\bmongo\b)',
     "Kubernetes": r'(?:\bkubernetes\b|\bk8s\b)',
     "Tailwind": r'(?:\btailwind\s*css\b|\btailwind\b)',
-    "REST APIs": r'(?:\brest\s*apis?\b|\brestful\b|\bmicroservices\b)',
+    "REST APIs": r'(?:\brest\s*apis?\b|\brestful\b|\bmicroservices\b|\brest\b)',
     "System Design": r'(?:\bsystem\s*design\b|\bdistributed\s*systems\b)',
-    "CI/CD": r'(?:\bci\/cd\b|\bgithub\s*actions\b|\bjenkins\b)',
+    "CI/CD": r'(?:\bci\/cd\b|\bci-cd\b|\bgithub\s*actions\b|\bjenkins\b)',
     "HTML5": r'(?:\bhtml5\b|\bhtml\b)',
     "CSS3": r'(?:\bcss3\b|\bcss\b)',
     "A/B Testing": r'(?:\ba\/b\s*testing\b|\bexperimentation\b)',
     "Machine Learning": r'(?:\bmachine\s*learning\b|\bml\b)',
-    "Scikit-Learn": r'(?:\bscikit-learn\b|\bsci-kit\b|\bsklearn\b)'
+    "Scikit-Learn": r'(?:\bscikit-learn\b|\bsci-kit\b|\bsklearn\b)',
+    "Power BI": r'(?:\bpower\s*bi\b|\bpowerbi\b)',
+    "Git": r'(?:\bgit\b|\bgithub\b|\bgitlab\b)',
+    "AWS": r'(?:\baws\b|\bamazon\s*web\s*services\b)',
+    "SQL": r'(?:\bsql\b|\bmysql\b|\bsqlite\b|\bpl\/sql\b)',
+    "PyTorch": r'(?:\bpytorch\b|\btorch\b)',
+    "TensorFlow": r'(?:\btensorflow\b|\btf\b)',
+    "R": r'(?:\br\s+programming\b|\blanguage\s+r\b|\br\s+stats\b|\br\s*studio\b|\b\/?r\b)'
 }
 
 def extract_text_from_pdf(file_stream):
