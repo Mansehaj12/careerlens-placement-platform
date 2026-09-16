@@ -3,6 +3,64 @@ import { Upload, FileText, CheckCircle2, AlertTriangle, ArrowRight, BookOpen, Sh
 import { motion } from 'framer-motion';
 import { API_BASE_URL } from '../config';
 
+export const ROLE_DEFAULT_SKILLS = {
+  "Software Engineer": ["Python", "Java", "C++", "SQL", "Git", "Docker", "System Design", "Linux", "REST APIs", "CI/CD", "PostgreSQL"],
+  "Frontend Developer": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind", "Next.js", "Redux", "Vite", "REST APIs", "Git"],
+  "Backend Developer": ["Node.js", "PostgreSQL", "REST APIs", "Express", "Redis", "MongoDB", "Django", "SQL", "Docker", "System Design", "Python"],
+  "Data Analyst": ["SQL", "Python", "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "Data Visualization", "A/B Testing", "Analytics"],
+  "Data Scientist": ["Python", "Pandas", "Scikit-Learn", "Machine Learning", "SQL", "PyTorch", "TensorFlow", "Statistics", "Data Visualization", "R"],
+  "Machine Learning Engineer": ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "MLOps", "Docker", "Kubernetes", "AWS", "SQL", "Machine Learning", "CI/CD"]
+};
+
+export const MASTER_SKILLS = [
+  "Python", "Java", "C++", "Go", "System Design", "Git", "SQL", "Docker",
+  "JavaScript", "TypeScript", "React", "HTML5", "CSS3", "Redux", "Tailwind", "Vite", "Next.js",
+  "Node.js", "Express", "Django", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "gRPC",
+  "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "A/B Testing", "Data Visualization",
+  "R", "Scikit-Learn", "TensorFlow", "PyTorch", "Machine Learning", "MLOps", "Kubernetes", "AWS",
+  "CI/CD", "Terraform", "Linux", "Bash", "Jenkins", "Product Roadmap", "Agile", "User Research",
+  "Scrum", "Analytics", "Wireframing"
+];
+
+export const SKILL_PATTERNS = {
+  "C++": /(?:\bc\+\+(?:11|14|17|20|23)?(?!\w)|\bcpp\b|\bc\s*plus\s*plus\b)/i,
+  "Go": /(?:\bgolang\b|\bgo\b)/i,
+  "HTML5": /(?:\bhtml5\b|\bhtml\b)/i,
+  "CSS3": /(?:\bcss3\b|\bcss\b)/i,
+  "Next.js": /(?:\bnext\.?js\b|\bnextjs\b)/i,
+  "Node.js": /(?:\bnode\.?js\b|\bnodejs\b|\bnode\b)/i,
+  "React": /(?:\breact\.?js\b|\breactjs\b|\breact\b)/i,
+  "Express": /(?:\bexpress\.?js\b|\bexpress\b)/i,
+  "PostgreSQL": /(?:\bpostgresql\b|\bpostgres\b|\bpsql\b)/i,
+  "MongoDB": /(?:\bmongodb\b|\bmongo\b)/i,
+  "Kubernetes": /(?:\bkubernetes\b|\bk8s\b)/i,
+  "Tailwind": /(?:\btailwind\s*css\b|\btailwind\b)/i,
+  "REST APIs": /(?:\brest\s*apis?\b|\brestful\b|\bmicroservices\b|\brest\b)/i,
+  "System Design": /(?:\bsystem\s*design\b|\bdistributed\s*systems\b)/i,
+  "CI/CD": /(?:\bci\/cd\b|\bci-cd\b|\bgithub\s*actions\b|\bjenkins\b)/i,
+  "A/B Testing": /(?:\ba\/b\s*testing\b|\bexperimentation\b)/i,
+  "Machine Learning": /(?:\bmachine\s*learning\b|\bml\b)/i,
+  "Scikit-Learn": /(?:\bscikit-learn\b|\bsci-kit\b|\bsklearn\b)/i,
+  "Power BI": /(?:\bpower\s*bi\b|\bpowerbi\b)/i,
+  "Git": /(?:\bgit\b|\bgithub\b|\bgitlab\b)/i,
+  "AWS": /(?:\baws\b|\bamazon\s*web\s*services\b)/i,
+  "SQL": /(?:\bsql\b|\bmysql\b|\bsqlite\b|\bpl\/sql\b)/i,
+  "PyTorch": /(?:\bpytorch\b|\btorch\b)/i,
+  "TensorFlow": /(?:\btensorflow\b|\btf\b)/i,
+  "R": /(?:\br\s+programming\b|\blanguage\s+r\b|\br\s+stats\b|\br\s*studio\b|\b\/?r\b)/i
+};
+
+export function extractSkillsFromText(text) {
+  if (!text) return [];
+  return MASTER_SKILLS.filter(s => {
+    if (SKILL_PATTERNS[s]) {
+      return SKILL_PATTERNS[s].test(text);
+    }
+    const regex = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+    return regex.test(text);
+  });
+}
+
 export default function ResumeMatcher() {
   const [selectedRole, setSelectedRole] = useState('Software Engineer');
   const [file, setFile] = useState(null);
@@ -42,18 +100,55 @@ export default function ResumeMatcher() {
     }
   };
 
-  const triggerAnalysis = (roleToRun, targetFile = file, targetText = cachedText || textFallback) => {
+  // Harmonize any external API responses with client-side skill extraction
+  const reconcileResults = (data, sourceText, roleEvaluated) => {
+    const textToVerify = sourceText || data.extracted_text || '';
+    if (textToVerify) {
+      const clientFound = extractSkillsFromText(textToVerify);
+      const mergedAll = Array.from(new Set([...(data.all_extracted_skills || []), ...clientFound]));
+      const targetRoleName = roleEvaluated || data.evaluated_role || selectedRole;
+      const required = ROLE_DEFAULT_SKILLS[targetRoleName] || ["Python", "SQL", "Git"];
+      const mergedMatched = required.filter(s => mergedAll.includes(s));
+      const mergedMissing = required.filter(s => !mergedAll.includes(s));
+
+      data.all_extracted_skills = mergedAll;
+      data.skills_found = mergedMatched;
+      data.skills_missing = mergedMissing;
+      if (required.length > 0) {
+        data.match_percentage = Math.round((mergedMatched.length / required.length) * 100);
+      }
+      if (data.roadmap) {
+        data.roadmap = data.roadmap.filter(r => mergedMissing.includes(r.skill));
+        const existingRoadmapSkills = new Set(data.roadmap.map(r => r.skill));
+        for (const ms of mergedMissing) {
+          if (!existingRoadmapSkills.has(ms)) {
+            data.roadmap.push({ skill: ms, resource: `Advanced ${ms} Guides & Project Building` });
+          }
+        }
+      }
+      if (!data.categorized_skills) data.categorized_skills = {};
+      const languages = mergedAll.filter(s => ["Python", "Java", "C++", "Go", "JavaScript", "TypeScript", "SQL", "R", "Bash"].includes(s));
+      if (languages.length > 0) {
+        data.categorized_skills["Languages"] = languages;
+      }
+    }
+    return data;
+  };
+
+  const triggerAnalysis = (roleToRun, targetFile = file, targetText = null) => {
     setErrorMsg('');
     setAnalyzing(true);
 
+    const activeText = targetText !== null ? targetText : (useTextMode ? textFallback : (cachedText || textFallback));
+
     // 1. If we already have the resume text (cached from PDF or pasted), run instant API evaluation
-    if (targetText && targetText.trim()) {
+    if (activeText && activeText.trim()) {
       fetch(`${API_BASE_URL}/api/analyze/resume`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           role: roleToRun,
-          text: targetText
+          text: activeText
         })
       })
         .then(async (res) => {
@@ -62,13 +157,14 @@ export default function ResumeMatcher() {
           return data;
         })
         .then((data) => {
-          setResults(data);
-          if (data.extracted_text) setCachedText(data.extracted_text);
+          const finalData = reconcileResults(data, activeText, roleToRun);
+          setResults(finalData);
+          if (finalData.extracted_text && !useTextMode) setCachedText(finalData.extracted_text);
           setAnalyzing(false);
         })
         .catch((err) => {
           console.warn("API text analysis offline, executing client-side fallback...", err);
-          runClientSideAnalysis(targetText, roleToRun);
+          runClientSideAnalysis(activeText, roleToRun);
           setAnalyzing(false);
         });
       return;
@@ -95,8 +191,9 @@ export default function ResumeMatcher() {
         return data;
       })
       .then((data) => {
-        setResults(data);
-        if (data.extracted_text) setCachedText(data.extracted_text);
+        const finalData = reconcileResults(data, data.extracted_text || '', roleToRun);
+        setResults(finalData);
+        if (finalData.extracted_text) setCachedText(finalData.extracted_text);
         setAnalyzing(false);
       })
       .catch((err) => {
@@ -108,14 +205,16 @@ export default function ResumeMatcher() {
 
   const handleAnalyze = (e) => {
     if (e) e.preventDefault();
-    triggerAnalysis(selectedRole);
+    const activeText = useTextMode ? textFallback : (cachedText || textFallback);
+    triggerAnalysis(selectedRole, file, activeText);
   };
 
   // Instant live re-evaluation whenever the user picks a different target role
   const handleRoleChange = (newRole) => {
     setSelectedRole(newRole);
-    if (file || textFallback.trim() || cachedText) {
-      triggerAnalysis(newRole, file, cachedText || textFallback);
+    const activeText = useTextMode ? textFallback : (cachedText || textFallback);
+    if (file || (activeText && activeText.trim())) {
+      triggerAnalysis(newRole, file, activeText);
     }
   };
 
@@ -123,61 +222,8 @@ export default function ResumeMatcher() {
   const runClientSideAnalysis = (text, targetRole = selectedRole) => {
     const textLower = text.toLowerCase();
     
-    const roleDefaultSkills = {
-      "Software Engineer": ["Python", "Java", "C++", "SQL", "Git", "Docker", "System Design", "Linux", "REST APIs", "CI/CD", "PostgreSQL"],
-      "Frontend Developer": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind", "Next.js", "Redux", "Vite", "REST APIs", "Git"],
-      "Backend Developer": ["Node.js", "PostgreSQL", "REST APIs", "Express", "Redis", "MongoDB", "Django", "SQL", "Docker", "System Design", "Python"],
-      "Data Analyst": ["SQL", "Python", "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "Data Visualization", "A/B Testing", "Analytics"],
-      "Data Scientist": ["Python", "Pandas", "Scikit-Learn", "Machine Learning", "SQL", "PyTorch", "TensorFlow", "Statistics", "Data Visualization", "R"],
-      "Machine Learning Engineer": ["Python", "PyTorch", "TensorFlow", "Scikit-Learn", "MLOps", "Docker", "Kubernetes", "AWS", "SQL", "Machine Learning", "CI/CD"]
-    };
-    
-    const masterSkills = [
-      "Python", "Java", "C++", "Go", "System Design", "Git", "SQL", "Docker",
-      "JavaScript", "TypeScript", "React", "HTML5", "CSS3", "Redux", "Tailwind", "Vite", "Next.js",
-      "Node.js", "Express", "Django", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "gRPC",
-      "Excel", "Tableau", "Power BI", "Pandas", "Statistics", "A/B Testing", "Data Visualization",
-      "R", "Scikit-Learn", "TensorFlow", "PyTorch", "Machine Learning", "MLOps", "Kubernetes", "AWS",
-      "CI/CD", "Terraform", "Linux", "Bash", "Jenkins", "Product Roadmap", "Agile", "User Research",
-      "Scrum", "Analytics", "Wireframing"
-    ];
-
-    const skillPatterns = {
-      "C++": /(?:\bc\+\+(?:11|14|17|20|23)?(?!\w)|\bcpp\b|\bc\s*plus\s*plus\b)/i,
-      "Go": /(?:\bgolang\b|\bgo\b)/i,
-      "HTML5": /(?:\bhtml5\b|\bhtml\b)/i,
-      "CSS3": /(?:\bcss3\b|\bcss\b)/i,
-      "Next.js": /(?:\bnext\.?js\b|\bnextjs\b)/i,
-      "Node.js": /(?:\bnode\.?js\b|\bnodejs\b|\bnode\b)/i,
-      "React": /(?:\breact\.?js\b|\breactjs\b|\breact\b)/i,
-      "Express": /(?:\bexpress\.?js\b|\bexpress\b)/i,
-      "PostgreSQL": /(?:\bpostgresql\b|\bpostgres\b|\bpsql\b)/i,
-      "MongoDB": /(?:\bmongodb\b|\bmongo\b)/i,
-      "Kubernetes": /(?:\bkubernetes\b|\bk8s\b)/i,
-      "Tailwind": /(?:\btailwind\s*css\b|\btailwind\b)/i,
-      "REST APIs": /(?:\brest\s*apis?\b|\brestful\b|\bmicroservices\b|\brest\b)/i,
-      "System Design": /(?:\bsystem\s*design\b|\bdistributed\s*systems\b)/i,
-      "CI/CD": /(?:\bci\/cd\b|\bci-cd\b|\bgithub\s*actions\b|\bjenkins\b)/i,
-      "A/B Testing": /(?:\ba\/b\s*testing\b|\bexperimentation\b)/i,
-      "Machine Learning": /(?:\bmachine\s*learning\b|\bml\b)/i,
-      "Scikit-Learn": /(?:\bscikit-learn\b|\bsci-kit\b|\bsklearn\b)/i,
-      "Power BI": /(?:\bpower\s*bi\b|\bpowerbi\b)/i,
-      "Git": /(?:\bgit\b|\bgithub\b|\bgitlab\b)/i,
-      "AWS": /(?:\baws\b|\bamazon\s*web\s*services\b)/i,
-      "SQL": /(?:\bsql\b|\bmysql\b|\bsqlite\b|\bpl\/sql\b)/i,
-      "PyTorch": /(?:\bpytorch\b|\btorch\b)/i,
-      "TensorFlow": /(?:\btensorflow\b|\btf\b)/i,
-      "R": /(?:\br\s+programming\b|\blanguage\s+r\b|\br\s+stats\b|\br\s*studio\b|\b\/?r\b)/i
-    };
-
-    const found = masterSkills.filter(s => {
-      if (skillPatterns[s]) {
-        return skillPatterns[s].test(text);
-      }
-      const regex = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
-      return regex.test(text);
-    });
-    const required = roleDefaultSkills[targetRole] || ["Python", "SQL", "Git"];
+    const found = extractSkillsFromText(text);
+    const required = ROLE_DEFAULT_SKILLS[targetRole] || ["Python", "SQL", "Git"];
     const matched = required.filter(s => found.includes(s));
     const missing = required.filter(s => !found.includes(s));
     const score = Math.round((matched.length / required.length) * 100);
@@ -208,9 +254,9 @@ export default function ResumeMatcher() {
       all_extracted_skills: found,
       skills_missing: missing,
       categorized_skills: {
-        "Languages": found.filter(s => ["Python", "Java", "C++", "JavaScript", "TypeScript", "SQL"].includes(s)),
-        "Frameworks & Web": found.filter(s => ["React", "Node.js", "Express", "Tailwind"].includes(s)),
-        "Cloud & Tools": found.filter(s => ["Git", "Docker", "AWS", "CI/CD"].includes(s))
+        "Languages": found.filter(s => ["Python", "Java", "C++", "Go", "JavaScript", "TypeScript", "SQL", "R", "Bash"].includes(s)),
+        "Frameworks & Web": found.filter(s => ["React", "Node.js", "Express", "Tailwind", "HTML5", "CSS3", "Next.js", "REST APIs"].includes(s)),
+        "Cloud & Tools": found.filter(s => ["Git", "Docker", "AWS", "CI/CD", "Linux", "Kubernetes", "PostgreSQL", "MongoDB"].includes(s))
       },
       roadmap: missing.map(s => ({ skill: s, resource: `Advanced ${s} Mastery Course & Project Sandbox` })),
       ats_audit: {
@@ -219,7 +265,6 @@ export default function ResumeMatcher() {
         verdict: atsComposite >= 75 ? "Strong Interview-Ready Profile" : "Competitive Profile with Gaps",
         section_audit: { sections, detected_count: 5, total_sections: 5, section_score: 100 },
         metrics_audit: { metrics_found: metricsMatches.slice(0, 8), count: metricsMatches.length, assessment: metricsMatches.length >= 3 ? "Good" : "Moderate", score: 80, tip: "Include measurable metrics in project bullet points." },
-        verbs_audit: { power_verbs: verbsFound, verb_count: verbsFound.length, strength: verbsFound.length >= 4 ? "Solid" : "Moderate", score: 80 }
       }
     });
   };
@@ -265,7 +310,14 @@ export default function ResumeMatcher() {
             <div className="flex items-end">
               <button
                 type="button"
-                onClick={() => { setUseTextMode(!useTextMode); setFile(null); }}
+                onClick={() => { 
+                  const nextMode = !useTextMode;
+                  setUseTextMode(nextMode);
+                  if (nextMode) {
+                    setFile(null);
+                    setCachedText('');
+                  }
+                }}
                 className="btn-secondary w-full"
               >
                 <FileText size={16} /> {useTextMode ? "Switch to PDF File Upload" : "Paste Raw Resume Text"}
@@ -308,7 +360,10 @@ export default function ResumeMatcher() {
                 className="form-input min-h-[160px] font-mono text-xs"
                 placeholder="Paste your full resume text here to run comprehensive ATS 2.0 evaluation..."
                 value={textFallback}
-                onChange={(e) => setTextFallback(e.target.value)}
+                onChange={(e) => {
+                  setTextFallback(e.target.value);
+                  setCachedText('');
+                }}
                 id="resume-textarea-paste"
               />
             </div>
