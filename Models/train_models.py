@@ -309,44 +309,10 @@ def train_placement_model():
             
     return placement_benchmarks, best_clf_name
 
-def save_master_benchmarks(salary_benchmarks, best_salary_model, empirical_mae, placement_benchmarks, best_placement_model):
-    master_benchmark_report = {
-        "timestamp": pd.Timestamp.now().isoformat(),
-        "validation_protocol": "5-Fold Cross-Validation with stratified splits for classification",
-        "salary_prediction": {
-            "task": "Regression",
-            "target": "salary_avg (USD)",
-            "models": salary_benchmarks,
-            "selected_model": best_salary_model,
-            "selection_rationale": "Ridge with L2 regularization (alpha=50) achieved the highest cross-validated R2 and lowest MAE, while preserving 100% linear interpretability and sub-millisecond inference.",
-            "prediction_range": {
-                "method": "Empirical Prediction Range",
-                "metric": "Validation Fold Mean Absolute Error (MAE)",
-                "margin_usd": round(empirical_mae, 2),
-                "formula": f"Predicted Salary +/- ${round(empirical_mae, 2):,}",
-                "note": "Reported as an empirical error range derived from 5-fold cross-validation out-of-fold residuals, avoiding unverified Gaussian distribution assumptions."
-            }
-        },
-        "placement_prediction": {
-            "task": "Binary Classification",
-            "target": "placed (0 = Unplaced, 1 = Placed)",
-            "models": placement_benchmarks,
-            "selected_model": best_placement_model,
-            "selection_rationale": "Random Forest with max_depth=6 and min_samples_split=5 achieved the highest ROC-AUC (0.9063 vs baseline 0.8673), producing smooth calibrated probability distributions without the sharp boundary artifacts of a single decision tree."
-        }
-    }
-    
-    for path in ["Frontend/public/data/model_benchmarks.json", "frontend/public/data/model_benchmarks.json"]:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(master_benchmark_report, f, indent=4)
-            
-    print("\nMaster benchmark reports successfully saved to Frontend public data stores!")
-
 if __name__ == "__main__":
     salary_benchmarks, best_sal, empirical_mae = train_salary_model()
     placement_benchmarks, best_plc = train_placement_model()
-    save_master_benchmarks(salary_benchmarks, best_sal, empirical_mae, placement_benchmarks, best_plc)
     print("\n=======================================================")
-    print("STEP 1 ML BENCHMARK PIPELINE FINISHED SUCCESSFULLY!")
+    print("CORE ML MODELS TRAINED & SAVED SUCCESSFULLY!")
     print("=======================================================")
 

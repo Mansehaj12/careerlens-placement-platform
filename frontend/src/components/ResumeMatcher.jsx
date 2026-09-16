@@ -218,7 +218,7 @@ export default function ResumeMatcher() {
         <form onSubmit={handleAnalyze} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col">
-              <label className="form-label" htmlFor="role-profile-matcher">Target Role Benchmark</label>
+              <label className="form-label" htmlFor="role-profile-matcher">Target Role</label>
               <select
                 className="form-select"
                 value={selectedRole}

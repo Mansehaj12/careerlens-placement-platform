@@ -5,7 +5,6 @@ import MarketDashboard from './components/MarketDashboard';
 import SalaryPredictor from './components/SalaryPredictor';
 import ResumeMatcher from './components/ResumeMatcher';
 import PlacementAnalytics from './components/PlacementAnalytics';
-import ModelBenchmarks from './components/ModelBenchmarks';
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -49,7 +48,6 @@ export default function App() {
             <Route path="/predict-salary" element={<SalaryPredictor />} />
             <Route path="/resume-analyzer" element={<ResumeMatcher />} />
             <Route path="/placement" element={<PlacementAnalytics />} />
-            <Route path="/benchmarks" element={<ModelBenchmarks />} />
           </Routes>
         </main>
 

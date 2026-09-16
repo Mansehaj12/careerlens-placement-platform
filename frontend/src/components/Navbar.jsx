@@ -46,13 +46,6 @@ export default function Navbar({ theme, toggleTheme }) {
       shortLabel: 'Placement',
       desc: 'Logistic Regression Probability & Merit',
       icon: <Award size={15} />
-    },
-    {
-      path: '/benchmarks',
-      label: 'Model Benchmarks',
-      shortLabel: 'Benchmarks',
-      desc: 'Comparative Cross-Validation Evaluation',
-      icon: <Cpu size={15} />
     }
   ];
 

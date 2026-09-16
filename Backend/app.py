@@ -39,7 +39,6 @@ DASHBOARD_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "dash
 QUALITY_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "data_quality.json")
 PLACEMENT_STATS_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "placement_model_stats.json")
 SALARY_STATS_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "salary_model_stats.json")
-BENCHMARK_DATA_PATH = os.path.join(BASE_DIR, "frontend", "public", "data", "model_benchmarks.json")
 
 # Global model placeholders loaded on startup
 salary_model = None
@@ -49,10 +48,9 @@ dashboard_data = None
 quality_data = None
 placement_stats = None
 salary_stats = None
-benchmark_data = None
 
 def load_models():
-    global salary_model, salary_encoder, placement_model, dashboard_data, quality_data, placement_stats, salary_stats, benchmark_data
+    global salary_model, salary_encoder, placement_model, dashboard_data, quality_data, placement_stats, salary_stats
     print("Loading models and analytics datasets on startup...")
     
     # Initialize database and seed tables
@@ -77,9 +75,6 @@ def load_models():
     if os.path.exists(SALARY_STATS_PATH):
         with open(SALARY_STATS_PATH, "r", encoding="utf-8") as f:
             salary_stats = json.load(f)
-    if os.path.exists(BENCHMARK_DATA_PATH):
-        with open(BENCHMARK_DATA_PATH, "r", encoding="utf-8") as f:
-            benchmark_data = json.load(f)
 
 # API Routes
 @app.route("/", methods=["GET"])
@@ -101,14 +96,6 @@ def get_market_stats():
         "dashboard": dashboard_data,
         "quality": quality_data
     })
-
-@app.route("/api/models/benchmark", methods=["GET"])
-def get_model_benchmarks():
-    """Serves the 5-fold cross-validation benchmarking comparison across all models."""
-    if not benchmark_data:
-        return jsonify({"error": "Benchmark data not found. Run ML training pipeline first."}), 500
-        
-    return jsonify(benchmark_data)
 
 @app.route("/api/predict/salary", methods=["POST"])
 def predict_salary():

@@ -25,7 +25,6 @@ Here is the side-by-side comparison of what changed and why:
 | **Resume ATS Engine** | Naive keyword counter that gave ~84% to almost any resume across all roles. | Role-aware 4-pillar scoring (55% Domain Skills, 18% Metrics, 15% Sections, 12% Verbs) + instant dropdown role re-evaluation. | Demonstrates real NLP text processing, domain-specific skill taxonomies, and understanding of how actual ATS systems work. |
 | **Salary Prediction** | Unregularized regression prone to multicollinearity; outputted a single fake-precise number. | Ridge Regression (L2, α=50) with 5-fold cross-validation; reports realistic empirical error ranges (±₹4.35L MAE) and percentile rank. | Shows you understand multicollinearity in tabular data and statistical honesty (ranges over fake precision). |
 | **Placement Simulator** | Pre-filled with high CGPA and 5 skills; had a brittle "reverse goal solver" making unrealistic promises. | Honest baseline (5.0 CGPA, 0 skills → ~35% risk tier) powered by a tuned Random Forest (ROC-AUC 0.906). | Shows understanding of baseline calibration and how non-linear ensemble models prevent decision cliff artifacts. |
-| **Model Transparency** | No benchmark page; algorithms were chosen arbitrarily without proof. | Dedicated Model Benchmarks page (`/benchmarks`) displaying 5-Fold Stratified CV leaderboards for both tasks. | Proves machine learning rigor—you didn't just guess a model; you validated and benchmarked multiple candidates. |
 | **System Reliability** | Unimported icon (`TrendingUp`) crashed the salary page; failed completely when backend was sleeping. | Clean build with zero warnings; built-in client-side mathematical fallback so the app works even when the backend is offline. | Shows full-stack resilience and graceful degradation under production conditions. |
 | **UI & Experience** | Mismatched card styles, no dark/light theme sync, hardcoded personal dummy profiles. | Unified glassmorphic design system, dynamic theme toggle with adaptive Recharts palettes, and clean drag-and-drop input. | Clean, professional presentation with zero clutter. |
 
@@ -77,20 +76,7 @@ In the initial version, candidates quickly noticed that whether they uploaded a 
 
 ---
 
-### 4. Adding the Model Benchmarks Suite (`/benchmarks`)
-
-#### The Problem in v1.0:
-- There was no documentation or code showing how or why certain machine learning models were chosen.
-
-#### The v2.0 Solution:
-- Built a dedicated `/benchmarks` leaderboard comparing candidate algorithms using 5-Fold Stratified Cross-Validation:
-  - **Salary**: Ridge vs Random Forest vs HistGradientBoosting (R², RMSE, MAE).
-  - **Placement**: Decision Tree vs Random Forest vs HistGradientBoosting (Accuracy, F1, ROC-AUC).
-- Clearly highlights the production winner with written rationale for why it was selected.
-
----
-
-### 5. Full-Stack Resilience & Offline Fallbacks
+### 4. Full-Stack Resilience & Offline Fallbacks
 
 #### The Problem in v1.0:
 - Free-tier backend servers (like PythonAnywhere) go to sleep when inactive. In v1.0, this caused the entire frontend to freeze or display broken error dialogs.
@@ -99,7 +85,7 @@ In the initial version, candidates quickly noticed that whether they uploaded a 
 #### The v2.0 Solution:
 - **Smart Client-Side Fallback**: If the Flask API does not respond within a few seconds, the frontend automatically falls back to local mathematical simulation using bundled model parameters. The demo continues to work smoothly without interruption.
 - **Bug Fixes & Clean Build**: Resolved all missing icon imports (`TrendingUp`) and verified bundle compilation with zero warnings.
-- **Single Page App Routing**: Configured Vercel rewrites so deep links and browser refreshes on subroutes (`/predict-salary`, `/placement`, `/benchmarks`) never return 404 errors.
+- **Single Page App Routing**: Configured Vercel rewrites so deep links and browser refreshes on subroutes (`/predict-salary`, `/placement`, `/resume-analyzer`) never return 404 errors.
 
 ---
 
@@ -109,4 +95,4 @@ If an interviewer asks: *"Did you iterate on this project or just build it in on
 
 > *"The first version was an initial proof-of-concept, but when I critically reviewed it, I found several areas that weren't production-grade. The ATS was just a naive keyword counter that gave everyone an 84% score, the salary model had multicollinearity issues that gave wild predictions, and the placement simulator had unrealistic starting defaults.*
 > 
-> *In Version 2.0, I treated it like a real engineering overhaul: I cleaned our dataset of 52,000 jobs down to 33,800 records using IQR outlier filtering, retrained the salary model with Ridge L2 regularization, and implemented a role-aware 4-pillar ATS scoring engine that updates instantly when you switch roles. I also added a 5-fold cross-validation benchmark suite and built client-side offline fallbacks so the app never crashes even if the backend server is sleeping. It turned a simple prototype into a robust, defensible system."*
+> *In Version 2.0, I treated it like a real engineering overhaul: I cleaned our dataset of 52,000 jobs down to 33,800 records using IQR outlier filtering, retrained the salary model with Ridge L2 regularization, and implemented a role-aware 4-pillar ATS scoring engine that updates instantly when you switch roles. I also calibrated the placement simulator with honest baseline defaults and built client-side offline fallbacks so the app never crashes even if the backend server is sleeping. It turned a simple prototype into a robust, defensible system."*

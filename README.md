@@ -22,7 +22,7 @@ Preparing for tech placements and job hunting is often filled with guesswork:
 
 ---
 
-## 🚀 Live Product Walkthrough (5 Core Modules)
+## 🚀 Live Product Walkthrough (4 Core Modules)
 
 You can explore all of these modules live at [careerlens-placement-platform.vercel.app](https://careerlens-placement-platform.vercel.app/):
 
@@ -34,10 +34,6 @@ You can explore all of these modules live at [careerlens-placement-platform.verc
    │    • Salary Trends   │    • Real Range (±MAE│    • Dropdown Rescore  │    • What-If Sliders│
    │    • Skills Demand   │    • Percentile Rank │    • Missing Roadmap   │    • Honest Baseline│
    └──────────────────────┴──────────────────────┴────────────────────────┴─────────────────────┘
-                                           │
-                                5. Model Benchmarks
-                               • 5-Fold Cross-Validation
-                               • Ridge vs RF vs HistGradient
 ```
 
 ---
@@ -93,19 +89,6 @@ You can explore all of these modules live at [careerlens-placement-platform.verc
 
 ---
 
-### 5. Model Benchmarks Leaderboard (`/benchmarks`)
-*Proof of machine learning rigor. We don't just pick an algorithm randomly—we show the benchmark data.*
-
-- **5-Fold Stratified Cross-Validation**: Compares multiple algorithms on identical validation folds so results are unbiased and reproducible.
-- **Salary Prediction (Regression)**:
-  - Compares **Ridge Regression (Baseline)** vs **Random Forest Regressor** vs **HistGradientBoosting**.
-  - *Winner:* **Ridge Regression (L2, α=50)** achieved the highest R² (0.2186) and lowest MAE ($5,215), while providing sub-millisecond inference and clear linear interpretability.
-- **Placement Prediction (Classification)**:
-  - Compares **Decision Tree (Baseline)** vs **Random Forest Classifier** vs **HistGradientBoosting**.
-  - *Winner:* **Random Forest Classifier** achieved the highest ROC-AUC (**0.9063** vs 0.8673 baseline) and **94.32% Accuracy**, ensuring smooth probability curves across the simulator without abrupt decision cliffs.
-
----
-
 ## 🧠 Machine Learning Design & Defensible Decisions
 
 If an interviewer asks you about the ML architecture, here is the clean, defensible rationale:
@@ -156,15 +139,14 @@ Frontend (Vercel)                    Backend (PythonAnywhere / Local)
 │   ├── parser.py                 # ATS parser: 4-pillar scoring & PDF text extraction
 │   └── requirements.txt          # Python dependencies
 ├── frontend/
-│   ├── public/data/              # Pre-calculated benchmarks and fallback JSONs
+│   ├── public/data/              # Pre-calculated analytics and fallback JSONs
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── Navbar.jsx             # Top navigation with dark/light mode toggle
 │   │   │   ├── MarketDashboard.jsx    # Analytics dashboard & ETL data quality tab
 │   │   │   ├── SalaryPredictor.jsx    # Ridge salary estimator & weights visualization
 │   │   │   ├── ResumeMatcher.jsx      # 4-pillar ATS resume analyzer & roadmap
-│   │   │   ├── PlacementAnalytics.jsx # Calibrated What-If student simulator
-│   │   │   └── ModelBenchmarks.jsx    # 5-fold cross-validation leaderboard
+│   │   │   └── PlacementAnalytics.jsx # Calibrated What-If student simulator
 │   │   ├── App.jsx                    # Application layout & routing
 │   │   ├── config.js                  # Dynamic API base URL configuration
 │   │   └── index.css                  # Tailwind styles & glassmorphic system
@@ -215,7 +197,7 @@ Here are direct, natural answers to the top questions an interviewer will ask yo
 > *"CareerLens is an end-to-end web platform designed to eliminate guesswork in tech hiring and campus placements. It has four key pillars: First, an analytics dashboard built on 33,000+ cleaned job postings showing real salary and skill trends. Second, an interpretable Ridge Regression model that predicts realistic salary ranges rather than fake exact numbers. Third, an ATS resume analyzer that evaluates resumes across four practical dimensions—domain skills, quantified metrics, standard sections, and action verbs—and updates instantly when you switch target roles. And fourth, a Random Forest placement simulator that lets students see the marginal impact of raising their CGPA or adding projects. I built it with React, Tailwind, Flask, and Scikit-Learn, and deployed it on Vercel and PythonAnywhere."*
 
 #### Q2: "Why did you choose Ridge Regression instead of a Deep Neural Network or XGBoost for salary prediction?"
-> *"Two reasons: multicollinearity and interpretability. Tech job postings have strongly correlated features—for instance, senior roles almost always co-occur with specific backend tech stacks and metro locations. An unregularized model or deep network can easily overfit or produce erratic swings on rare skill combinations. Ridge Regression applies an L2 penalty that stabilizes feature coefficients. In our 5-fold cross-validation benchmarks, Ridge actually outperformed tree regressors in MAE ($5,215 vs $5,463) and executed with sub-millisecond latency while allowing us to show the candidate a transparent feature importance chart."*
+> *"Two reasons: multicollinearity and interpretability. Tech job postings have strongly correlated features—for instance, senior roles almost always co-occur with specific backend tech stacks and metro locations. An unregularized model or deep network can easily overfit or produce erratic swings on rare skill combinations. Ridge Regression applies an L2 penalty that stabilizes feature coefficients. In our 5-fold cross-validation evaluations, Ridge actually outperformed tree regressors in MAE ($5,215 vs $5,463) and executed with sub-millisecond latency while allowing us to show the candidate a transparent feature importance chart."*
 
 #### Q3: "How does your ATS engine work? Is it just checking for random buzzwords?"
 > *"No, that was actually the big flaw in Version 1.0, where any resume scored around 84% regardless of role. In Version 2.0, we rebuilt it with a role-aware 4-pillar weighted model: 55% goes to domain-specific skills for that exact role (so React counts heavily for Frontend, but Docker and PostgreSQL count for Backend), 18% evaluates quantified metrics in bullet points (percentages, latency cuts, user counts), 15% checks for standard resume sections, and 12% looks for executive action verbs. Furthermore, because we cache the parsed text in React state, changing the target role in the dropdown re-scores the resume instantly without making the user re-upload the document."*
